@@ -23,19 +23,6 @@ const categoryMap = {
   vegetable_dish: "家常菜",
 };
 
-const fallbackImages = {
-  aquatic: "recipes/tomato-tofu.jpeg",
-  breakfast: "recipes/zucchini-egg.jpeg",
-  condiment: "recipes/spinach-egg.jpg",
-  dessert: "recipes/caramel-potato.jpeg",
-  drink: "recipes/tomato-tofu.jpeg",
-  meat_dish: "recipes/pepper-potato.jpg",
-  "semi-finished": "recipes/tomato-noodle.jpg",
-  soup: "recipes/tomato-tofu.jpeg",
-  staple: "recipes/tomato-noodle.jpg",
-  vegetable_dish: "recipes/pepper-potato.jpg",
-};
-
 const emojiRules = [
   [/鸡蛋|蛋/, "🥚"],
   [/番茄|西红柿/, "🍅"],
@@ -163,18 +150,35 @@ function normalizeIngredientName(rawLine) {
   let line = cleanInline(rawLine)
     .replace(/^[-*+]\s*/, "")
     .replace(/^\d+[.、)]\s*/, "")
+    .replace(/\p{Extended_Pictographic}/gu, "")
     .replace(/^总量[:：]?\s*/, "")
     .replace(/（.*?）|\(.*?\)/g, "")
     .trim();
   if (!line || /^每次|如下|总量|份数|步骤|可选|注意|注[:：]/.test(line)) return "";
+  line = line
+    .replace(/^[：:，,。；;、\s-]+/, "")
+    .replace(
+      /^\d+(\.\d+)?\s*(g|kg|克|千克|ml|mL|毫升|L|升|个|颗|根|片|勺|大勺|小勺|茶匙|汤匙|把|碗|杯|只|条|块|瓣|朵|张|包|盒|罐|袋|斤|两|人份|人|顿)\s*/i,
+      "",
+    )
+    .trim();
   const beforeEqual = line.split(/[=＝:：]/)[0].trim();
   line = beforeEqual || line;
   line = line
-    .replace(/\d+(\.\d+)?\s*(g|kg|克|千克|ml|mL|毫升|L|升|个|颗|根|片|勺|大勺|小勺|把|碗|杯|只|条|块|瓣|朵|张|包|盒|罐|斤|两).*/i, "")
+    .replace(/\d+(\.\d+)?\s*(g|kg|克|千克|ml|mL|毫升|L|升|个|颗|根|片|勺|大勺|小勺|茶匙|汤匙|把|碗|杯|只|条|块|瓣|朵|张|包|盒|罐|袋|斤|两).*/i, "")
     .replace(/适量|少许|若干|一[个根把碗杯只条块瓣包盒]|半[个根把碗杯]/g, "")
     .replace(/[，,。；;、].*$/, "")
+    .replace(/[一二三四五六七八九十两]+(个|颗|根|片|勺|把|碗|杯|只|条|块|瓣|朵|张|包|盒|罐|袋)$/, "")
+    .replace(/^[：:，,。；;、\s-]+/, "")
     .trim();
-  if (!line || line.length > 14 || toolPattern.test(line)) return "";
+  if (
+    !line ||
+    /^[=+\-*]+$/.test(line) ||
+    line.length > 14 ||
+    /\d|°|大卡|千卡|分钟|小时|人份|茶匙|汤匙|沸水/.test(line) ||
+    toolPattern.test(line)
+  )
+    return "";
   return line;
 }
 
@@ -258,7 +262,7 @@ function importRecipes() {
     );
     const id = slugify(relativePath);
     const time = extractTime(content, categoryKey);
-    const image = firstImageForRecipe(file, content, id) ?? fallbackImages[categoryKey] ?? "recipes/pepper-potato.jpg";
+    const image = firstImageForRecipe(file, content, id) ?? "";
     return {
       id,
       name: title,

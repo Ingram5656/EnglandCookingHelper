@@ -1,21 +1,53 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
 import {
-  INGREDIENT_EMOJI,
-  INGREDIENT_SUGGESTIONS,
-  RECIPES,
-  Recipe,
-  SYNONYMS,
-} from "./recipes";
+  getAllIngredients,
+  getAllRecipes,
+  openRecipeDatabase,
+  saveIngredient,
+  saveRecipe,
+  saveRecipeImage,
+  StoredIngredient,
+  StoredRecipe,
+} from "./database";
+import { Ingredient, Recipe, SYNONYMS } from "./recipes";
 
-type View = "recommend" | "categories" | "favorites" | "recent";
+type View =
+  | "recommend"
+  | "categories"
+  | "favorites"
+  | "recent"
+  | "ingredients"
+  | "upload";
 type SidePanel = "shopping" | "settings" | null;
 
 const DEFAULT_INGREDIENTS = ["鸡蛋", "番茄", "青椒", "土豆", "葱", "大蒜"];
+const TEMPLATE = `菜名：红烧鱼
+分类：水产
+难度：适中
+时间：35
+份量：2
+简介：家常红烧鱼，咸鲜入味，适合配米饭。
+
+食材：
+- 鱼 | 1 条 | main | 🐟
+- 姜 | 3 片 | seasoning | 🫚
+- 葱 | 1 根 | seasoning | 🌿
+- 生抽 | 2 勺 | seasoning | 🍶
+- 盐 | 适量 | seasoning | 🧂
+
+步骤：
+1. 鱼处理干净，擦干表面水分。
+2. 热锅放油，将鱼两面煎至微黄。
+3. 加入姜、葱、生抽和少量热水。
+4. 中火焖煮至汤汁收浓。
+5. 加盐调味后出锅。
+
+小贴士：煎鱼前擦干水分，可以减少粘锅。`;
 
 const NAV_ITEMS: Array<{
-  id: View | "pantry" | "shopping" | "settings";
+  id: View | "shopping" | "settings";
   label: string;
   icon: string;
 }> = [
@@ -23,7 +55,8 @@ const NAV_ITEMS: Array<{
   { id: "categories", label: "菜谱分类", icon: "▦" },
   { id: "favorites", label: "收藏菜谱", icon: "♡" },
   { id: "recent", label: "最近浏览", icon: "◷" },
-  { id: "pantry", label: "食材管理", icon: "♧" },
+  { id: "ingredients", label: "食材清单", icon: "♧" },
+  { id: "upload", label: "上传菜谱", icon: "＋" },
   { id: "shopping", label: "购物清单", icon: "🛒" },
   { id: "settings", label: "设置", icon: "⚙" },
 ];
@@ -43,29 +76,142 @@ function scoreRecipe(recipe: Recipe, selectedIngredients: string[]) {
     if (!selected.has(normalizeIngredient(ingredient.name))) return sum;
     return sum + (ingredient.type === "main" ? 3 : 1);
   }, 0);
-  return Math.round((matched / total) * 100);
+  return total ? Math.round((matched / total) * 100) : 0;
+}
+
+function idFromName(name: string) {
+  const normalized = name.trim().toLowerCase();
+  const suffix = Math.random().toString(36).slice(2, 8);
+  return `user-${normalized.replace(/[^\p{L}\p{N}]+/gu, "-")}-${suffix}`;
+}
+
+function fileToDataUrl(file: File) {
+  return new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(String(reader.result));
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
+}
+
+function valueAfter(label: string, text: string) {
+  const match = text.match(new RegExp(`^${label}[：:](.+)$`, "m"));
+  return match?.[1]?.trim() ?? "";
+}
+
+function blockAfter(label: string, text: string) {
+  const lines = text.split(/\r?\n/);
+  const start = lines.findIndex((line) => line.trim() === `${label}：` || line.trim() === `${label}:`);
+  if (start < 0) return "";
+  const end = lines.findIndex(
+    (line, index) => index > start && /^[\u4e00-\u9fa5A-Za-z]+[：:]$/.test(line.trim()),
+  );
+  return lines.slice(start + 1, end < 0 ? lines.length : end).join("\n");
+}
+
+function parseRecipeTemplate(text: string, imageDataUrl: string): StoredRecipe {
+  const name = valueAfter("菜名", text);
+  if (!name) throw new Error("模板缺少“菜名”。");
+
+  const ingredientLines = blockAfter("食材", text)
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^[-*]\s*/, "").trim())
+    .filter(Boolean);
+  const ingredients = ingredientLines.map<Ingredient>((line) => {
+    const [rawName, rawAmount, rawType, rawEmoji] = line
+      .split("|")
+      .map((part) => part.trim());
+    if (!rawName) throw new Error("食材行缺少食材名称。");
+    return {
+      name: normalizeIngredient(rawName),
+      amount: rawAmount || "适量",
+      type: rawType === "seasoning" ? "seasoning" : "main",
+      emoji: rawEmoji || "🥣",
+    };
+  });
+  if (!ingredients.length) throw new Error("模板缺少“食材”列表。");
+
+  const steps = blockAfter("步骤", text)
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^\d+[.、)]\s*/, "").trim())
+    .filter(Boolean);
+  if (!steps.length) throw new Error("模板缺少“步骤”列表。");
+
+  const now = Date.now();
+  return {
+    id: idFromName(name),
+    name,
+    summary: valueAfter("简介", text) || "用户导入的本地菜谱。",
+    image: imageDataUrl,
+    imageSource: imageDataUrl ? "upload" : "none",
+    category: valueAfter("分类", text) || "自定义",
+    difficulty:
+      valueAfter("难度", text) === "进阶"
+        ? "进阶"
+        : valueAfter("难度", text) === "适中"
+          ? "适中"
+          : "简单",
+    time: Number(valueAfter("时间", text)) || 20,
+    servings: Number(valueAfter("份量", text)) || 2,
+    ingredients,
+    steps,
+    tip: valueAfter("小贴士", text) || "用户导入菜谱。",
+    source: "user",
+    createdAt: now,
+    updatedAt: now,
+  };
 }
 
 export default function Home() {
+  const [db, setDb] = useState<IDBDatabase | null>(null);
+  const [recipes, setRecipes] = useState<StoredRecipe[]>([]);
+  const [ingredients, setIngredients] = useState<StoredIngredient[]>([]);
   const [selectedIngredients, setSelectedIngredients] =
     useState<string[]>(DEFAULT_INGREDIENTS);
   const [ingredientInput, setIngredientInput] = useState("");
   const [showIngredientPicker, setShowIngredientPicker] = useState(false);
   const [query, setQuery] = useState("");
+  const [ingredientQuery, setIngredientQuery] = useState("");
   const [timeFilter, setTimeFilter] = useState("all");
   const [difficultyFilter, setDifficultyFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [sortMode, setSortMode] = useState("match");
   const [activeView, setActiveView] = useState<View>("recommend");
-  const [selectedRecipeId, setSelectedRecipeId] = useState(RECIPES[0].id);
+  const [selectedRecipeId, setSelectedRecipeId] = useState("");
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
   const [shopping, setShopping] = useState<string[]>([]);
   const [sidePanel, setSidePanel] = useState<SidePanel>(null);
   const [compactCards, setCompactCards] = useState(false);
-  const [hydrated, setHydrated] = useState(false);
+  const [templateText, setTemplateText] = useState(TEMPLATE);
+  const [uploadImage, setUploadImage] = useState("");
+  const [pendingRecipe, setPendingRecipe] = useState<StoredRecipe | null>(null);
+  const [pendingMissingIngredients, setPendingMissingIngredients] = useState<
+    Ingredient[]
+  >([]);
   const [toast, setToast] = useState("");
-  const pantryRef = useRef<HTMLElement>(null);
+  const [dbReady, setDbReady] = useState(false);
+
+  async function refreshDatabase(currentDb = db) {
+    if (!currentDb) return;
+    const [nextRecipes, nextIngredients] = await Promise.all([
+      getAllRecipes(currentDb),
+      getAllIngredients(currentDb),
+    ]);
+    setRecipes(nextRecipes.sort((a, b) => a.name.localeCompare(b.name, "zh-Hans-CN")));
+    setIngredients(
+      nextIngredients.sort((a, b) => a.name.localeCompare(b.name, "zh-Hans-CN")),
+    );
+    if (!selectedRecipeId && nextRecipes.length) setSelectedRecipeId(nextRecipes[0].id);
+  }
+
+  useEffect(() => {
+    openRecipeDatabase().then(async (database) => {
+      setDb(database);
+      await refreshDatabase(database);
+      setDbReady(true);
+    });
+  }, []);
 
   useEffect(() => {
     try {
@@ -80,30 +226,26 @@ export default function Home() {
       if (storedShopping) setShopping(JSON.parse(storedShopping));
       if (storedCompact) setCompactCards(JSON.parse(storedCompact));
     } catch {
-      // Invalid local data falls back to the safe defaults above.
+      // Invalid local UI state falls back to defaults.
     }
-    setHydrated(true);
   }, []);
 
   useEffect(() => {
-    if (!hydrated) return;
-    localStorage.setItem(
-      "smartrecipe-pantry",
-      JSON.stringify(selectedIngredients),
-    );
+    localStorage.setItem("smartrecipe-pantry", JSON.stringify(selectedIngredients));
     localStorage.setItem("smartrecipe-favorites", JSON.stringify(favorites));
     localStorage.setItem("smartrecipe-recent", JSON.stringify(recent));
     localStorage.setItem("smartrecipe-shopping", JSON.stringify(shopping));
     localStorage.setItem("smartrecipe-compact", JSON.stringify(compactCards));
-  }, [
-    hydrated,
-    selectedIngredients,
-    favorites,
-    recent,
-    shopping,
-    compactCards,
-  ]);
+  }, [selectedIngredients, favorites, recent, shopping, compactCards]);
 
+  const ingredientEmoji = useMemo(
+    () => Object.fromEntries(ingredients.map((item) => [item.name, item.emoji])),
+    [ingredients],
+  );
+  const ingredientNames = useMemo(
+    () => new Set(ingredients.map((item) => normalizeIngredient(item.name))),
+    [ingredients],
+  );
   const normalizedPantry = useMemo(
     () => selectedIngredients.map(normalizeIngredient),
     [selectedIngredients],
@@ -111,21 +253,19 @@ export default function Home() {
 
   const scoredRecipes = useMemo(
     () =>
-      RECIPES.map((recipe) => ({
+      recipes.map((recipe) => ({
         ...recipe,
         score: scoreRecipe(recipe, selectedIngredients),
       })),
-    [selectedIngredients],
+    [recipes, selectedIngredients],
   );
 
   const visibleRecipes = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
     const recentOrder = new Map(recent.map((id, index) => [id, index]));
-
     return scoredRecipes
       .filter((recipe) => {
-        if (activeView === "favorites" && !favorites.includes(recipe.id))
-          return false;
+        if (activeView === "favorites" && !favorites.includes(recipe.id)) return false;
         if (activeView === "recent" && !recent.includes(recipe.id)) return false;
         if (
           normalizedQuery &&
@@ -135,12 +275,8 @@ export default function Home() {
           )
         )
           return false;
-        if (timeFilter !== "all" && recipe.time > Number(timeFilter))
-          return false;
-        if (
-          difficultyFilter !== "all" &&
-          recipe.difficulty !== difficultyFilter
-        )
+        if (timeFilter !== "all" && recipe.time > Number(timeFilter)) return false;
+        if (difficultyFilter !== "all" && recipe.difficulty !== difficultyFilter)
           return false;
         if (categoryFilter !== "all" && recipe.category !== categoryFilter)
           return false;
@@ -158,15 +294,15 @@ export default function Home() {
         return b.score - a.score;
       });
   }, [
-    scoredRecipes,
     activeView,
-    favorites,
-    recent,
-    query,
-    timeFilter,
-    difficultyFilter,
     categoryFilter,
+    difficultyFilter,
+    favorites,
+    query,
+    recent,
+    scoredRecipes,
     sortMode,
+    timeFilter,
   ]);
 
   useEffect(() => {
@@ -181,11 +317,28 @@ export default function Home() {
   const selectedRecipe =
     scoredRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
     scoredRecipes[0];
-  const matchedIngredients = selectedRecipe.ingredients.filter((item) =>
-    normalizedPantry.includes(normalizeIngredient(item.name)),
-  );
-  const missingIngredients = selectedRecipe.ingredients.filter(
-    (item) => !normalizedPantry.includes(normalizeIngredient(item.name)),
+  const matchedIngredients =
+    selectedRecipe?.ingredients.filter((item) =>
+      normalizedPantry.includes(normalizeIngredient(item.name)),
+    ) ?? [];
+  const missingIngredients =
+    selectedRecipe?.ingredients.filter(
+      (item) => !normalizedPantry.includes(normalizeIngredient(item.name)),
+    ) ?? [];
+
+  const supportedIngredients = useMemo(() => {
+    const normalizedQuery = ingredientQuery.trim().toLowerCase();
+    return ingredients.filter(
+      (item) =>
+        !normalizedQuery ||
+        item.name.toLowerCase().includes(normalizedQuery) ||
+        item.emoji.includes(normalizedQuery),
+    );
+  }, [ingredientQuery, ingredients]);
+
+  const recipesWithoutImage = useMemo(
+    () => recipes.filter((recipe) => !recipe.image).length,
+    [recipes],
   );
 
   function announce(message: string) {
@@ -193,10 +346,16 @@ export default function Home() {
     window.setTimeout(() => setToast(""), 2200);
   }
 
-  function addIngredient(value: string) {
+  async function addSupportedIngredient(ingredient: Ingredient) {
+    if (!db) return;
+    await saveIngredient(db, { ...ingredient, source: "user" });
+    await refreshDatabase(db);
+  }
+
+  function addPantryIngredient(value: string) {
     const ingredient = normalizeIngredient(value);
     if (!ingredient) return;
-    if (normalizedPantry.includes(normalizeIngredient(ingredient))) {
+    if (normalizedPantry.includes(ingredient)) {
       announce("这个食材已经在食材库中了");
       return;
     }
@@ -207,7 +366,7 @@ export default function Home() {
 
   function submitIngredient(event: FormEvent) {
     event.preventDefault();
-    addIngredient(ingredientInput);
+    addPantryIngredient(ingredientInput);
   }
 
   function openRecipe(id: string) {
@@ -234,12 +393,6 @@ export default function Home() {
   }
 
   function handleNav(id: (typeof NAV_ITEMS)[number]["id"]) {
-    if (id === "pantry") {
-      setSidePanel(null);
-      pantryRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-      setShowIngredientPicker(true);
-      return;
-    }
     if (id === "shopping" || id === "settings") {
       setSidePanel(id);
       return;
@@ -249,6 +402,68 @@ export default function Home() {
     if (id === "categories") setCategoryFilter("all");
   }
 
+  async function handleRecipeImageChange(
+    event: ChangeEvent<HTMLInputElement>,
+    recipe: StoredRecipe,
+  ) {
+    const file = event.target.files?.[0];
+    if (!file || !db) return;
+    const dataUrl = await fileToDataUrl(file);
+    await saveRecipeImage(db, recipe, dataUrl);
+    await refreshDatabase(db);
+    announce(`已更新 ${recipe.name} 的菜谱图片`);
+    event.target.value = "";
+  }
+
+  async function handleUploadImage(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    setUploadImage(await fileToDataUrl(file));
+  }
+
+  async function commitRecipeWithIngredients(
+    recipe: StoredRecipe,
+    missing: Ingredient[],
+  ) {
+    if (!db) return;
+    for (const ingredient of missing) {
+      await saveIngredient(db, {
+        name: normalizeIngredient(ingredient.name),
+        amount: "适量",
+        type: ingredient.type,
+        emoji: ingredient.emoji || "🥣",
+        source: "user",
+      });
+    }
+    await saveRecipe(db, recipe);
+    await refreshDatabase(db);
+    setTemplateText(TEMPLATE);
+    setUploadImage("");
+    setPendingRecipe(null);
+    setPendingMissingIngredients([]);
+    setActiveView("recommend");
+    setSelectedRecipeId(recipe.id);
+    announce(`已导入 ${recipe.name}`);
+  }
+
+  async function submitRecipeTemplate(event: FormEvent) {
+    event.preventDefault();
+    try {
+      const recipe = parseRecipeTemplate(templateText, uploadImage);
+      const missing = recipe.ingredients.filter(
+        (ingredient) => !ingredientNames.has(normalizeIngredient(ingredient.name)),
+      );
+      if (missing.length) {
+        setPendingRecipe(recipe);
+        setPendingMissingIngredients(missing);
+        return;
+      }
+      await commitRecipeWithIngredients(recipe, []);
+    } catch (error) {
+      announce(error instanceof Error ? error.message : "菜谱模板解析失败");
+    }
+  }
+
   const heading =
     activeView === "favorites"
       ? "收藏菜谱"
@@ -256,7 +471,20 @@ export default function Home() {
         ? "最近浏览"
         : activeView === "categories"
           ? "菜谱分类"
-          : "推荐菜谱";
+          : activeView === "ingredients"
+            ? "食材清单"
+            : activeView === "upload"
+              ? "上传菜谱"
+              : "推荐菜谱";
+
+  if (!dbReady) {
+    return (
+      <div className="loading-screen">
+        <div className="brand-mark">♨</div>
+        <p>正在打开本地菜谱数据库...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="app-shell">
@@ -275,10 +503,7 @@ export default function Home() {
 
         <nav className="side-nav" aria-label="主要导航">
           {NAV_ITEMS.map((item) => {
-            const isActive =
-              item.id === activeView ||
-              item.id === sidePanel ||
-              (item.id === "pantry" && showIngredientPicker);
+            const isActive = item.id === activeView || item.id === sidePanel;
             return (
               <button
                 key={item.id}
@@ -299,8 +524,8 @@ export default function Home() {
 
         <div className="sidebar-note">
           <span className="note-leaf">☘</span>
-          <strong>用现有食材</strong>
-          <p>发现更多美味</p>
+          <strong>本地数据库</strong>
+          <p>{recipes.length} 道菜谱</p>
           <div className="produce" aria-hidden="true">
             🥬🥕🍅
           </div>
@@ -310,11 +535,13 @@ export default function Home() {
       <main className="main-content">
         <header className="topbar">
           <div>
-            <p className="eyebrow">SMARTRECIPE · LOCAL</p>
+            <p className="eyebrow">SMARTRECIPE · INDEXEDDB</p>
             <h1>
               {heading} <span aria-hidden="true">🌿</span>
             </h1>
-            <p>选择你拥有的食材，智能推荐适合的本地菜谱</p>
+            <p>
+              菜谱、食材清单和上传图片都保存在当前浏览器的本地数据库
+            </p>
           </div>
           <label className="search-box">
             <span aria-hidden="true">⌕</span>
@@ -330,358 +557,513 @@ export default function Home() {
               </button>
             )}
           </label>
-          <div className="profile" title="所有数据仅保存在本机">
+          <div className="profile" title="所有数据保存在本机 IndexedDB">
             <span className="offline-dot" />
-            离线模式
+            离线数据库
             <span className="avatar">👩🏻‍🍳</span>
           </div>
         </header>
 
-        <section className="pantry-panel" ref={pantryRef}>
-          <div className="panel-heading">
-            <div>
-              <h2>
-                我拥有的食材 <span>{selectedIngredients.length}</span>
-              </h2>
-              <p>主料权重更高，调料也会参与匹配</p>
+        {activeView !== "ingredients" && activeView !== "upload" && (
+          <>
+            <section className="pantry-panel">
+              <div className="panel-heading">
+                <div>
+                  <h2>
+                    我拥有的食材 <span>{selectedIngredients.length}</span>
+                  </h2>
+                  <p>用当前食材匹配本地数据库里的菜谱</p>
+                </div>
+                <div className="panel-actions">
+                  <button
+                    className="ghost-button"
+                    onClick={() => setSelectedIngredients([])}
+                    disabled={!selectedIngredients.length}
+                  >
+                    清空
+                  </button>
+                  <button
+                    className="primary-button"
+                    onClick={() => {
+                      setActiveView("recommend");
+                      setSortMode("match");
+                      announce("已按当前食材重新匹配");
+                    }}
+                  >
+                    ✣ 推荐菜谱
+                  </button>
+                </div>
+              </div>
+
+              <div className="ingredient-chips">
+                {selectedIngredients.map((ingredient) => (
+                  <button
+                    className="ingredient-chip"
+                    key={ingredient}
+                    onClick={() =>
+                      setSelectedIngredients((current) =>
+                        current.filter((item) => item !== ingredient),
+                      )
+                    }
+                    aria-label={`移除${ingredient}`}
+                  >
+                    <span>{ingredientEmoji[ingredient] ?? "🥣"}</span>
+                    {ingredient}
+                    <b>×</b>
+                  </button>
+                ))}
+                <button
+                  className="add-chip"
+                  onClick={() => setShowIngredientPicker((open) => !open)}
+                  aria-expanded={showIngredientPicker}
+                >
+                  ＋ 添加更多食材
+                </button>
+              </div>
+
+              {showIngredientPicker && (
+                <div className="ingredient-picker">
+                  <form onSubmit={submitIngredient}>
+                    <input
+                      autoFocus
+                      value={ingredientInput}
+                      onChange={(event) => setIngredientInput(event.target.value)}
+                      placeholder="输入食材，例如：豆腐"
+                      aria-label="输入食材"
+                    />
+                    <button className="primary-button" type="submit">
+                      添加
+                    </button>
+                  </form>
+                  <div className="suggestion-row">
+                    {ingredients
+                      .filter(
+                        (item) =>
+                          item.type === "main" &&
+                          !normalizedPantry.includes(normalizeIngredient(item.name)),
+                      )
+                      .slice(0, 12)
+                      .map((item) => (
+                        <button
+                          key={item.name}
+                          onClick={() => addPantryIngredient(item.name)}
+                        >
+                          {item.emoji} {item.name}
+                        </button>
+                      ))}
+                  </div>
+                </div>
+              )}
+            </section>
+
+            <div className="toolbar">
+              <button
+                className={`recommend-pill ${
+                  sortMode === "match" ? "active" : ""
+                }`}
+                onClick={() => setSortMode("match")}
+              >
+                ☆ 推荐菜谱
+              </button>
+              <label>
+                <span className="sr-only">排序方式</span>
+                <select
+                  value={sortMode}
+                  onChange={(event) => setSortMode(event.target.value)}
+                >
+                  <option value="match">匹配度排序</option>
+                  <option value="time">烹饪时间排序</option>
+                  <option value="difficulty">难度排序</option>
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">烹饪时间</span>
+                <select
+                  value={timeFilter}
+                  onChange={(event) => setTimeFilter(event.target.value)}
+                >
+                  <option value="all">烹饪时间</option>
+                  <option value="10">10 分钟内</option>
+                  <option value="15">15 分钟内</option>
+                  <option value="20">20 分钟内</option>
+                  <option value="30">30 分钟内</option>
+                  <option value="45">45 分钟内</option>
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">难度</span>
+                <select
+                  value={difficultyFilter}
+                  onChange={(event) => setDifficultyFilter(event.target.value)}
+                >
+                  <option value="all">全部难度</option>
+                  <option value="简单">简单</option>
+                  <option value="适中">适中</option>
+                  <option value="进阶">进阶</option>
+                </select>
+              </label>
+              <label>
+                <span className="sr-only">菜谱分类</span>
+                <select
+                  value={categoryFilter}
+                  onChange={(event) => setCategoryFilter(event.target.value)}
+                >
+                  <option value="all">全部分类</option>
+                  {[...new Set(recipes.map((recipe) => recipe.category))].map(
+                    (category) => (
+                      <option key={category}>{category}</option>
+                    ),
+                  )}
+                </select>
+              </label>
+              <span className="result-count">
+                {visibleRecipes.length} 个结果 · {recipesWithoutImage} 道待上传图片
+              </span>
             </div>
-            <div className="panel-actions">
+
+            <div className={`workspace ${compactCards ? "compact" : ""}`}>
+              <section className="recipe-list" aria-label="菜谱列表">
+                {visibleRecipes.length ? (
+                  visibleRecipes.map((recipe) => {
+                    const matched = recipe.ingredients.filter((item) =>
+                      normalizedPantry.includes(normalizeIngredient(item.name)),
+                    );
+                    const missing = recipe.ingredients.filter(
+                      (item) =>
+                        !normalizedPantry.includes(normalizeIngredient(item.name)),
+                    );
+                    return (
+                      <article
+                        key={recipe.id}
+                        className={`recipe-card ${
+                          selectedRecipeId === recipe.id ? "selected" : ""
+                        }`}
+                        onClick={() => openRecipe(recipe.id)}
+                      >
+                        {recipe.image ? (
+                          <img src={recipe.image} alt={recipe.name} />
+                        ) : (
+                          <div className="no-image">
+                            <span>📷</span>
+                            <small>待上传</small>
+                          </div>
+                        )}
+                        <div className="card-copy">
+                          <div className="card-title-row">
+                            <h3>{recipe.name}</h3>
+                            <button
+                              className={
+                                favorites.includes(recipe.id) ? "favorited" : ""
+                              }
+                              onClick={(event) => {
+                                event.stopPropagation();
+                                toggleFavorite(recipe.id);
+                              }}
+                              aria-label={`${
+                                favorites.includes(recipe.id)
+                                  ? "取消收藏"
+                                  : "收藏"
+                              }${recipe.name}`}
+                            >
+                              {favorites.includes(recipe.id) ? "★" : "☆"}
+                            </button>
+                          </div>
+                          <p className="card-meta">
+                            <span>♧ {recipe.difficulty}</span>
+                            <span>◷ {recipe.time} 分钟</span>
+                            <span>▤ {recipe.category}</span>
+                            <span>{recipe.imageSource === "upload" ? "用户图片" : recipe.image ? "原图" : "无图"}</span>
+                          </p>
+                          <p className="ingredient-line">
+                            <b>已有：</b>
+                            {matched.slice(0, 4).map((item) => (
+                              <span key={item.name} title={item.name}>
+                                {item.emoji}
+                              </span>
+                            ))}
+                            {matched.length > 0 && <i>✓</i>}
+                          </p>
+                          <p className="ingredient-line missing-line">
+                            <b>缺少：</b>
+                            {missing.length ? (
+                              missing.slice(0, 4).map((item) => (
+                                <span key={item.name} title={item.name}>
+                                  {item.emoji}
+                                </span>
+                              ))
+                            ) : (
+                              <em>食材齐全，可以开做</em>
+                            )}
+                          </p>
+                        </div>
+                        <div className="match-score">
+                          <small>匹配度</small>
+                          <strong>{recipe.score}%</strong>
+                          <span
+                            className={
+                              recipe.score > 80
+                                ? "strong"
+                                : recipe.score >= 50
+                                  ? "medium"
+                                  : "low"
+                            }
+                          >
+                            {recipe.score > 80
+                              ? "强推荐"
+                              : recipe.score >= 50
+                                ? "推荐"
+                                : "低匹配"}
+                          </span>
+                        </div>
+                      </article>
+                    );
+                  })
+                ) : (
+                  <div className="empty-state">
+                    <span>🥣</span>
+                    <h3>暂时没有符合条件的菜谱</h3>
+                    <p>试试清除筛选，或再添加一些食材。</p>
+                    <button
+                      className="primary-button"
+                      onClick={() => {
+                        setQuery("");
+                        setTimeFilter("all");
+                        setDifficultyFilter("all");
+                        setCategoryFilter("all");
+                        setActiveView("recommend");
+                      }}
+                    >
+                      清除筛选
+                    </button>
+                  </div>
+                )}
+              </section>
+
+              {selectedRecipe && (
+                <aside className="recipe-detail">
+                  <div className="detail-heading">
+                    <button
+                      className={`favorite-large ${
+                        favorites.includes(selectedRecipe.id) ? "favorited" : ""
+                      }`}
+                      onClick={() => toggleFavorite(selectedRecipe.id)}
+                      aria-label="收藏当前菜谱"
+                    >
+                      {favorites.includes(selectedRecipe.id) ? "★" : "☆"}
+                    </button>
+                    <div>
+                      <h2>{selectedRecipe.name}</h2>
+                      <p>
+                        ♧ {selectedRecipe.difficulty} · ◷ {selectedRecipe.time} 分钟 ·{" "}
+                        {selectedRecipe.servings} 人份
+                      </p>
+                    </div>
+                    <div className="detail-score">
+                      <small>匹配度</small>
+                      <strong>{selectedRecipe.score}%</strong>
+                    </div>
+                  </div>
+
+                  {selectedRecipe.image ? (
+                    <img
+                      className="detail-image"
+                      src={selectedRecipe.image}
+                      alt={selectedRecipe.name}
+                    />
+                  ) : (
+                    <div className="detail-image no-image large">
+                      <span>📷</span>
+                      <strong>这个菜谱还没有对应图片</strong>
+                    </div>
+                  )}
+                  <label className="image-upload-button">
+                    上传/替换这道菜图片
+                    <input
+                      type="file"
+                      accept="image/*"
+                      onChange={(event) =>
+                        handleRecipeImageChange(event, selectedRecipe)
+                      }
+                    />
+                  </label>
+                  <p className="detail-summary">{selectedRecipe.summary}</p>
+
+                  <h3 className="section-title">食材清单</h3>
+                  <div className="ingredient-columns">
+                    <div className="ingredient-box have">
+                      <strong>
+                        已拥有 <span>✓</span>
+                      </strong>
+                      {matchedIngredients.length ? (
+                        matchedIngredients.map((item) => (
+                          <div key={item.name}>
+                            <span>
+                              {item.emoji} {item.name}
+                            </span>
+                            <b>{item.amount}</b>
+                          </div>
+                        ))
+                      ) : (
+                        <p>还没有匹配的食材</p>
+                      )}
+                    </div>
+                    <div className="ingredient-box need">
+                      <strong>
+                        需要补充 <span>🛒</span>
+                      </strong>
+                      {missingIngredients.length ? (
+                        missingIngredients.map((item) => (
+                          <button
+                            key={item.name}
+                            onClick={() => toggleShopping(item.name)}
+                            title="加入或移出购物清单"
+                          >
+                            <span>
+                              {shopping.includes(item.name) ? "✓" : item.emoji}{" "}
+                              {item.name}
+                            </span>
+                            <b>{item.amount}</b>
+                          </button>
+                        ))
+                      ) : (
+                        <p>食材齐全，可以直接开做</p>
+                      )}
+                    </div>
+                  </div>
+
+                  <h3 className="section-title">制作步骤</h3>
+                  <ol className="steps">
+                    {selectedRecipe.steps.map((step, index) => (
+                      <li key={`${step}-${index}`}>
+                        <span>{index + 1}</span>
+                        <p>{step}</p>
+                      </li>
+                    ))}
+                  </ol>
+                  <div className="cook-tip">
+                    <span>💡</span>
+                    <p>
+                      <strong>厨房小贴士</strong>
+                      {selectedRecipe.tip}
+                    </p>
+                  </div>
+                </aside>
+              )}
+            </div>
+          </>
+        )}
+
+        {activeView === "ingredients" && (
+          <section className="database-panel">
+            <div className="database-header">
+              <div>
+                <h2>支持食材</h2>
+                <p>
+                  当前本地数据库支持 {ingredients.length} 个食材，每个食材都有 emoji。
+                </p>
+              </div>
+              <label className="search-box compact-search">
+                <span aria-hidden="true">⌕</span>
+                <input
+                  value={ingredientQuery}
+                  onChange={(event) => setIngredientQuery(event.target.value)}
+                  placeholder="搜索食材..."
+                />
+              </label>
+            </div>
+            <div className="ingredient-grid">
+              {supportedIngredients.map((ingredient) => (
+                <button
+                  key={ingredient.name}
+                  className="ingredient-record"
+                  onClick={() => addPantryIngredient(ingredient.name)}
+                >
+                  <span>{ingredient.emoji}</span>
+                  <strong>{ingredient.name}</strong>
+                  <small>{ingredient.type === "main" ? "主料" : "调料"}</small>
+                </button>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {activeView === "upload" && (
+          <section className="database-panel upload-panel">
+            <div className="database-header">
+              <div>
+                <h2>上传菜谱</h2>
+                <p>按模板输入菜谱，可一键导入到本地 IndexedDB 数据库。</p>
+              </div>
+              <button className="ghost-button" onClick={() => setTemplateText(TEMPLATE)}>
+                恢复模板
+              </button>
+            </div>
+            <form className="upload-form" onSubmit={submitRecipeTemplate}>
+              <label className="upload-image-box">
+                {uploadImage ? (
+                  <img src={uploadImage} alt="待导入菜谱图片预览" />
+                ) : (
+                  <span>上传菜谱图片</span>
+                )}
+                <input type="file" accept="image/*" onChange={handleUploadImage} />
+              </label>
+              <div className="template-editor">
+                <div className="template-note">
+                  食材行格式：名称 | 用量 | main 或 seasoning | emoji
+                </div>
+                <textarea
+                  value={templateText}
+                  onChange={(event) => setTemplateText(event.target.value)}
+                  spellCheck={false}
+                />
+                <button className="primary-button" type="submit">
+                  一键导入菜谱
+                </button>
+              </div>
+            </form>
+          </section>
+        )}
+      </main>
+
+      {pendingRecipe && (
+        <div className="modal-layer" role="dialog" aria-modal="true">
+          <div className="modal-card">
+            <h2>发现新食材</h2>
+            <p>
+              这些食材还不在食材清单中。确认后会先加入食材数据库，再导入菜谱。
+            </p>
+            <div className="pending-ingredients">
+              {pendingMissingIngredients.map((ingredient) => (
+                <span key={ingredient.name}>
+                  {ingredient.emoji || "🥣"} {ingredient.name}
+                </span>
+              ))}
+            </div>
+            <div className="modal-actions">
               <button
                 className="ghost-button"
-                onClick={() => setSelectedIngredients([])}
-                disabled={!selectedIngredients.length}
+                onClick={() => {
+                  setPendingRecipe(null);
+                  setPendingMissingIngredients([]);
+                }}
               >
-                清空
+                返回修改
               </button>
               <button
                 className="primary-button"
-                onClick={() => {
-                  setActiveView("recommend");
-                  setSortMode("match");
-                  announce("已按当前食材重新匹配");
-                }}
-              >
-                ✣ 推荐菜谱
-              </button>
-            </div>
-          </div>
-
-          <div className="ingredient-chips">
-            {selectedIngredients.map((ingredient) => (
-              <button
-                className="ingredient-chip"
-                key={ingredient}
                 onClick={() =>
-                  setSelectedIngredients((current) =>
-                    current.filter((item) => item !== ingredient),
+                  commitRecipeWithIngredients(
+                    pendingRecipe,
+                    pendingMissingIngredients,
                   )
                 }
-                aria-label={`移除${ingredient}`}
               >
-                <span>{INGREDIENT_EMOJI[ingredient] ?? "🥣"}</span>
-                {ingredient}
-                <b>×</b>
+                添加食材并导入
               </button>
-            ))}
-            <button
-              className="add-chip"
-              onClick={() => setShowIngredientPicker((open) => !open)}
-              aria-expanded={showIngredientPicker}
-            >
-              ＋ 添加更多食材
-            </button>
+            </div>
           </div>
-
-          {showIngredientPicker && (
-            <div className="ingredient-picker">
-              <form onSubmit={submitIngredient}>
-                <input
-                  autoFocus
-                  value={ingredientInput}
-                  onChange={(event) => setIngredientInput(event.target.value)}
-                  placeholder="输入食材，例如：豆腐"
-                  aria-label="输入食材"
-                />
-                <button className="primary-button" type="submit">
-                  添加
-                </button>
-              </form>
-              <div className="suggestion-row">
-                {INGREDIENT_SUGGESTIONS.filter(
-                  (item) =>
-                    !normalizedPantry.includes(normalizeIngredient(item)),
-                )
-                  .slice(0, 9)
-                  .map((item) => (
-                    <button key={item} onClick={() => addIngredient(item)}>
-                      {INGREDIENT_EMOJI[item] ?? "🥣"} {item}
-                    </button>
-                  ))}
-              </div>
-            </div>
-          )}
-        </section>
-
-        <div className="toolbar">
-          <button
-            className={`recommend-pill ${sortMode === "match" ? "active" : ""}`}
-            onClick={() => setSortMode("match")}
-          >
-            ☆ 推荐菜谱
-          </button>
-          <label>
-            <span className="sr-only">排序方式</span>
-            <select
-              value={sortMode}
-              onChange={(event) => setSortMode(event.target.value)}
-            >
-              <option value="match">匹配度排序</option>
-              <option value="time">烹饪时间排序</option>
-              <option value="difficulty">难度排序</option>
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">烹饪时间</span>
-            <select
-              value={timeFilter}
-              onChange={(event) => setTimeFilter(event.target.value)}
-            >
-              <option value="all">烹饪时间</option>
-              <option value="10">10 分钟内</option>
-              <option value="15">15 分钟内</option>
-              <option value="20">20 分钟内</option>
-              <option value="30">30 分钟内</option>
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">难度</span>
-            <select
-              value={difficultyFilter}
-              onChange={(event) => setDifficultyFilter(event.target.value)}
-            >
-              <option value="all">全部难度</option>
-              <option value="简单">简单</option>
-              <option value="适中">适中</option>
-              <option value="进阶">进阶</option>
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">菜谱分类</span>
-            <select
-              value={categoryFilter}
-              onChange={(event) => setCategoryFilter(event.target.value)}
-            >
-              <option value="all">全部分类</option>
-              {[...new Set(RECIPES.map((recipe) => recipe.category))].map(
-                (category) => (
-                  <option key={category}>{category}</option>
-                ),
-              )}
-            </select>
-          </label>
-          <span className="result-count">{visibleRecipes.length} 个结果</span>
         </div>
-
-        <div className={`workspace ${compactCards ? "compact" : ""}`}>
-          <section className="recipe-list" aria-label="菜谱列表">
-            {visibleRecipes.length ? (
-              visibleRecipes.map((recipe) => {
-                const matched = recipe.ingredients.filter((item) =>
-                  normalizedPantry.includes(normalizeIngredient(item.name)),
-                );
-                const missing = recipe.ingredients.filter(
-                  (item) =>
-                    !normalizedPantry.includes(normalizeIngredient(item.name)),
-                );
-                return (
-                  <article
-                    key={recipe.id}
-                    className={`recipe-card ${
-                      selectedRecipeId === recipe.id ? "selected" : ""
-                    }`}
-                    onClick={() => openRecipe(recipe.id)}
-                  >
-                    <img src={recipe.image} alt={recipe.name} />
-                    <div className="card-copy">
-                      <div className="card-title-row">
-                        <h3>{recipe.name}</h3>
-                        <button
-                          className={
-                            favorites.includes(recipe.id) ? "favorited" : ""
-                          }
-                          onClick={(event) => {
-                            event.stopPropagation();
-                            toggleFavorite(recipe.id);
-                          }}
-                          aria-label={`${
-                            favorites.includes(recipe.id) ? "取消收藏" : "收藏"
-                          }${recipe.name}`}
-                        >
-                          {favorites.includes(recipe.id) ? "★" : "☆"}
-                        </button>
-                      </div>
-                      <p className="card-meta">
-                        <span>♧ {recipe.difficulty}</span>
-                        <span>◷ {recipe.time} 分钟</span>
-                        <span>▤ {recipe.category}</span>
-                      </p>
-                      <p className="ingredient-line">
-                        <b>已有：</b>
-                        {matched.slice(0, 4).map((item) => (
-                          <span key={item.name} title={item.name}>
-                            {item.emoji}
-                          </span>
-                        ))}
-                        {matched.length > 0 && <i>✓</i>}
-                      </p>
-                      <p className="ingredient-line missing-line">
-                        <b>缺少：</b>
-                        {missing.length ? (
-                          missing.slice(0, 4).map((item) => (
-                            <span key={item.name} title={item.name}>
-                              {item.emoji}
-                            </span>
-                          ))
-                        ) : (
-                          <em>食材齐全，可以开做</em>
-                        )}
-                      </p>
-                    </div>
-                    <div className="match-score">
-                      <small>匹配度</small>
-                      <strong>{recipe.score}%</strong>
-                      <span
-                        className={
-                          recipe.score > 80
-                            ? "strong"
-                            : recipe.score >= 50
-                              ? "medium"
-                              : "low"
-                        }
-                      >
-                        {recipe.score > 80
-                          ? "强推荐"
-                          : recipe.score >= 50
-                            ? "推荐"
-                            : "低匹配"}
-                      </span>
-                    </div>
-                  </article>
-                );
-              })
-            ) : (
-              <div className="empty-state">
-                <span>🥣</span>
-                <h3>暂时没有符合条件的菜谱</h3>
-                <p>试试清除筛选，或再添加一些食材。</p>
-                <button
-                  className="primary-button"
-                  onClick={() => {
-                    setQuery("");
-                    setTimeFilter("all");
-                    setDifficultyFilter("all");
-                    setCategoryFilter("all");
-                    setActiveView("recommend");
-                  }}
-                >
-                  清除筛选
-                </button>
-              </div>
-            )}
-          </section>
-
-          <aside className="recipe-detail">
-            <div className="detail-heading">
-              <button
-                className={`favorite-large ${
-                  favorites.includes(selectedRecipe.id) ? "favorited" : ""
-                }`}
-                onClick={() => toggleFavorite(selectedRecipe.id)}
-                aria-label="收藏当前菜谱"
-              >
-                {favorites.includes(selectedRecipe.id) ? "★" : "☆"}
-              </button>
-              <div>
-                <h2>{selectedRecipe.name}</h2>
-                <p>
-                  ♧ {selectedRecipe.difficulty} · ◷ {selectedRecipe.time} 分钟 ·
-                  &nbsp;{selectedRecipe.servings} 人份
-                </p>
-              </div>
-              <div className="detail-score">
-                <small>匹配度</small>
-                <strong>{selectedRecipe.score}%</strong>
-              </div>
-            </div>
-            <img
-              className="detail-image"
-              src={selectedRecipe.image}
-              alt={selectedRecipe.name}
-            />
-            <p className="detail-summary">{selectedRecipe.summary}</p>
-
-            <h3 className="section-title">食材清单</h3>
-            <div className="ingredient-columns">
-              <div className="ingredient-box have">
-                <strong>
-                  已拥有 <span>✓</span>
-                </strong>
-                {matchedIngredients.length ? (
-                  matchedIngredients.map((item) => (
-                    <div key={item.name}>
-                      <span>
-                        {item.emoji} {item.name}
-                      </span>
-                      <b>{item.amount}</b>
-                    </div>
-                  ))
-                ) : (
-                  <p>还没有匹配的食材</p>
-                )}
-              </div>
-              <div className="ingredient-box need">
-                <strong>
-                  需要补充 <span>🛒</span>
-                </strong>
-                {missingIngredients.length ? (
-                  missingIngredients.map((item) => (
-                    <button
-                      key={item.name}
-                      onClick={() => toggleShopping(item.name)}
-                      title="加入或移出购物清单"
-                    >
-                      <span>
-                        {shopping.includes(item.name) ? "✓" : item.emoji}{" "}
-                        {item.name}
-                      </span>
-                      <b>{item.amount}</b>
-                    </button>
-                  ))
-                ) : (
-                  <p>食材齐全，可以直接开做</p>
-                )}
-              </div>
-            </div>
-
-            <h3 className="section-title">制作步骤</h3>
-            <ol className="steps">
-              {selectedRecipe.steps.map((step, index) => (
-                <li key={step}>
-                  <span>{index + 1}</span>
-                  <p>{step}</p>
-                </li>
-              ))}
-            </ol>
-            <div className="cook-tip">
-              <span>💡</span>
-              <p>
-                <strong>厨房小贴士</strong>
-                {selectedRecipe.tip}
-              </p>
-            </div>
-          </aside>
-        </div>
-      </main>
+      )}
 
       {sidePanel && (
         <>
@@ -703,7 +1085,7 @@ export default function Home() {
             {sidePanel === "shopping" ? (
               <>
                 <p className="drawer-intro">
-                  从菜谱缺少食材中添加，清单只保存在这台设备。
+                  从菜谱缺少食材中添加，清单保存在当前设备。
                 </p>
                 <div className="shopping-list">
                   {shopping.length ? (
@@ -713,7 +1095,7 @@ export default function Home() {
                           type="checkbox"
                           onChange={() => toggleShopping(item)}
                         />
-                        <span>{INGREDIENT_EMOJI[item] ?? "🥣"}</span>
+                        <span>{ingredientEmoji[item] ?? "🥣"}</span>
                         <b>{item}</b>
                         <button
                           onClick={() => toggleShopping(item)}
@@ -756,28 +1138,10 @@ export default function Home() {
                 <div className="privacy-card">
                   <span>✓</span>
                   <p>
-                    <strong>完全离线</strong>
-                    食材、收藏、浏览记录和购物清单均使用浏览器本地存储。
+                    <strong>本地数据库</strong>
+                    菜谱、食材和上传图片使用 IndexedDB；偏好设置保存在当前设备。
                   </p>
                 </div>
-                <button
-                  className="danger-button"
-                  onClick={() => {
-                    localStorage.removeItem("smartrecipe-pantry");
-                    localStorage.removeItem("smartrecipe-favorites");
-                    localStorage.removeItem("smartrecipe-recent");
-                    localStorage.removeItem("smartrecipe-shopping");
-                    localStorage.removeItem("smartrecipe-compact");
-                    setSelectedIngredients(DEFAULT_INGREDIENTS);
-                    setFavorites([]);
-                    setRecent([]);
-                    setShopping([]);
-                    setCompactCards(false);
-                    announce("本地数据已重置");
-                  }}
-                >
-                  重置全部本地数据
-                </button>
               </div>
             )}
           </aside>

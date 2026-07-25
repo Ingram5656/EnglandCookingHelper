@@ -19,6 +19,8 @@ export type Recipe = {
   ingredients: Ingredient[];
   steps: string[];
   tip: string;
+  source?: "seed" | "user";
+  imageSource?: "seed" | "upload" | "none";
 };
 
 type StoredRecipe = Omit<Recipe, "image"> & {
@@ -31,9 +33,13 @@ const recipeAsset = (fileName: string) =>
 export const RECIPES: Recipe[] = (generatedRecipes as StoredRecipe[]).map(
   (recipe) => ({
     ...recipe,
-    image: recipeAsset(recipe.image),
+    image: recipe.image ? recipeAsset(recipe.image) : "",
+    source: "seed",
+    imageSource: recipe.image ? "seed" : "none",
   }),
 );
+
+export const SEED_VERSION = `howtocook-${RECIPES.length}-strict-images-v2`;
 
 const ingredientFrequency = RECIPES.reduce<Map<string, Ingredient>>(
   (map, recipe) => {

@@ -80,18 +80,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
-      },
-      {
-        "name": "蒜 5-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -299,12 +287,6 @@
         "emoji": "🌿"
       },
       {
-        "name": "食用油 20-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
         "name": "蚝油",
         "amount": "适量",
         "type": "seasoning",
@@ -507,12 +489,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🧄"
-      },
-      {
-        "name": "阿根廷红虾 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🐟"
       }
     ],
     "steps": [
@@ -535,7 +511,7 @@
     "id": "aquaticmd-dc53ffd0",
     "name": "红烧鲤鱼",
     "summary": "红烧鲤鱼是一道家常鲁菜，鱼肉先炸后炖，外皮微韧，肉质鲜嫩，咸甜酱香中透着五花肉的醇厚，汤汁浓稠下饭。富含优质蛋白和钙、磷等矿物质，有助滋补。处理炸鱼和调味配比稍需耐心，但步骤清晰，新手跟着做也能完成。从备料到出锅预计 大",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "进阶",
     "time": 1,
@@ -572,13 +548,7 @@
         "emoji": "🫚"
       },
       {
-        "name": "蒜瓣 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "干辣椒两个",
+        "name": "干辣椒",
         "amount": "适量",
         "type": "main",
         "emoji": "🫑"
@@ -610,7 +580,7 @@
     "id": "aquaticmd-c990163c",
     "name": "红烧鱼",
     "summary": "红烧鱼是一道家常风味浓郁的经典菜，咸鲜微甜，鱼肉嫩滑入味，属于大众喜爱的中式烧菜。鱼肉富含优质蛋白和不饱和脂肪酸，营养易吸收。制作时需要处理生鱼和油煎，步骤稍多，对新手有一定挑战，但跟着菜谱操作也能成功。从备料到出锅，大",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "进阶",
     "time": 40,
@@ -671,18 +641,6 @@
         "emoji": "🫚"
       },
       {
-        "name": "蒜瓣 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "干辣椒2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫑"
-      },
-      {
         "name": "香菜按照个人口味",
         "amount": "适量",
         "type": "main",
@@ -699,6 +657,18 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🍶"
+      },
+      {
+        "name": "酱油",
+        "amount": "适量",
+        "type": "seasoning",
+        "emoji": "🫗"
+      },
+      {
+        "name": "白砂糖",
+        "amount": "适量",
+        "type": "seasoning",
+        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -721,7 +691,7 @@
     "id": "aquaticmd-b7c477dc",
     "name": "红烧鱼头",
     "summary": "红烧鱼头是一道经典的家常烧菜，鱼头胶质丰富，肉质滑嫩，汤汁咸鲜微辣，十分下饭。鱼头富含优质蛋白、卵磷脂和不饱和脂肪酸，对滋养皮肤和大脑有益。由于需要处理生鱼和剁骨，难度稍高，不建议完全零基础的新手独自操作，全程制作（含腌",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "简单",
     "time": 3,
@@ -756,30 +726,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🫚"
-      },
-      {
-        "name": "蒜瓣 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "美人椒 1/",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫑"
-      },
-      {
-        "name": "香菜 4 棵",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥬"
-      },
-      {
-        "name": "八角两个",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -988,7 +934,7 @@
     "id": "aquaticmd-12e5c938",
     "name": "酱炖蟹",
     "summary": "这道菜是浙江平湖地区的秋日限定咸鲜风味，蟹黄绵润裹着酱香，蟹肉清甜，汤汁拌饭一绝。富含优质蛋白和微量元素。难度适中，适合有基础的新手，从准备到出锅大约 30 分钟。 预估烹饪难度：★★★ 预估卡路里：468 大卡",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "简单",
     "time": 30,
@@ -1061,22 +1007,16 @@
         "emoji": "🥩"
       },
       {
-        "name": "豆瓣酱 30-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "◻️"
-      },
-      {
-        "name": "冰糖 0-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
         "name": "葱",
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
+      },
+      {
+        "name": "水",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -1180,7 +1120,7 @@
     "id": "aquaticmd-650e8254",
     "name": "咖喱炒蟹",
     "summary": "这是一道融合泰式风味的家常海鲜菜，浓郁咖喱包裹着爆满的蟹肉，带有蟹黄香气和椰浆的顺滑口感。螃蟹富含优质蛋白和多种微量元素，有助于补充体力。制作工序清晰，只需注意封煎蟹黄和最后关火翻炒酱汁，对有一定下厨经验的人比较友好，一",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "进阶",
     "time": 30,
@@ -1395,36 +1335,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "香葱 三根",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "蒸鱼豉油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🐟"
-      },
-      {
-        "name": "料酒 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
-      },
-      {
-        "name": "食用盐 5-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -1444,7 +1354,7 @@
     "id": "aquaticmd-243550ff",
     "name": "清蒸生蚝",
     "summary": "清蒸生蚝是一道原汁原味的沿海家常菜，蚝肉鲜嫩多汁，带着淡淡的海水咸香，蒜蓉与姜丝激发出清甜口感。生蚝富含优质蛋白和锌元素，能帮助提升免疫力。操作不算复杂，但掀开滚烫锅盖和处理蚝壳需要稍加小心，新手也能顺利完成。从刷洗到出",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "适中",
     "time": 3,
@@ -1493,12 +1403,6 @@
         "emoji": "🥣"
       },
       {
-        "name": "姜 1 小块",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫚"
-      },
-      {
         "name": "酱油 每个生蚝",
         "amount": "适量",
         "type": "seasoning",
@@ -1519,7 +1423,7 @@
     "id": "aquaticmd-60859356",
     "name": "肉蟹煲",
     "summary": "这道菜酱香浓郁，蟹肉鲜甜微辣，土豆软糯、年糕 Q 弹，汤汁拌饭格外过瘾，属于一道适合聚餐的硬菜。它富含优质蛋白和多种微量元素，营养丰富。制作有一定难度，需处理活蟹、把控火候和调味比例，对新手略具挑战，预计全程约需 1 小",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "简单",
     "time": 1,
@@ -1623,7 +1527,7 @@
     "id": "aquaticmd-7f867935",
     "name": "水煮鱼",
     "summary": "水煮鱼是一道麻辣鲜香、鱼肉嫩滑的经典川菜。巴沙鱼富含优质蛋白且脂肪含量低，搭配时令蔬菜营养均衡。做法中等难度，对新手有一定挑战，但按步骤操作也能成功。预计制作时长约 2 小时。 预估烹饪难度：★★★★ 预估卡路里：248",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "简单",
     "time": 30,
@@ -1813,18 +1717,6 @@
         "emoji": "🥣"
       },
       {
-        "name": "大虾 8-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🐟"
-      },
-      {
-        "name": "柠檬 1/",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "橄榄油",
         "amount": "适量",
         "type": "seasoning",
@@ -1909,7 +1801,7 @@
         "emoji": "🍶"
       },
       {
-        "name": "香菜一颗",
+        "name": "香菜",
         "amount": "适量",
         "type": "main",
         "emoji": "🥬"
@@ -1953,7 +1845,7 @@
     "id": "aquaticmd-1748ca0a",
     "name": "微波葱姜黑鳕鱼",
     "summary": "微波做鱼，葱姜提鲜，热油一淋，香气四溢，是一道肉质细嫩、滋味咸鲜的家常蒸鱼菜，属于改良粤式做法。黑鳕鱼富含优质蛋白和欧米伽-3 脂肪酸，对心脑健康有益。操作不算复杂，但需掌握火候和油温，更适合有一定下厨经验的朋友。从备料",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "适中",
     "time": 5,
@@ -2135,7 +2027,7 @@
     "id": "aquaticmd-947d9f7f",
     "name": "响油鳝丝",
     "summary": "响油鳝丝是一道经典的江浙沪家常菜，鳝丝鲜嫩滑爽，蒜香浓郁，酱汁微甜，淋上热猪油后香气四溢，非常下饭。鳝鱼富含优质蛋白和 DHA，营养丰富。这道菜对刀工和火候有一定要求，难度适中，新手需要稍加练习。从备料到出锅，一般 大约",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "水产",
     "difficulty": "适中",
     "time": 40,
@@ -2545,7 +2437,7 @@
     "id": "breakfastmd-ff496dde",
     "name": "茶叶蛋",
     "summary": "这道传统小吃茶香浓郁，鲜香可口，富含优质蛋白质，是快捷的营养早餐之选。制作步骤清晰，难度适中，新手需要留意火候与香料配比，约 30 分钟即可完成，一次能做够 2-3 人食用，适合周末从容备好。 预估烹饪难度：★★★ 预估",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 30,
@@ -2610,12 +2502,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "香叶 0.5-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -2632,7 +2518,7 @@
     "id": "breakfastmd-a5bc5b8b",
     "name": "蛋煎糍粑",
     "summary": "一道简单快手的小吃，外皮微酥，内里软糯，裹着蛋香与甜味，是南方家常风味。糍粑提供丰富碳水，鸡蛋补充蛋白质，热量较高但很顶饱。制作过程极其简单，新手也能轻松驾驭，全程仅需大约十 分钟。 预估烹饪难度：★★ 预估卡路里：37",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 15,
@@ -2657,22 +2543,10 @@
         "emoji": "🧂"
       },
       {
-        "name": "糍粑 两块",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "红糖",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       },
       {
         "name": "食用盐",
@@ -2695,7 +2569,7 @@
     "id": "breakfastmd-380ddb65",
     "name": "桂圆红枣粥",
     "summary": "一道甜香软糯的中式传统粥品。以糯米、红枣和桂圆同煮，自带甘甜，暖身暖胃。有补血安神、健脑益智、补养心脾的食养效果。做法非常友好，新手也能轻松掌握，从准备到粥香满屋大约需要 70 分钟。 预估烹饪难度：★★ 预估卡路里：6",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "适中",
     "time": 70,
@@ -2733,7 +2607,7 @@
     "id": "breakfastmd-dd9e469c",
     "name": "韩国麻药鸡蛋",
     "summary": "一道甜辣浓郁的韩式溏心蛋小菜，酱汁挂满蛋白，入口嫩滑，回味微辛。鸡蛋提供优质蛋白与卵磷脂，营养饱腹。做法极为简单，新手也能轻松上手，从煮蛋到冷藏入味大约需要一个半小时。 预估烹饪难度：★ 预估卡路里：669 大卡",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 7,
@@ -2782,34 +2656,22 @@
         "emoji": "🫑"
       },
       {
-        "name": "鸡蛋 5 -",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
-        "name": "酱油 4 汤匙",
+        "name": "酱油",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
       },
       {
-        "name": "清水 4 汤匙",
+        "name": "清水",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
       },
       {
-        "name": "味淋 2 汤匙",
+        "name": "味淋",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "白糖 2 汤匙",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -2827,7 +2689,7 @@
     "id": "breakfastmd-373098f9",
     "name": "鸡蛋三明治",
     "summary": "这是一道简单快手的西式简餐，吐司夹着绵密的鸡蛋酱和咸香培根，口感软嫩又带着焦香。鸡蛋富含优质蛋白，搭配培根和黄油能快速补充能量。操作非常友好，厨房新手也能轻松驾驭，全程只需 大约 10 分钟即可完成。 预估烹饪难度：★★",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 10,
@@ -2890,7 +2752,7 @@
     "id": "breakfastmd-cfa6fb7c",
     "name": "煎饺",
     "summary": "煎饺是一道底部金黄酥脆、内馅鲜嫩多汁的家常面点，常见于北方餐桌。搭配速冻水饺制作，富含碳水化合物和蛋白质，简单快手。预估难度二星，对新手非常友好，总共约需 15 分钟就能端上桌。 预估烹饪难度：★★ 预估卡路里：769 ",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 15,
@@ -2927,7 +2789,7 @@
     "id": "breakfastmd-2f2aafba",
     "name": "金枪鱼酱三明治",
     "summary": "这道西式早餐三明治以水浸金枪鱼拌入蛋黄酱和俄式酸黄瓜汁，咸鲜微酸，口感绵密，配上烤脆的吐司格外饱腹。富含优质蛋白和 Omega-3 等营养，能快速补充能量。制作非常简单，只需混合酱料、用轻食机加热，新手也能在 5 分钟里",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 5,
@@ -2980,12 +2842,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🐟"
-      },
-      {
-        "name": "俄式酸黄瓜汁 10-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥒"
       }
     ],
     "steps": [
@@ -3001,7 +2857,7 @@
     "id": "breakfastmd-894c4447",
     "name": "空气炸锅面包片",
     "summary": "空气炸锅面包片是一道极简快手的主食，外脆内软，麦香纯粹，特别适合减脂期食用。它富含膳食纤维和植物蛋白，能提供较长时间的饱腹感。做法毫无门槛，只需将面包片放入空气炸锅即可，对新手极其友好，从准备到完成仅需大约五分钟。 预估",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 5,
@@ -3026,7 +2882,7 @@
     "id": "breakfastmd-7ab0c81f",
     "name": "美式炒蛋",
     "summary": "这是一道松软鲜嫩的美式家常蛋料理，加入牛奶后蛋花细密、口感绵润，富含优质蛋白和钙质。做法简单，对新手友好，从准备到出锅大约只需 20 分钟。 预估烹饪难度：★★ 预估卡路里：258 大卡",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 20,
@@ -3069,7 +2925,7 @@
     "id": "breakfastmd-bfd5ce57",
     "name": "牛奶燕麦",
     "summary": "一份高蛋白、高纤维的便捷营养早餐，将牛奶的滑润、燕麦的谷香与煎蛋的嫩脆巧妙结合，入口温热柔和、易于消化，饱腹感强。制作过程简单直接，对新手极为友好，全程约三分钟即可完成，搭配蔬果更添清爽。 预估烹饪难度：★ 预估卡路里：",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 2,
@@ -3092,24 +2948,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
-      },
-      {
-        "name": "🥛 牛奶",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
-      },
-      {
-        "name": "🍳 鸡蛋",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
-        "name": "🍚 燕麦",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -3130,7 +2968,7 @@
     "id": "breakfastmd-6eb30073",
     "name": "手抓饼",
     "summary": "手抓饼外酥里软，层次分明，是深受喜爱的家常面点。饼皮用半烫面制作，柔韧有嚼劲，搭配鸡蛋和蔬菜，营养均衡。做法对新手很友好，从和面到出锅大约只需 40 分钟，非常适合忙碌的早晨。 预估烹饪难度：★★ 预估卡路里：1050 ",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "适中",
     "time": 40,
@@ -3211,7 +3049,7 @@
     "id": "breakfastmd-7a5b5fc0",
     "name": "水煮玉米",
     "summary": "水煮玉米是一道家常快手菜，口感清甜软糯。新鲜玉米带皮煮制，保留原香，加入盐和糖更能提味。它富含膳食纤维、维生素与碳水化合物，能为身体提供饱足感。做法极其简单，新手也能轻松上手，从准备到上桌只需大约 15 分钟。 预估烹饪",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 15,
@@ -3307,24 +3145,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥩"
-      },
-      {
-        "name": "手抓饼 1 份-2 份",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "芝士片 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "培根片 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
       }
     ],
     "steps": [
@@ -3343,7 +3163,7 @@
     "id": "breakfastmd-f2272ba2",
     "name": "太阳蛋",
     "summary": "太阳蛋是一道用微波炉快速制成的家常早餐。口感嫩滑，蛋清凝固、蛋黄微溏，属于典型的快手菜。鸡蛋富含优质蛋白和多种维生素，易于消化吸收。做法非常简单，对新手友好。使用可控火候微波炉只需 3 分钟就能完成，不可控火候的也仅需几",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 3,
@@ -3403,7 +3223,7 @@
     "id": "breakfastmd-a5a2d383",
     "name": "溏心蛋",
     "summary": "这是一道用普通电锅就能轻松做出的家常蛋料理，蛋黄呈现流动的溏心状态，口感嫩滑香醇。每颗鸡蛋提供约 6 克优质蛋白质，尤其适合健身人群补充营养。制作过程简单明了，只要掌握好加热和静置的时间，新手也能快速上手，全程仅需 大约",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "适中",
     "time": 15,
@@ -3426,12 +3246,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "淹过鸡蛋约 2 公分的冷水",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
       }
     ],
     "steps": [
@@ -3447,7 +3261,7 @@
     "id": "breakfastmd-1c110644",
     "name": "吐司果酱",
     "summary": "这是一道极简快手早餐，烤至微脆的吐司夹入甜香果酱，外脆内软，方便随身携带，属于典型的便捷西式简餐。主要提供碳水化合物和糖分，能快速补充晨间能量。操作几乎零门槛，非常适合不擅烹饪的忙碌新手。从准备到完成只需大约 2 分钟，",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 2,
@@ -3472,7 +3286,7 @@
         "emoji": "🍚"
       },
       {
-        "name": "吐司两片",
+        "name": "吐司",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -3497,7 +3311,7 @@
     "id": "breakfastmd-7d20d6d5",
     "name": "完美水煮蛋",
     "summary": "这是一道通过科学家研发的循环水煮法制成的鸡蛋，蛋黄绵密细腻，蛋白均匀凝固，口感层次分明。它保留了更多营养素，多酚含量比传统煮法高 23%，蛋白质丰富。制作难度较高，需精准控温并反复转移，预计制作时长约 35 分钟。 预估",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 35,
@@ -3520,18 +3334,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
-      },
-      {
-        "name": "100°C 沸水",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "30°C 温水",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -3549,7 +3351,7 @@
     "id": "breakfastmd-aeda9952",
     "name": "微波炉蛋糕",
     "summary": "微波炉版的快手蛋糕，口感松软香甜，是一道零基础也能轻松上手的家庭甜点。以鸡蛋、面粉为基础，搭配黄油提供能量和浓郁香气，糖分快速补充体力，加入坚果或水果还能增加膳食纤维和维生素。仅需准备少数材料，借助微波炉高火一分钟即可完",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 2,
@@ -3580,61 +3382,61 @@
         "emoji": "🥚"
       },
       {
-        "name": "鸡蛋🥚",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
-        "name": "面粉🍚",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "泡打粉🍚",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "白糖🍬",
+        "name": "白糖",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
       },
       {
-        "name": "盐🧂",
+        "name": "盐",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
       },
       {
-        "name": "咖啡粉☕",
+        "name": "咖啡粉",
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
       },
       {
-        "name": "巧克力🍫",
+        "name": "巧克力",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
       },
       {
-        "name": "麦片🍿",
+        "name": "麦片",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
       },
       {
-        "name": "牛奶🥛",
+        "name": "牛奶",
         "amount": "适量",
         "type": "main",
         "emoji": "🥩"
       },
       {
-        "name": "坚果🥜",
+        "name": "坚果",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
+      },
+      {
+        "name": "饼干屑",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🍚"
+      },
+      {
+        "name": "香蕉",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
+      },
+      {
+        "name": "非黑暗料理",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -3652,7 +3454,7 @@
     "id": "breakfastmd-7c43ea64",
     "name": "微波炉荷包蛋",
     "summary": "微波炉荷包蛋是一道便捷的家常快手菜，蛋白嫩滑、蛋黄软糯，带有芝麻油的清香。鸡蛋富含优质蛋白质和卵磷脂。做法极其简单，新手也能轻松掌握，从准备到出锅仅需约 2 分钟。 预估烹饪难度：★ 预估卡路里：169 大卡",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 2,
@@ -3697,7 +3499,7 @@
     "id": "breakfastmd-46c8c3cf",
     "name": "微波炉蒸蛋",
     "summary": "一道用微波炉快速制作的嫩滑蒸蛋，口感细腻如布丁，属于家常快手菜。富含优质蛋白，易于消化吸收，很适合作为早餐或轻食。制作非常简单，新手也能轻松上手，全程约 10 分钟即可完成。 预估烹饪难度：★ 预估卡路里：151 大卡",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 10,
@@ -3734,12 +3536,6 @@
         "emoji": "🫗"
       },
       {
-        "name": "温水或高汤 100-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "香油 几滴",
         "amount": "适量",
         "type": "seasoning",
@@ -3760,7 +3556,7 @@
     "id": "breakfastmd-db5e5493",
     "name": "温泉蛋",
     "summary": "温泉蛋源自日本，蛋白呈半流动凝乳状，蛋黄却温润凝固，口感滑嫩细腻，与溏心蛋恰好相反。鸡蛋富含优质蛋白、卵磷脂和多种维生素，营养十分全面。制作时需要借助温度计将水温控制在 70℃，虽然对温度稍有要求，但步骤简单，耐心等待约",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "适中",
     "time": 25,
@@ -3812,7 +3608,7 @@
     "id": "breakfastmd-698f79a0",
     "name": "燕麦鸡蛋饼",
     "summary": "燕麦鸡蛋饼是一道快手营养早餐，口感软嫩，带有燕麦的谷物香气与蛋奶的醇厚，属于家常简约风格。富含蛋白质、碳水化合物和膳食纤维，能为身体提供充足能量，尤其适合健身人士和工作日早晨。做法简单，对新手友好，从备料到出锅通常只需十",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 15,
@@ -3829,12 +3625,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "牛奶 50-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
       },
       {
         "name": "可根据口味选择增加",
@@ -3877,7 +3667,7 @@
     "id": "breakfastmd-63b6201a",
     "name": "意式香肠北非蛋",
     "summary": "意式香肠北非蛋是一道浓郁鲜香的地中海风味料理，溏心蛋卧在酸甜的番茄肉酱里，搭配脆面包蘸食，口感丰富。主要食材提供优质蛋白质，番茄、甜椒和洋葱带来维生素与膳食纤维。制作不难，只需注意焖蛋火候，全程约 30 分钟即可上桌。 ",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "适中",
     "time": 30,
@@ -3974,7 +3764,7 @@
     "id": "breakfastmd-3b2c2c2d",
     "name": "蒸花卷",
     "summary": "这是一道北方传统面食，松软可口，带着淡淡麦香。使用冷冻花卷蒸制，能快速补充碳水化合物和膳食纤维。做法极其简单，烹饪新手也能轻松掌握，全程仅需半小时，是理想的快手早餐。 预估烹饪难度：★★ 预估卡路里：400 大卡",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 15,
@@ -4020,7 +3810,7 @@
     "id": "breakfastmd-dfdcf25d",
     "name": "蒸水蛋",
     "summary": "这是一道以滑嫩如布丁的口感和清雅鲜美的风味见长的家常菜，南北通吃，北方常亲切地称其为“鸡蛋糕儿”。鸡蛋富含优质蛋白和卵磷脂，是日常补充营养的便捷之选。做法只需掌握蛋水比例和小火慢蒸的诀窍，对新手非常友好，从准备到出锅通常",
-    "image": "recipes/zucchini-egg.jpeg",
+    "image": "",
     "category": "早餐",
     "difficulty": "简单",
     "time": 15,
@@ -4039,7 +3829,7 @@
         "emoji": "🥣"
       },
       {
-        "name": "鸡蛋两只",
+        "name": "鸡蛋",
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
@@ -4104,7 +3894,7 @@
     "id": "condimentmd-a5ffed8e",
     "name": "葱油",
     "summary": "葱油是一道提香增鲜的家常调味油，带着浓郁的葱香和开洋的复合鲜味，用来拌馅、凉拌或热菜明油都很适合。主要提供油脂能量，葱姜等辛香料还含有植物活性成分，可辅助去腥开胃。做法简单，对新手友好，一般准备加熬制大约 30 分钟就能",
-    "image": "recipes/spinach-egg.jpg",
+    "image": "",
     "category": "调味料",
     "difficulty": "适中",
     "time": 30,
@@ -4166,7 +3956,7 @@
     "id": "condimentmd-053c32bd",
     "name": "简易版炒糖色",
     "summary": "糖色是中餐红烧类菜肴上色的关键技法，火候到位时能带来红亮光泽与独特的焦香风味。主要成分为糖，提供能量，但更多是调和菜肴色泽与口味。这道简易版炒糖色对火候控制有一定要求，新手需多加练习才能避免发苦或发甜，整体制作约需十分钟",
-    "image": "recipes/spinach-egg.jpg",
+    "image": "",
     "category": "调味料",
     "difficulty": "进阶",
     "time": 20,
@@ -4222,7 +4012,7 @@
     "id": "condimentmd-7e6225fe",
     "name": "蒜香酱油",
     "summary": "蒜香酱油是一道蒜香浓郁、咸鲜油润的家常蘸料，常用于白切鸡、饺子等菜肴的提味。大蒜和芝麻分别具有抗菌和补充不饱和脂肪酸的作用。做法极其简单，对新手非常友好，全程只需大约 5 分钟即可完成。 预估烹饪难度：★★ 预估卡路里：",
-    "image": "recipes/spinach-egg.jpg",
+    "image": "",
     "category": "调味料",
     "difficulty": "简单",
     "time": 5,
@@ -4271,7 +4061,7 @@
     "id": "condimentmd-81a0fd53",
     "name": "糖醋汁",
     "summary": "这款调味汁酸甜可口，是中餐里糖醋菜肴的经典风味来源。调制简单、比例易记，新手也能轻松上手，从备料到完成约需 10 分钟。糖分能提供能量，醋香有助于开胃解腻，让家常菜瞬间变得有滋有味。 预估烹饪难度：★★ 预估卡路里：14",
-    "image": "recipes/spinach-egg.jpg",
+    "image": "",
     "category": "调味料",
     "difficulty": "简单",
     "time": 10,
@@ -4436,7 +4226,7 @@
     "id": "condimentmd-d959ef48",
     "name": "油酥",
     "summary": "这是一道中式面点配料，常用于烙饼，能让成品层次分明、外酥里软。主要提供碳水化合物和脂肪，为身体补充能量。做法十分简单，新手友好，预计只需 3 分钟就能调好。 预估烹饪难度：★★ 预估卡路里：111 大卡",
-    "image": "recipes/spinach-egg.jpg",
+    "image": "",
     "category": "调味料",
     "difficulty": "简单",
     "time": 3,
@@ -4472,7 +4262,7 @@
     "id": "condimentmd-dc1a420d",
     "name": "炸串酱料",
     "summary": "这款万能炸串酱料香辣浓郁、鲜咸适口，属于街头风味风格。主要提供脂肪和香辛料带来的芳香物质，能增进食欲。制作非常简单，对新手毫无压力，全程只需大约 10 分钟即可完成。 预估烹饪难度：★★ 预估卡路里：1826 大卡",
-    "image": "recipes/spinach-egg.jpg",
+    "image": "",
     "category": "调味料",
     "difficulty": "简单",
     "time": 10,
@@ -4586,7 +4376,7 @@
     "id": "dessertmd-bb7cda7f",
     "name": "奥利奥冰淇淋",
     "summary": "奥利奥冰淇淋口感细腻，奶香与奥利奥的酥脆甜蜜相融，纯动物奶油令整体轻盈不腻。它主要提供能量，含有脂肪和碳水化合物，适合作为消暑小甜点。制作过程较为简单，只需处理饼干夹心和搅打奶油，新手稍加耐心也可完成，全程准备约需半小时",
-    "image": "recipes/caramel-potato.jpeg",
+    "image": "",
     "category": "甜品",
     "difficulty": "适中",
     "time": 5,
@@ -4644,7 +4434,7 @@
     "id": "dessertmd-33c35fd7",
     "name": "草莓冰淇淋",
     "summary": "这是一道不需要搅拌机就能轻松制作的家常草莓冰淇淋，果香浓郁、口感绵密。草莓富含维生素 C，搭配奶香四溢的炼乳和奶油，能提供能量和钙质。做法简单不考验厨艺，新手也能一次成功。全程制作耗时约八小时，其中大部分是冷冻时间，实际",
-    "image": "recipes/caramel-potato.jpeg",
+    "image": "",
     "category": "甜品",
     "difficulty": "简单",
     "time": 35,
@@ -4817,7 +4607,7 @@
     "id": "dessertmd-c8605eb5",
     "name": "红柚蛋糕",
     "summary": "红柚蛋糕是一道用空气炸锅就能轻松完成的清新甜点，融合了红柚果粒的微酸果香与蛋糕的松软口感，适合作为单人份下午茶。鸡蛋和面粉提供蛋白质与碳水，红柚富含维生素 C，带来简单的基础营养。制作难度中等，关键在于分次搅拌成无颗粒的",
-    "image": "recipes/caramel-potato.jpeg",
+    "image": "",
     "category": "甜品",
     "difficulty": "简单",
     "time": 35,
@@ -4878,7 +4668,7 @@
     "id": "dessertmd-f5004ddb",
     "name": "胡萝卜甜糕",
     "summary": "胡萝卜甜糕是印度家喻户晓的冬季甜品，胡萝卜丝与牛奶慢炖浓缩，融入酥油和坚果，口感绵密香甜、色泽金红。富含胡萝卜素、钙质和优质脂肪，暖身滋养。制作过程简单，但对新手需要些耐心，全程约需 45 分钟即可完成。 预估烹饪难度：",
-    "image": "recipes/caramel-potato.jpeg",
+    "image": "",
     "category": "甜品",
     "difficulty": "适中",
     "time": 45,
@@ -4972,6 +4762,36 @@
     "servings": 4,
     "ingredients": [
       {
+        "name": "淡奶油",
+        "amount": "适量",
+        "type": "seasoning",
+        "emoji": "🫗"
+      },
+      {
+        "name": "椰树牌椰汁",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
+      },
+      {
+        "name": "espresso 意式浓缩",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
+      },
+      {
+        "name": "椰子水",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
+      },
+      {
+        "name": "吉利丁",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
+      },
+      {
         "name": "过滤网",
         "amount": "适量",
         "type": "main",
@@ -5041,12 +4861,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "筛网 网孔约为 1 毫米",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -5191,7 +5005,7 @@
     "id": "dessertmd-1a62b3df",
     "name": "魔芋蛋糕",
     "summary": "魔芋蛋糕是一款低热量、无麸质的甜点，用赤藓糖醇代替白砂糖，口感轻盈湿润，带有可可香气，尤其适合减脂人群。它富含膳食纤维和蛋白质，饱腹感强。制作有一定难度，需要打发蛋白并注意翻拌手法，但整体耗时仅约半小时，算是快手健康的烘",
-    "image": "recipes/caramel-potato.jpeg",
+    "image": "",
     "category": "甜品",
     "difficulty": "简单",
     "time": 25,
@@ -5876,24 +5690,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "耙耙柑 1~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "茉莉绿茶 2~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "1",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -5968,12 +5764,6 @@
       },
       {
         "name": "基于茉莉绿茶版本准备",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "茉莉绿茶茶叶 3~",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -6126,7 +5916,7 @@
     "id": "drinkmd-ca398ad5",
     "name": "冬瓜茶",
     "summary": "冬瓜茶是一款清爽解暑的传统饮品，口感甘甜柔和，带有冬瓜特有的清香，冰镇后风味更佳。冬瓜本身低热量、富含水分，搭配冰糖熬制，能补充能量、生津止渴。制作不复杂，但对新手而言需要一些耐心，全程大约需要 4 到 5 小时。 预估",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 10,
@@ -6238,12 +6028,6 @@
         "emoji": "🥣"
       },
       {
-        "name": "橙汁 35~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "大冰块差不多就行",
         "amount": "适量",
         "type": "main",
@@ -6315,18 +6099,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "金酒 30~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍶"
-      },
-      {
-        "name": "1",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -6390,12 +6162,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "金酒 30~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍶"
       }
     ],
     "steps": [
@@ -6468,7 +6234,7 @@
     "id": "drinkmd-af398186",
     "name": "可乐桶",
     "summary": "可乐桶是一款简单易调的休闲鸡尾酒，口感清爽甜润，可乐的气泡和柠檬汁很好地中和了威士忌的烈感，适合聚会场合。主要提供能量，柠檬补充维生素 C。整个调配过程只需 5 分钟即可完成，新手也能轻松上手。 预估烹饪难度：★★ 预估",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 5,
@@ -6527,7 +6293,7 @@
     "id": "drinkmd-92fdfe00",
     "name": "奶茶",
     "summary": "这是一道用红茶和奶粉轻松调制的家常饮品，茶香与奶香交融，口感顺滑温暖。红茶中的茶多酚搭配牛奶的蛋白质和钙质，既能提神又补充日常营养。做法非常简单，新手也能一次成功，仅需大约半 小时就能喝上自制奶茶。 预估烹饪难度：★★ ",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 30,
@@ -6544,18 +6310,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "奶粉 11-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "砂糖 5-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -6607,18 +6361,6 @@
         "emoji": "🥣"
       },
       {
-        "name": "柠檬 40~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "果蜜 40~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "冰几块",
         "amount": "适量",
         "type": "main",
@@ -6639,7 +6381,7 @@
     "id": "drinkmd-01f1d0c0",
     "name": "牛油果拉西",
     "summary": "这是一款融合了印度传统酸奶饮品“拉西”的创新饮品，口感绵密顺滑、清甜不腻，特别适合作为早餐或午后提神饮品。牛油果富含单不饱和脂肪酸与膳食纤维，搭配酸奶的优质蛋白和益生菌，一杯便能提供持久饱腹感。制作极为简单，新手也能零失",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 5,
@@ -6686,18 +6428,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "蜂蜜 1 汤匙",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧂"
-      },
-      {
-        "name": "小豆蔻粉 1 撮",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -6773,18 +6503,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "苹果 1/",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "菠菜叶 4 叶",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥬"
       }
     ],
     "steps": [
@@ -6848,7 +6566,7 @@
     "id": "drinkmd-081c20f5",
     "name": "酸梅汤（半成品加工）",
     "summary": "酸梅汤（半成品加工）是一道酸甜爽口的夏日消暑饮品，传统京味风格。酸梅汤本身有生津止渴、帮助消化的好处。做法极其简单，只需按顺序搅拌即可，对新手毫无难度，全程大约五分钟就能完成。 预估烹饪难度：★ 预估卡路里：603 大卡",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 10,
@@ -7030,7 +6748,7 @@
     "id": "drinkmd-c5a6b227",
     "name": "杨枝甘露",
     "summary": "这是一道改良版的经典港式甜品，用奇亚籽代替西谷米，口感滑嫩又带有籽粒的细微嚼劲，芒果的香甜与葡萄柚的微酸交织，椰奶增添浓郁。富含膳食纤维、维生素 C 和优质脂肪，清爽解暑。制作非常简单，新手也能轻松完成，从备料到享用只需",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 20,
@@ -7056,24 +6774,6 @@
       },
       {
         "name": "奇亚籽",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "冰块 2 小块",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "芒果 1 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "葡萄柚 1/2 粒",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -7110,7 +6810,7 @@
     "id": "drinkmd-2c75adf7",
     "name": "印度奶茶",
     "summary": "印度奶茶是一道充满异域风情的家常饮品，以红茶、牛奶和多种香料现煮而成，口感浓郁顺滑，带有生姜、豆蔻、肉桂交织的辛香暖意。牛奶提供优质蛋白和钙质，香料则有助于暖身驱寒、促进消化。制作过程简单直观，对新手友好，从备料到入口只",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 10,
@@ -7175,18 +6875,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "◻️"
-      },
-      {
-        "name": "肉桂棒 1 小段",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
-      },
-      {
-        "name": "糖 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -7209,7 +6897,7 @@
     "id": "drinkmd-06d4ebde",
     "name": "长岛冰茶",
     "summary": "长岛冰茶是一款口感酷似冰茶、入口柔和但酒精度颇高的经典鸡尾酒。它本身营养价值不高，偶尔小酌可放松身心，但切勿过量。做法非常简单，只需按比例混合四种基酒、甜酒和果汁，新手也能轻松调制。从准备到完成仅需 大约 5 分钟。 预",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 5,
@@ -7291,7 +6979,7 @@
     "id": "drinkb52md-a5c312d6",
     "name": "B52轰炸机",
     "summary": "这款鸡尾酒口感层次分明，入口先是伏特加的烈，紧接着是咖啡奶油的回甘，点燃后饮用有独特的冰火体验，属于经典创意鸡尾酒。咖啡酒与百利甜酒提供了少量咖啡因和奶脂，但整体营养以酒精为主。制作需要练习分层倒酒和点火技巧，对新手稍有",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "简单",
     "time": 5,
@@ -7335,7 +7023,7 @@
     "id": "drinkmojitomd-aca3a6a2",
     "name": "Mojito莫吉托",
     "summary": "这款鸡尾酒口感清爽酸甜，带有薄荷的清凉和朗姆酒的微醺，是经典的夏季饮品。酒精含量较低，佐以富含维生素 C 的青柠，能生津解渴、提神醒脑。制作十分简单，对新手友好，从备料到完成只需大约十 分钟。 预估烹饪难度：★★★ 预估",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "饮品",
     "difficulty": "适中",
     "time": 10,
@@ -7415,7 +7103,7 @@
     "id": "meat_dishmd-e7619f8b",
     "name": "奥尔良风味烤鸡腿",
     "summary": "奥尔良风味烤鸡腿是一道简单易做的菜，富含蛋白质和铁。总共花费约 3 小时，其中手动操作时间约 20 分钟。 预估烹饪难度：★★★★★ 预估卡路里：955 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 20,
@@ -7444,12 +7132,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "新奥尔良烤翅调料 15 -",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       },
       {
         "name": "水 ≥",
@@ -7563,10 +7245,10 @@
         "emoji": "🍚"
       },
       {
-        "name": "生抽 3 汤匙",
+        "name": "清水",
         "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
+        "type": "main",
+        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -7633,12 +7315,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🫚"
-      },
-      {
-        "name": "番茄🍅",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍅"
       }
     ],
     "steps": [
@@ -7659,7 +7335,7 @@
     "id": "meat_dishmd-92300c6a",
     "name": "白菜猪肉炖粉条",
     "summary": "猪肉白菜炖粉条是东北地区经典的家常炖菜，汤汁浓郁咸鲜，五花肉软烂、粉条吸饱肉香后滑韧入味，白菜清甜解腻。整道菜荤素搭配均衡，能提供蛋白质、维生素和碳水化合物，营养饱腹。制作过程需要一些耐心，特别是粉条处理和炖煮火候，对新",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 45,
@@ -7739,7 +7415,7 @@
     "id": "meat_dishmd-a221160e",
     "name": "豉汁排骨",
     "summary": "这是一道粤式茶楼里的人气蒸点，豉香醇厚，排骨滑嫩脱骨。排骨提供优质蛋白和钙质，发酵豆豉增添风味也更利吸收。做法需经过泡洗、腌制和控火蒸制，对新手稍有考验，但步骤清晰易上手，从备料到出锅大约只需 1 小时。剩余的汤汁用来拌",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 10,
@@ -7912,22 +7588,10 @@
         "emoji": "🫑"
       },
       {
-        "name": "豆豉 1 汤匙",
+        "name": "水",
         "amount": "适量",
         "type": "main",
-        "emoji": "◻️"
-      },
-      {
-        "name": "生抽 1.5 汤匙",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
-      },
-      {
-        "name": "老抽 0.5 茶匙",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
+        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -7943,7 +7607,7 @@
     "id": "meat_dishmd-c9be155e",
     "name": "葱烧鸡腿",
     "summary": "葱烧鸡腿是一道只靠鸡腿和大葱两种核心食材就能完成的下饭家常菜。鸡腿肉外焦里嫩，葱香浓郁，做法简单，全程一口锅，新手也能一次成功。蛋白质丰富，搭配米饭尤其合适，适合工作日快手晚餐。 预估烹饪难度：★★ 预估卡路里：850 ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "简单",
     "time": 10,
@@ -7957,12 +7621,6 @@
       },
       {
         "name": "大葱",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
-        "name": "小葱 3-",
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
@@ -8016,18 +7674,6 @@
         "emoji": "🫗"
       },
       {
-        "name": "生姜 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫚"
-      },
-      {
-        "name": "花椒 10 粒",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫑"
-      },
-      {
         "name": "料酒",
         "amount": "适量",
         "type": "seasoning",
@@ -8054,7 +7700,7 @@
     "id": "meat_dishmd-81dc908d",
     "name": "带把肘子",
     "summary": "带把肘子是陕西大荔的传统名菜，因脚爪形似把柄而得名。成菜肘皮胶粘软糯，肉质酥烂不腻，蘸甜面酱佐葱段食用，咸香醇厚。富含胶原蛋白和优质蛋白质，滋补养颜。制作需去骨、定形、长时间蒸制，对新手有一定挑战，预计整个制作过程约需 ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -8311,7 +7957,7 @@
     "id": "meat_dishmd-0ca4f993",
     "name": "番茄红酱",
     "summary": "这款意式风味酱料香浓可口，蔬菜与牛肉的搭配带来丰富口感。它富含蛋白质和多种维生素，营养均衡。制作过程稍有繁琐，需要一些烹饪基础，例如炒出颗粒感的牛肉和控火慢煮。从备料到完成约需一小时，一次可多做一些冷冻保存，随取随用十分",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 30,
@@ -8409,7 +8055,7 @@
     "id": "meat_dishmd-73dfeec2",
     "name": "粉蒸肉",
     "summary": "粉蒸肉是一道经典中式蒸菜，香味浓郁，口感软糯，属于广泛流传的家常风味。五花肉提供优质蛋白质和脂肪，搭配土豆等根茎蔬菜，营养均衡。此菜适合有一定烹饪经验的人士制作，从准备到完成大约需要 90 分钟。 预估烹饪难度：★★★★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 90,
@@ -8508,7 +8154,7 @@
     "id": "meat_dishmd-43d8d58a",
     "name": "腐乳肉",
     "summary": "这是一道经典的江南家常菜，五花肉与红腐乳同炖，色泽红亮如琥珀，肉质酥烂到入口即化，咸甜交织的酒香与豆香在舌尖层层展开。富含优质蛋白质和 B 族维生素，经慢火煨煮后更易消化。制作流程需要耐心把控火候和收汁，对新手来说有一定",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -8822,7 +8468,7 @@
     "id": "meat_dishmd-54861086",
     "name": "咕噜肉",
     "summary": "咕噜肉是一道经典粤式家常菜，酸甜开胃、外酥里嫩，菠萝的果香让肉块吃起来格外清爽解腻。猪肉提供优质蛋白质，青椒和菠萝则补充维生素与膳食纤维。这道菜的难点在于掌握炸肉的火候，对新手略有挑战，但只要按步骤操作便能成功。从腌制到",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -8889,25 +8535,7 @@
         "emoji": "🧂"
       },
       {
-        "name": "1 汤匙",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "1 茶匙",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "盐 1/4 茶匙",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "茄汁 4 汤匙",
+        "name": "水",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -9351,7 +8979,7 @@
     "id": "meat_dishmd-1464c947",
     "name": "红烧鸡翅",
     "summary": "红烧鸡翅是一道家常下饭菜，咸鲜带甜、色泽红亮，肉质嫩滑易脱骨。鸡翅富含优质蛋白质与胶原蛋白，营养好吸收。制作难度适中，新手按步骤操作也能顺利掌握，从备料到出锅大约需要 40 分钟。 预估烹饪难度：★★★ 预估卡路里：10",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -9761,12 +9389,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "冰糖 7-8 粒",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -9798,7 +9420,7 @@
         "emoji": "🥩"
       },
       {
-        "name": "干小米椒🌶",
+        "name": "干小米椒",
         "amount": "适量",
         "type": "main",
         "emoji": "🫑"
@@ -9890,7 +9512,7 @@
     "id": "meat_dishmd-607035e5",
     "name": "虎皮肘子",
     "summary": "这道菜成品色泽红亮，肘皮呈现诱人的虎皮纹路，口感软烂入味，肥而不腻，瘦肉松软，属于传统中式宴客大菜。猪肘富含胶原蛋白和优质蛋白，经过长时间炖煮后更易吸收，对皮肤和关节有一定滋养效果。制作过程包含烧皮、油炸、炒糖色和高压炖",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 3,
@@ -10001,7 +9623,7 @@
     "id": "meat_dishmd-745b2964",
     "name": "黄瓜炒肉",
     "summary": "这是一道清爽脆嫩的家常快手菜，咸鲜适口，带有蒜香与微辣。富含蛋白质和多种维生素，有助于清热补水。对新手比较友好，只要注意火候就能成功，预计制作时长约 25 分钟。 预估烹饪难度：★★★ 预估卡路里：550 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 25,
@@ -10066,7 +9688,7 @@
     "id": "meat_dishmd-2a7b484d",
     "name": "黄焖鸡",
     "summary": "黄焖鸡是一道以鸡腿、香菇、青椒为主料的家常菜，汤汁浓郁，鸡肉滑嫩，咸鲜微甜，十分下饭。富含优质蛋白质和菌菇多糖等营养。炒糖色环节稍有挑战，但可用老抽替代，整体难度不高，新手也能顺利掌握。从备菜到出锅，大约需要 40 分钟",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -10165,7 +9787,7 @@
     "id": "meat_dishmd-d807baa0",
     "name": "黄油鸡",
     "summary": "这是一道源自印度的经典咖喱菜肴，以烤制后再炖煮的鸡腿肉搭配番茄、黄油和奶油制成的酱汁，口感醇厚丝滑，酸甜微辣，带有独特的香料复合香气。鸡肉、酸奶和腰果提供了丰富的蛋白质与健康脂肪，番茄和香料也带来一定的维生素与抗氧化物。",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 45,
@@ -10437,18 +10059,6 @@
         "emoji": "🥩"
       },
       {
-        "name": "小葱 2 棵",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
-        "name": "生姜 10-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫚"
-      },
-      {
         "name": "生抽",
         "amount": "适量",
         "type": "seasoning",
@@ -10475,7 +10085,7 @@
     "id": "meat_dishmd-65a79a54",
     "name": "尖椒炒牛肉",
     "summary": "一道家常小炒，咸香微辣，牛肉滑嫩入味，尖椒清脆爽口。牛肉提供优质蛋白和铁，尖椒富含维生素 C，搭配起来营养均衡。虽然腌制需要一些耐心，但操作步骤明确，新手也能上手，难度适中。从备料到出锅大约需要 1 小时。 预估烹饪难度",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -10683,7 +10293,7 @@
     "id": "meat_dishmd-39758674",
     "name": "煎烤羊排",
     "summary": "一道外酥里嫩、香气浓郁的料理，先以香料炖煮再煎出金黄脆壳，风味浓郁不腻，是家常宴客两相宜的硬菜。羊肉富含优质蛋白和铁、锌等矿物质，有助于温补气血。做法步骤稍多，但只要按流程走，新手也能拿下；使用高压锅全程约 1 小时，普",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 3,
@@ -10879,7 +10489,7 @@
     "id": "meat_dishmd-24c850c7",
     "name": "姜葱捞鸡",
     "summary": "姜葱捞鸡是一道粤式经典家常菜，鸡肉嫩滑多汁，葱姜香气浓郁，咸鲜适口，十分下饭。鸡腿肉提供优质蛋白质，搭配姜葱能温中散寒、促进食欲。整体操作以蒸制和手撕为主，步骤清晰，对新手来说比较容易上手。从备料到完成大约需要 40 分",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -11036,12 +10646,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "◻️"
-      },
-      {
-        "name": "冰糖 7-8 粒",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -11132,12 +10736,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🫚"
-      },
-      {
-        "name": "蒜 2 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -11230,7 +10828,7 @@
     "id": "meat_dishmd-f8adddc2",
     "name": "椒盐排条",
     "summary": "椒盐排条是上海本帮菜里的经典家常菜，外酥里嫩，咸香适口。猪大排提供优质蛋白质和必需氨基酸，能补充体力。这道菜虽然步骤稍多，但跟着流程走并不难，新手也可以大胆尝试。从备料到出锅，大约需要 40 分钟。 预估烹饪难度：★★★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -11295,12 +10893,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "吉士粉 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -11396,18 +10988,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "蒜 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "小米辣 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -11486,7 +11066,7 @@
     "id": "meat_dishmd-4ac39e69",
     "name": "烤鸡翅",
     "summary": "腌制入味的鸡中翅经高温烘烤，外皮微焦、内里鲜嫩多汁，带有黑胡椒和酱油的咸香。富含优质蛋白质和胶原蛋白。难度适中，新手也能轻松上手，从准备到出炉大约需要 1 小时。还可按喜好添加蜂蜜或五香粉增添风味。 预估烹饪难度：★★★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -11521,12 +11101,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🍶"
-      },
-      {
-        "name": "鸡翅用量为 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
       },
       {
         "name": "盐的用量为",
@@ -11567,7 +11141,7 @@
     "id": "meat_dishmd-51b75ae9",
     "name": "可乐鸡翅",
     "summary": "可乐鸡翅色泽红亮、口感嫩滑，味道咸甜适口，是一道流行于家庭餐桌的创意菜肴。鸡翅富含优质蛋白质与脂肪，搭配可乐烹煮后肉质更为软烂。制作过程需要掌握煎制与收汁的火候，对新手有一定挑战，但跟随步骤仍可成功。从备料到完成大约耗时",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -11620,12 +11194,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
-      },
-      {
-        "name": "鸡翅 10 ～",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
       },
       {
         "name": "老抽",
@@ -11845,16 +11413,16 @@
         "emoji": "🌿"
       },
       {
-        "name": "姜 1 小块",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫚"
-      },
-      {
         "name": "蒜",
         "amount": "适量",
         "type": "main",
         "emoji": "🧄"
+      },
+      {
+        "name": "花椒粉",
+        "amount": "适量",
+        "type": "seasoning",
+        "emoji": "🫑"
       }
     ],
     "steps": [
@@ -11877,7 +11445,7 @@
     "id": "meat_dishmd-9a225a27",
     "name": "辣椒炒肉",
     "summary": "辣椒炒肉是一道湘味浓郁的家常菜，辣椒干香微焦，肉片滑嫩入味，咸鲜微辣十分下饭。猪肉富含优质蛋白质和 B 族维生素，青椒则提供丰富的维生素 C。这道菜需要掌握干煸和快炒的火候，适合有一定烹饪基础的朋友尝试。从备料到出锅，大",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 30,
@@ -12168,7 +11736,7 @@
     "id": "meat_dishmd-ed046bdb",
     "name": "冷吃兔",
     "summary": "这是一道经典的四川自贡盐帮菜，麻辣干香，兔肉紧实有嚼劲，入口先辣后鲜，回味悠长。兔肉高蛋白低脂肪，富含卵磷脂和多种氨基酸，营养丰富且易于消化。制作过程需处理多种香料并严格控制火候，对新手有一定挑战。从备料到炒制完成约需 ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 15,
@@ -12578,7 +12146,7 @@
     "id": "meat_dishmd-559e643a",
     "name": "萝卜炖羊排",
     "summary": "这道汤菜清鲜不腻，羊肉软烂入味，萝卜饱吸汤汁后甘甜绵糯，是北方冬季常见的家常暖身菜。羊肉富含优质蛋白和铁，萝卜含有维生素与膳食纤维，两者搭配温补脾胃、驱寒助消化。虽然需经焯水去腥和两次炖煮，但步骤清晰易循，新手也能顺利上",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 10,
@@ -12643,18 +12211,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "花椒 10 粒",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫑"
-      },
-      {
-        "name": "冰糖 2-4 粒",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -12674,7 +12230,7 @@
     "id": "meat_dishmd-5f0ecc0a",
     "name": "麻辣香锅",
     "summary": "一道麻辣浓郁的川味家常菜，汇集蔬菜、肉类和豆制品，口感香辣过瘾、层次丰富。荤素搭配提供了优质蛋白质和多种维生素，营养全面。操作步骤清晰，需要掌握焯水和翻炒火候，对新手有一定挑战，总制作时间约 30 分钟。 预估烹饪难度：",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 30,
@@ -12721,12 +12277,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥩"
-      },
-      {
-        "name": "北京麻辣方便面 1 袋",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -12815,21 +12365,21 @@
         "emoji": "🫗"
       },
       {
-        "name": "1 枚咸鸭蛋",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
-        "name": "20-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "两瓣大蒜",
         "amount": "适量",
         "type": "main",
+        "emoji": "🧄"
+      },
+      {
+        "name": "小米辣",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🍚"
+      },
+      {
+        "name": "蒜蓉辣酱",
+        "amount": "适量",
+        "type": "seasoning",
         "emoji": "🧄"
       }
     ],
@@ -12853,7 +12403,7 @@
     "id": "meat_dishmd-9d948041",
     "name": "蚂蚁上树",
     "summary": "蚂蚁上树是一道经典的川味家常菜，咸香微辣，粉丝软滑吸汁，肉末细嫩鲜香。以红薯粉丝和肉末为主料，富含碳水化合物与蛋白质，能快速补充能量。制作难度中等，步骤清晰，对新手比较友好，全程约需 20 分钟即可完成。 预估烹饪难度：",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "简单",
     "time": 20,
@@ -13083,24 +12633,6 @@
         "emoji": "🧄"
       },
       {
-        "name": "通心粉 100-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "奶酪 40-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "培根或其他肉类 100-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
-      },
-      {
         "name": "大蒜半瓣",
         "amount": "适量",
         "type": "main",
@@ -13135,12 +12667,6 @@
     "ingredients": [
       {
         "name": "锡箔纸",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "汤匙",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -13200,22 +12726,10 @@
         "emoji": "🥬"
       },
       {
-        "name": "牛排 450-",
+        "name": "百里香",
         "amount": "适量",
         "type": "main",
-        "emoji": "🥩"
-      },
-      {
-        "name": "橄榄油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "黄油 20-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
+        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -13629,18 +13143,6 @@
         "emoji": "🥔"
       },
       {
-        "name": "酱油 6-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
         "name": "水",
         "amount": "适量",
         "type": "main",
@@ -13707,12 +13209,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "大葱 1 节",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -13725,7 +13221,7 @@
     "id": "meat_dishmd-eb6061de",
     "name": "肉饼炖蛋",
     "summary": "肉饼炖蛋是一道咸鲜滑嫩的传统家常菜，肉饼吸饱了酱汁，鸡蛋卧在其中，口感软嫩又下饭。它富含优质蛋白质和多种氨基酸，能很好地补充体力。做法十分简单，对厨房新手非常友好，从备料到出锅大约只需要 20 分钟。 预估烹饪难度：★★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 20,
@@ -13766,12 +13262,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "芝麻香油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -13785,7 +13275,7 @@
     "id": "meat_dishmd-d7f38186",
     "name": "杀猪菜",
     "summary": "这是一道源自东北的经典炖菜，酸爽鲜香、暖心暖胃。酸菜富含乳酸菌和膳食纤维，排骨提供优质蛋白与钙质，血肠则能补充铁元素。制作时需要耐心处理血肠以防煮爆，对厨房新手有一定挑战。从备料到出锅，预计耗时约一小时。 预估烹饪难度：",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -13895,7 +13385,7 @@
     "id": "meat_dishmd-ac7ce299",
     "name": "山西过油肉",
     "summary": "过油肉是山西传统名菜，肉片滑嫩、蒜苔爽脆，咸鲜微酸，带着陈醋的醇香，属于典型的地方家常风味。猪里脊提供优质蛋白，搭配木耳、蒜苔和葱头，营养均衡。这道菜对火候和上浆技巧有一定要求，更适合有一定下厨基础的爱好者尝试。从备料到",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -14001,7 +13491,7 @@
     "id": "meat_dishmd-cc31a9ce",
     "name": "商芝肉",
     "summary": "商芝肉是陕西商县的传统风味菜，色泽红润，质地软嫩，肥而不腻，带有商芝独特的清香。猪肉提供优质蛋白和脂肪，蕨类蔬菜商芝则增添了膳食纤维和多种微量元素。这道菜工序繁琐，对刀工和火候均有要求，适合有一定烹饪基础的人挑战。从备料",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 40,
@@ -14268,7 +13758,7 @@
     "id": "meat_dishmd-a2c99279",
     "name": "水煮肉片",
     "summary": "水煮肉片是一道麻辣鲜香、肉片滑嫩、配菜爽脆的经典川菜，极其适合下饭。猪里脊提供优质蛋白质，搭配豆芽等蔬菜，营养均衡。做法稍显繁琐，尤其需要耐心腌制肉片和制作刀口辣椒，新手大约需要 1 至 2 小时完成。 预估烹饪难度：★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 2,
@@ -14379,7 +13869,7 @@
     "id": "meat_dishmd-1009d033",
     "name": "蒜苔炒肉末",
     "summary": "蒜苔炒肉末是北方家常菜，咸鲜脆嫩，蒜香浓郁。蒜苔富含膳食纤维和维生素，五花肉提供蛋白质，荤素搭配均衡。做法简单，备料轻松，新手也能快速上手。从切配到出锅大约只需 10 分钟。 预估烹饪难度：★★ 预估卡路里：258 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "简单",
     "time": 10,
@@ -14417,12 +13907,6 @@
       },
       {
         "name": "蒜瓣",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "蒜苔 1 扎",
         "amount": "适量",
         "type": "main",
         "emoji": "🧄"
@@ -14534,12 +14018,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "米酒 10 +",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -14562,7 +14040,7 @@
     "id": "meat_dishmd-652907c1",
     "name": "糖醋里脊",
     "summary": "糖醋里脊酸甜浓郁、外酥里嫩，是广受欢迎的家常风味，在多地域菜系中都很常见。猪里脊提供优质蛋白，但裹粉油炸和糖醋汁使整体热量偏高。制作时需要掌握腌制、复炸和调汁火候，对新手稍有挑战，建议提前备好料并一气呵成。从备料到出锅大",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 45,
@@ -14733,12 +14211,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "食用油 300–",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -14867,7 +14339,7 @@
     "id": "meat_dishmd-7d553adc",
     "name": "甜辣烤全翅",
     "summary": "这道甜辣烤全翅利用空气炸锅烹制，外皮微焦、内里多汁，甜中带辣的风味很受欢迎。鸡肉富含优质蛋白质，用空气炸代替油炸大幅减少了油脂，吃起来负担更轻。制作流程清晰明了，只需提前腌制并中途翻面一次，对新手也比较友好。从处理食材到",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 3,
@@ -15179,7 +14651,7 @@
     "id": "meat_dishmd-296ff42c",
     "name": "西红柿牛腩",
     "summary": "西红柿牛腩汤汁浓厚酸甜可口，牛肉软绵醇香，是道开胃下饭的家常菜。富含蛋白质、维生素和番茄红素，营养均衡。对新手有一定挑战，需要掌握炖肉火候和番茄炒汁的技巧。一般初学者大约需要 90 分钟完成。 预估烹饪难度：★★★★★ ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 90,
@@ -15204,28 +14676,10 @@
         "emoji": "🥣"
       },
       {
-        "name": "2cm 两段葱段",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
         "name": "生抽",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🍶"
-      },
-      {
-        "name": "西红柿 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍅"
-      },
-      {
-        "name": "食用油 20-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -15345,7 +14799,7 @@
     "id": "meat_dishmd-9265b918",
     "name": "乡村啤酒鸭",
     "summary": "鸭肉与啤酒同炖，汤汁浓郁，肉质鲜香软烂，还带有一股淡淡的啤酒清香，是一道风味独特的家常菜。鸭肉本身滋补，富含蛋白质、B 族维生素和多种矿物质，搭配啤酒炖煮后更易入味。这道菜步骤虽稍多，但操作并不复杂，一般初学者只需 大约",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 4,
@@ -15560,7 +15014,7 @@
     "id": "meat_dishmd-8656e681",
     "name": "香干肉丝",
     "summary": "香干肉丝是一道咸香下饭的家常小炒，肉丝嫩滑，香干柔韧，青椒爽脆。富含动物性与植物性双重蛋白质，搭配青椒补充维生素。难度适中，新手稍加练习即可掌握，预计制作时长约 30 分钟。 预估烹饪难度：★★★ 预估卡路里：472 大",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "简单",
     "time": 30,
@@ -15670,12 +15124,6 @@
         "emoji": "🧄"
       },
       {
-        "name": "干香菇 5 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "温水",
         "amount": "适量",
         "type": "main",
@@ -15759,12 +15207,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "生菜一朵",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥬"
       },
       {
         "name": "食用油",
@@ -16140,7 +15582,7 @@
     "id": "meat_dishmd-c12ff022",
     "name": "小炒肉",
     "summary": "小炒肉是一道香辣下饭的经典湘式家常菜，五花肉片焦香不腻，搭配鲜辣椒与豆豉、豆瓣酱炒出浓郁酱香。富含优质蛋白质和脂肪，辣椒能提供丰富的维生素 C，有助开胃暖身。制作难度中等，适合有一定基础的新手尝试，需注意肉片腌制和火候把",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "简单",
     "time": 30,
@@ -16207,18 +15649,6 @@
         "emoji": "🧄"
       },
       {
-        "name": "盐 1-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "葱 0.5-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
         "name": "食用油",
         "amount": "适量",
         "type": "seasoning",
@@ -16244,7 +15674,7 @@
     "id": "meat_dishmd-b3ccc8b0",
     "name": "小米辣炒肉",
     "summary": "小米辣炒肉香辣过瘾，是一道典型的西南风味下饭菜，猪肉的鲜嫩搭配小米辣的爽辣，令人食欲大开。猪肉富含蛋白质和脂肪，辣椒提供丰富的维生素 C，能够促进食欲。虽然需要掌握爆香和翻炒的火候，但步骤清晰，新手也能轻松上手，预计制作",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 25,
@@ -16323,12 +15753,6 @@
         "emoji": "🫑"
       },
       {
-        "name": "盐 1-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
         "name": "姜蒜",
         "amount": "适量",
         "type": "main",
@@ -16347,7 +15771,7 @@
     "id": "meat_dishmd-70b60517",
     "name": "小酥肉",
     "summary": "小酥肉外酥里嫩，咸香中带着花椒的微麻，是川渝地区家家户户都会做的家常炸物。猪肉富含蛋白质和脂肪，油炸后热量较高，适合偶尔解馋。这道菜步骤稍多，需掌握初炸定型与复炸上色的火候，对新手略有挑战，预计从头到尾约 1 小时 30",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 30,
@@ -16710,12 +16134,6 @@
         "emoji": "🍶"
       },
       {
-        "name": "1 人份 * 2 顿",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "带皮羊排",
         "amount": "适量",
         "type": "main",
@@ -16739,7 +16157,7 @@
     "id": "meat_dishmd-bf65ef45",
     "name": "洋葱炒猪肉",
     "summary": "这是一道家常风味小炒，咸中带甜，酱香浓郁，洋葱炒软后滋味温和，搭配嫩滑猪肉片非常下饭。猪肉提供优质蛋白质和 B 族维生素，洋葱含膳食纤维和多种抗氧化物，开胃助消化。操作简单，新手也能轻松上手，预计制作时长仅需 15 分钟",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 15,
@@ -16768,12 +16186,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "洋葱 一颗",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       },
       {
         "name": "猪肉",
@@ -16838,7 +16250,7 @@
     "id": "meat_dishmd-5ec95efc",
     "name": "意式烤鸡",
     "summary": "意式烤鸡是一道带有地中海风味的家常烤箱菜。鸡腿肉经过蒜香橄榄油腌制，烤后外皮微焦、内里鲜嫩多汁，搭配柠檬汁和欧芹，口感清爽不腻。鸡肉富含优质蛋白质，橄榄油提供不饱和脂肪酸，营养均衡。制作难度适中，需要提前预热烤箱，新手跟",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -16885,12 +16297,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "鸡腿肉用量通常来说为 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
       },
       {
         "name": "盐用量为",
@@ -17010,24 +16416,6 @@
         "emoji": "◻️"
       },
       {
-        "name": "盐 3-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "糖 5-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "豆瓣酱 20-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "◻️"
-      },
-      {
         "name": "小葱",
         "amount": "适量",
         "type": "main",
@@ -17049,7 +16437,7 @@
     "id": "meat_dishmd-38b5a18d",
     "name": "鱼香肉丝",
     "summary": "鱼香肉丝是一道经典川菜，口味酸甜微辣，肉丝滑嫩，配以胡萝卜、青椒和木耳，口感丰富。富含蛋白质和多种维生素，荤素搭配，营养均衡。制作有一定难度，需要调好鱼香汁并掌握翻炒火候，新手建议严格按步骤操作。预计制作时长约 40 分",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 40,
@@ -17160,7 +16548,7 @@
     "id": "meat_dishmd-55ce7b8c",
     "name": "枝竹羊腩煲",
     "summary": "这是一道源自广东的传统煲仔菜，羊肉与腐竹在柱侯酱和腐乳的调和下，酱香浓郁，口感肥美而不腻口，暖身暖心，尤其适合寒冬食用。羊肉富含蛋白质和铁质，能温补气血，腐竹则提供优质植物蛋白，搭配起来营养均衡。虽然备料和炖煮步骤较多，",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 30,
@@ -17322,7 +16710,7 @@
     "id": "meat_dishmd-5be3cbb5",
     "name": "猪肉烩酸菜",
     "summary": "猪肉烩酸菜是一道北方家常炖菜，酸香浓郁，五花肉软烂，排骨入味。主要提供蛋白质，酸菜也带来乳酸菌等有益成分。做法步骤清晰，新手也能按部就班完成，但需耐心慢炖，从头到尾大约需要 3 小时。 预估烹饪难度：★★★★★ 预估卡路",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "进阶",
     "time": 5,
@@ -17446,12 +16834,6 @@
         "emoji": "🥣"
       },
       {
-        "name": "牛腩 500-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
-      },
-      {
         "name": "姜",
         "amount": "适量",
         "type": "main",
@@ -17504,6 +16886,12 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
+      },
+      {
+        "name": "郫县豆瓣酱",
+        "amount": "适量",
+        "type": "seasoning",
+        "emoji": "◻️"
       }
     ],
     "steps": [
@@ -17526,7 +16914,7 @@
     "id": "meat_dishmd-542a8496",
     "name": "孜然牛肉",
     "summary": "孜然牛肉是一道香辣鲜嫩的家常小炒，浓郁的孜然风味与牛肉的软滑、青椒的清脆融合得恰到好处。牛肉富含优质蛋白和铁，搭配青椒还能补充维生素，营养均衡。制作需要一些刀工和火候把控，适合有一定下厨基础的爱好者尝试。算上腌肉和备菜，",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "肉菜",
     "difficulty": "适中",
     "time": 45,
@@ -17775,12 +17163,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
-      },
-      {
-        "name": "蒜头 2 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -17798,20 +17180,20 @@
     "id": "semi-finishedmd-bc63535b",
     "name": "半成品意面",
     "summary": "这是一道利用市售半成品快速完成的西式简餐，面条弹韧有嚼劲，搭配现成酱料风味浓郁。以碳水化合物为主，能迅速补充能量，并含有蛋白质。制作难度极低，新手也能零失误，从开火到装盘仅需约 2 分钟。 预估烹饪难度：★ 预估卡路里：",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "半成品",
     "difficulty": "简单",
     "time": 2,
     "servings": 2,
     "ingredients": [
       {
-        "name": "1 袋 半成品意大利面",
+        "name": "半成品意大利面",
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
       },
       {
-        "name": "2 人 1 顿",
+        "name": "清水",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -17894,12 +17276,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧄"
-      },
-      {
-        "name": "黄油 1 小盒",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -17920,12 +17296,6 @@
     "time": 40,
     "servings": 2,
     "ingredients": [
-      {
-        "name": "隔热手套 1 双",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
       {
         "name": "网购蛋挞液",
         "amount": "适量",
@@ -17957,7 +17327,7 @@
     "id": "semi-finishedmd-27a93d60",
     "name": "凉皮",
     "summary": "凉皮是一道源自陕西的家常小吃，口感筋道爽滑，酸辣开胃，带有浓郁的芝麻酱香。芝麻酱和面筋提供了丰富的植物蛋白与钙质，搭配清脆的黄瓜和绿豆芽，富含维生素和膳食纤维。整体操作难度中等，只需简单煮烫、切丝和调汁，一般初学者也能从",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "半成品",
     "difficulty": "适中",
     "time": 40,
@@ -18014,7 +17384,7 @@
     "id": "semi-finishedmd-052a0338",
     "name": "牛油火锅底料",
     "summary": "这道重庆火锅底料以大量牛油为基底，糅合糍粑辣椒和多种香辛料，熬出的底料麻辣醇厚、香气浓烈，是涮烫毛肚、鸭肠等食材的灵魂。牛油和猪油提供了丰富能量，辣椒与花椒能温中散寒、促进食欲，但油脂含量较高，宜节制食用。制作过程需精准",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "半成品",
     "difficulty": "进阶",
     "time": 8,
@@ -18125,7 +17495,7 @@
     "id": "semi-finishedmd-beacf9fa",
     "name": "速冻馄饨",
     "summary": "速冻馄饨皮薄馅嫩，汤清味鲜，是一道便捷的家常面食。主要提供碳水化合物和蛋白质，便于快速补充能量。做法简单，对新手非常友好，使用电饭煲即可完成，从烧水到出锅大约需要 55 分钟。 预估烹饪难度：★★ 预估卡路里：540 大",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "半成品",
     "difficulty": "适中",
     "time": 55,
@@ -18166,12 +17536,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥬"
-      },
-      {
-        "name": "一般人一顿可以食用 12～",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -18190,7 +17554,7 @@
     "id": "semi-finishedmd-a6d7632b",
     "name": "速冻水饺",
     "summary": "这是一道源自中国的家常面食，采用市售冻饺速成，皮薄馅丰，口感鲜香。佐以醋、姜、蒜等蘸料，滋味更添层次。作为一餐，它能提供充足的蛋白质与碳水，营养饱腹。制作毫无难点，新手也能轻松上手，前后仅需大约一 刻钟。 预估烹饪难度：",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "半成品",
     "difficulty": "简单",
     "time": 8,
@@ -18201,12 +17565,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "一般人可以食用 7～",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       },
       {
         "name": "水饺约需要本身体积两倍的水",
@@ -18264,7 +17622,7 @@
     "servings": 1,
     "ingredients": [
       {
-        "name": "1 袋半成品薯条",
+        "name": "半成品薯条",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -18354,18 +17712,6 @@
         "emoji": "🫑"
       },
       {
-        "name": "胡椒粉 3-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫑"
-      },
-      {
-        "name": "食用盐 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
         "name": "开水",
         "amount": "适量",
         "type": "main",
@@ -18385,7 +17731,7 @@
     "id": "soupmd-e85cfe50",
     "name": "陈皮排骨汤",
     "summary": "一道清润滋补的广式炖汤，汤色清亮，入口甘醇，带有陈皮的独特清香。排骨提供优质蛋白，搭配西洋参、石斛等食材，能润肺健脾、生津止渴，适合经常熬夜的人群。制作难度中等，只需要将材料处理好放进炖盅，慢炖约两小时即可完成。 预估烹",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 35,
@@ -18537,7 +17883,7 @@
     "id": "soupmd-1ea66738",
     "name": "番茄牛肉蛋花汤",
     "summary": "番茄牛肉蛋花汤是一道酸甜开胃的家常汤品，口感鲜嫩顺滑。牛肉富含优质蛋白和铁，番茄提供番茄红素和维生素 C，鸡蛋则补充卵磷脂。做法简单，新手也能轻松掌握，通常大约半 小时就能端上餐桌。 预估烹饪难度：★★★ 预估卡路里：2",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "适中",
     "time": 20,
@@ -18699,7 +18045,7 @@
     "id": "soupmd-aebea57b",
     "name": "黄瓜皮蛋汤",
     "summary": "黄瓜皮蛋汤是一道快手家常汤品，口味清淡，带着皮蛋与蒜瓣煸炒出的焦香，暖心暖胃且不油腻。黄瓜清热补水，皮蛋提供一定蛋白质，低脂少负担。做法几乎没有技术门槛，厨房新手也能轻松完成，从备料到出锅只需大约十 分钟。 预估烹饪难度",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 35,
@@ -18746,30 +18092,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🥩"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "盐 2-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "鸡精 0.5-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🥩"
-      },
-      {
-        "name": "水 400-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -18786,7 +18108,7 @@
     "id": "soupmd-80dff4be",
     "name": "金针菇汤",
     "summary": "这是一道清淡爽口的家常汤品，口味鲜美，属简易快手菜。金针菇含有丰富的氨基酸和膳食纤维，加鸡蛋还能补充优质蛋白。制作门槛极低，新手也能轻松驾驭，从备菜到出锅大约只需 10 分钟。 预估烹饪难度：★★ 预估卡路里：149 大",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 10,
@@ -18803,12 +18125,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
-      },
-      {
-        "name": "金针菇 400-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
       },
       {
         "name": "食盐",
@@ -18891,7 +18207,7 @@
     "id": "soupmd-f465a9aa",
     "name": "腊八粥",
     "summary": "腊八粥是一道传统节令甜粥，粥体粘稠软糯，融合了多种谷物、豆类和干果的复合香气。富含碳水化合物、矿物质和多种维生素，莲子还有养心安神之效，适合工作压力大的人食用。虽然食材种类多，但操作简单，耐心慢熬即可，对新手友好。除去浸",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "进阶",
     "time": 30,
@@ -18996,7 +18312,7 @@
     "id": "soupmd-b08800be",
     "name": "罗宋汤",
     "summary": "一道源自俄罗斯甜菜汤、在上海改良的海派家常汤品，以番茄和牛肉为主调，口感酸甜浓郁、醇厚鲜美。富含优质蛋白、番茄红素及多种维生素，营养均衡。制作简单，对初学者友好，全程预计 2–3 小时即可完成。 预估烹饪难度：★★★★ ",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "进阶",
     "time": 5,
@@ -19069,12 +18385,6 @@
         "emoji": "🥬"
       },
       {
-        "name": "红肠 100 -",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "橄榄油",
         "amount": "适量",
         "type": "seasoning",
@@ -19085,6 +18395,12 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
+      },
+      {
+        "name": "盐",
+        "amount": "适量",
+        "type": "seasoning",
+        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -19107,7 +18423,7 @@
     "id": "soupmd-d2019e29",
     "name": "米粥",
     "summary": "白粥清淡绵软，是家常必备的暖胃主食，米香纯粹，老少皆宜。富含碳水化合物和少量蛋白质，易于消化吸收，有补脾、和胃、清肺的食养之效。操作简单，只需掌握好火候和水量，初学者也能轻松完成，全程约需 25 分钟。 预估烹饪难度：★",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 25,
@@ -19139,12 +18455,6 @@
       },
       {
         "name": "容量是",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "中断大火加热的最晚时间 T1",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -19182,7 +18492,7 @@
     "id": "soupmd-39d163b6",
     "name": "奶油蘑菇汤",
     "summary": "这是一道经典法式浓汤，口感丝滑绵密，菌香与奶香交融。蘑菇富含膳食纤维和微量元素，牛奶则提供优质蛋白与钙质。做法非常简单，新手也能轻松驾驭，从备料到完成大约需要 30 分钟。 预估烹饪难度：★ 预估卡路里：426 大卡 -",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 30,
@@ -19258,7 +18568,7 @@
     "id": "soupmd-240f04a3",
     "name": "排骨苦瓜汤",
     "summary": "排骨苦瓜汤是一道汤色清亮、鲜美回甘的粤式家常汤品，排骨软烂、苦瓜清热解腻。富含蛋白质与维生素，虾皮还能补充钙质。处理过程需要焯水去腥、仔细去除苦瓜瓤，对新手有一定挑战，但借助电压力锅可大幅简化；传统慢炖需 2 至 4 小",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "进阶",
     "time": 240,
@@ -19281,12 +18591,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🐟"
-      },
-      {
-        "name": "生姜 5~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫚"
       }
     ],
     "steps": [
@@ -19300,7 +18604,7 @@
     "id": "soupmd-c2d9a1f9",
     "name": "排骨山药玉米汤",
     "summary": "排骨山药玉米汤清甜醇厚，山药软糯、玉米回甘，融合了排骨的鲜香，属于老少皆宜的家常汤品。它富含蛋白质、膳食纤维和多种维生素，有健脾益胃、增强抵抗力的作用。做法简单，预处理和炖煮步骤清晰，新手也能轻松上手，全程大约需要 1 ",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 3,
@@ -19380,7 +18684,7 @@
     "id": "soupmd-9b7c0450",
     "name": "皮蛋瘦肉粥",
     "summary": "皮蛋瘦肉粥是广东经典的家常粥品，粥底绵密顺滑，皮蛋的醇香与瘦肉的鲜嫩融合，口感温润鲜美。它富含碳水化合物和优质蛋白质，搭配蔬菜，营养较为均衡，易于消化吸收。这道粥步骤虽多，但操作直观，新手跟着流程也能顺利完成，预计制作时",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "适中",
     "time": 35,
@@ -19463,12 +18767,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "小葱 1 棵",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -19490,7 +18788,7 @@
     "id": "soupmd-97b808bb",
     "name": "生汆丸子汤",
     "summary": "生汆丸子汤口感鲜嫩弹滑，是一道原汁原味的家常汤品。猪肉提供优质蛋白质，搭配木耳、黄花等食材，营养较为均衡。制作中需要自己剁肉并掌握挤丸子的火候，稍有些门槛，更适合有一定基础的厨艺爱好者。从备料到上桌大约需要 1 小时。 ",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "进阶",
     "time": 1,
@@ -19601,7 +18899,7 @@
     "id": "soupmd-0c0b5886",
     "name": "西红柿鸡蛋汤",
     "summary": "西红柿鸡蛋汤是一道酸甜开胃、口感滑嫩的家常汤品，做法极简，属于老少皆宜的大众菜肴。富含番茄红素、维生素 C 和优质蛋白质，营养均衡易吸收。对新手非常友好，快手省时，预计制作时长 大约 15 分钟。 预估烹饪难度：★★ 预",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 15,
@@ -19642,18 +18940,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
-      },
-      {
-        "name": "鸡蛋 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
-        "name": "香油 2 滴",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -19672,7 +18958,7 @@
     "id": "soupmd-51f0a4a8",
     "name": "小米粥",
     "summary": "小米粥是一道北方常见的家常粥品，口感绵滑，米香浓郁，熬出的米油尤其养胃。它富含蛋白质、脂肪、碳水化合物和胡萝卜素，维生素 B1 含量在粮食中名列前茅，容易消化吸收。做法非常简单，新手也能轻松掌握，从烧水到出锅大约需要 3",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 35,
@@ -19822,18 +19108,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "枸杞 5-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "冰糖 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -19918,12 +19192,6 @@
         "emoji": "🧂"
       },
       {
-        "name": "排骨 500-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
-      },
-      {
         "name": "胡萝卜",
         "amount": "适量",
         "type": "main",
@@ -19940,6 +19208,12 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
+      },
+      {
+        "name": "开水",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -20002,7 +19276,7 @@
     "id": "soupmd-3332ab2d",
     "name": "紫菜蛋花汤",
     "summary": "紫菜蛋花汤是一道清淡鲜美的家常汤品，属于中式简易汤菜。紫菜富含碘、钙和膳食纤维，鸡蛋提供优质蛋白质，二者搭配营养均衡。做法非常简单，对新手友好，从准备到出锅仅需约 20 分钟。 预估烹饪难度：★★ 预估卡路里：217 大",
-    "image": "recipes/tomato-tofu.jpeg",
+    "image": "",
     "category": "汤羹",
     "difficulty": "简单",
     "time": 20,
@@ -20049,6 +19323,12 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🐟"
+      },
+      {
+        "name": "的干紫菜",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥬"
       },
       {
         "name": "两个鸡蛋",
@@ -20111,12 +19391,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥩"
-      },
-      {
-        "name": "食用油的用量为 10 -",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -20139,7 +19413,7 @@
     "id": "staplemd-b2def629",
     "name": "炒河粉",
     "summary": "炒河粉是一道流行于广东地区的经典小吃，讲究镬气十足、干香爽滑，河粉软韧透亮，搭配肉丝、豆芽和黄瓜丝，口感层次丰富。主要提供碳水化合物和蛋白质，蔬菜的加入也补充了维生素与膳食纤维。按本菜谱操作难度适中，即便新手只要备齐材料",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 30,
@@ -20320,7 +19594,7 @@
     "id": "staplemd-a562dd15",
     "name": "炒馍",
     "summary": "炒馍是一道咸香酥脆的家常面食，属于北方风味。馒头丁炒至金黄，外脆里软，孜然与五香粉的加入让风味更加浓郁。可搭配鸡蛋提供蛋白质，搭配小葱增添清香，营养均衡。制作难度适中，新手也能很快上手，预计 大约 15 分钟即可出锅享用",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 15,
@@ -20373,12 +19647,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫑"
-      },
-      {
-        "name": "小葱 2 棵",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -20398,7 +19666,7 @@
     "id": "staplemd-1ed01ecb",
     "name": "炒年糕",
     "summary": "这是一道闽南风味的主食，年糕软糯弹牙，带着葱油的焦香，家常又饱腹。以米粉制成的年糕提供充足碳水化合物，搭配鸡蛋和青菜能补充蛋白质与维生素，营养均衡。做法简单，对新手友好，从准备到出锅大约需要 30 分钟。 预估烹饪难度：",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 30,
@@ -20423,7 +19691,7 @@
         "emoji": "🥣"
       },
       {
-        "name": "：鸡蛋",
+        "name": "鸡蛋",
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
@@ -20516,7 +19784,7 @@
     "id": "staplemd-cdba4c32",
     "name": "葱油拌面",
     "summary": "葱油拌面是一道经典的上海家常面点，以独特的葱油香味著称，做法简单快捷。富含碳水化合物和脂肪，能快速补充能量。一般初学者只需 20 分钟即可完成，非常适合作为日常快手晚餐。 预估烹饪难度：★★ 预估卡路里：355 大卡",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 20,
@@ -20585,7 +19853,7 @@
     "id": "staplemd-dfc162db",
     "name": "蛋包饭",
     "summary": "以嫩滑蛋皮包裹茄汁炒饭，口感丰富，酸甜开胃，是一道经典的日式家庭料理。富含蛋白质、碳水和多种维生素，营养均衡。包裹蛋皮需要一点技巧，但整体难度适中，新手也可尝试，从准备到完成约需 25 分钟。 预估烹饪难度：★★★ 预估",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 25,
@@ -20676,7 +19944,7 @@
     "id": "staplemd-a7e0727f",
     "name": "蛋炒饭",
     "summary": "一道家常蛋炒饭，金黄的蛋丝裹着粒粒分明的米饭，搭配火腿、胡萝卜和黄瓜，口感丰富，咸香适口。鸡蛋提供优质蛋白，胡萝卜增添维生素，碳水化合物带来充足能量。制作步骤稍多，但新手按流程操作也能成功，全程大约需要 25 分钟。 预",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 25,
@@ -20810,12 +20078,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "牛油一汤匙 / 人",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🥩"
       }
     ],
     "steps": [
@@ -20833,7 +20095,7 @@
     "id": "staplemd-c1d0a17f",
     "name": "豆角焖面",
     "summary": "豆角焖面是一道北方家常面食，面条吸饱汤汁，口感软韧咸香，带着豆角的清爽和肉片的油润。五花肉提供蛋白质和脂肪，豆角富含膳食纤维和维生素，荤素搭配均衡。整体操作不难，但需要留意火候和加汤时机，适合有一定下厨经验的朋友尝试，一",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 30,
@@ -21011,18 +20273,6 @@
         "emoji": "🫗"
       },
       {
-        "name": "胡萝卜 1/",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "雪碧 2 瓶盖",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
         "name": "生抽",
         "amount": "适量",
         "type": "seasoning",
@@ -21099,12 +20349,6 @@
         "emoji": "🥣"
       },
       {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
         "name": "生抽",
         "amount": "适量",
         "type": "seasoning",
@@ -21133,6 +20377,12 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🥩"
+      },
+      {
+        "name": "十三香",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🥣"
       }
     ],
     "steps": [
@@ -21155,7 +20405,7 @@
     "id": "staplemd-6dc0b060",
     "name": "红芸豆拌饭",
     "summary": "这道北印度家常菜是旁遮普邦和德里地区的传统美食，番茄洋葱汤汁浓郁辛香，炖煮后红芸豆软糯入味，与热米饭拌食温暖饱腹。豆子富含蛋白质、膳食纤维和多种微量元素，营养均衡。做法简单，初学者也能轻松上手，全程制作约 40 分钟，但",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 40,
@@ -21313,12 +20563,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🥣"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -21414,16 +20658,16 @@
         "emoji": "🥣"
       },
       {
-        "name": "面粉 1 cup",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "30 ℃ 温水 1 cup",
+        "name": "酵母",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
+      },
+      {
+        "name": "面团",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -21490,18 +20734,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "食盐 1-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -21595,7 +20827,7 @@
     "id": "staplemd-c73a5154",
     "name": "韭菜盒子",
     "summary": "韭菜盒子是一道传统中式面点，外皮金黄酥脆，内馅鲜香多汁。韭菜搭配虾仁和鸡蛋，富含维生素与优质蛋白质。做法简单，对新手也很友好，从和面到出锅大约需要 2.5 小时。 预估烹饪难度：★★★ 预估卡路里：794 大卡",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 30,
@@ -21636,12 +20868,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "鸡蛋 3 枚",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
       }
     ],
     "steps": [
@@ -21657,7 +20883,7 @@
     "id": "staplemd-20ba0894",
     "name": "可乐炒饭",
     "summary": "这道菜以可乐替代糖调味，带来独特的焦香微甜风味，酱汁浓郁包裹粒粒米饭，属于创意家常炒饭。鸡蛋和火腿肠提供优质蛋白质与能量，搭配主食米饭，营养均衡管饱。操作步骤直观，适合新手尝试，一般 大约 20 分钟便可端上桌。 预估烹",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 20,
@@ -21728,12 +20954,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫑"
-      },
-      {
-        "name": "火腿肠 20-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥩"
       }
     ],
     "steps": [
@@ -21782,24 +21002,6 @@
         "emoji": "🥩"
       },
       {
-        "name": "酱油 100-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "糖 60-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "白醋 30-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
-      },
-      {
         "name": "鸡蛋",
         "amount": "适量",
         "type": "main",
@@ -21819,7 +21021,7 @@
     "id": "staplemd-05b44060",
     "name": "醪糟小汤圆",
     "summary": "醪糟小汤圆是一道香甜软糯的传统中式甜品，酒酿的微酸与糯米的绵滑交融，暖胃又舒心。它富含碳水化合物和少量 B 族维生素，能快速补充能量，也有助促进血液循环。做法毫无门槛，对新手特别友好，从烧水到出锅只需约 15 分钟，是一",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 15,
@@ -21863,7 +21065,7 @@
     "id": "staplemd-6775b708",
     "name": "老干妈拌面",
     "summary": "一道香辣开胃的家常快手面食，面条筋道裹满老干妈的豆豉辣香，酱油提鲜，简单却滋味十足。作为主食能快速补充碳水化合物和能量，辣椒素还有助促进食欲。制作毫无门槛，新手也能轻松驾驭，从烧水到出锅只需大约十 分钟。 预估烹饪难度：",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 25,
@@ -22069,7 +21271,7 @@
     "id": "staplemd-d887c775",
     "name": "利提巧卡",
     "summary": "利提巧卡是印度比哈尔邦的传统主食，由烤得金黄的麦球和烟熏风味的蔬菜泥组成，口感外脆内软，香气浓郁。烤鹰嘴豆粉馅料富含植物蛋白和膳食纤维，搭配茄子、番茄、土豆等蔬菜，营养丰富。制作需要和面、包馅、烤制以及处理蔬菜，步骤较多",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 60,
@@ -22271,7 +21473,7 @@
     "id": "staplemd-520e3e16",
     "name": "螺蛳粉",
     "summary": "螺蛳粉是广西柳州的特色小吃，汤鲜味浓，酸辣爽口，米粉软滑筋道。口味上融合了螺蛳汤的鲜美、酸笋的独特发酵风味和辣椒油的刺激，层次分明。作为主食，米粉提供充足碳水化合物，螺蛳肉包和配料带来一定蛋白质，酸笋则有助于开胃促消化。",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 5,
@@ -22342,7 +21544,7 @@
     "id": "staplemd-37cce2b1",
     "name": "麻辣减脂荞麦面",
     "summary": "麻辣汤底融合了火锅底料与花生酱、牛奶，口感浓郁顺滑，带有鲜明麻辣风味。搭配高纤维荞麦面与新鲜蔬菜，低卡饱腹，适合减脂期享用。做法毫无难度，无需厨艺基础，全程约 20 分钟即可端锅开吃。 预估烹饪难度：★★ 预估卡路里：7",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 20,
@@ -22434,7 +21636,7 @@
     "id": "staplemd-61ad1886",
     "name": "麻油拌面",
     "summary": "麻油香气浓郁，搭配老抽与胡椒粉简单调味，咸香适口，是一道省时省钱的家常拌面。面条提供充足碳水化合物，麻油含有不饱和脂肪酸与维生素 E，能为身体补充能量。制作毫无难度，厨房新手也能轻松上手，从煮水到拌好只需大约十分钟。 预",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 3,
@@ -22660,30 +21862,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🍚"
-      },
-      {
-        "name": "水 70 x 5",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "橄榄油 7 x 5",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "酵母粉 1 x 5",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "盐 0.6 x 5",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -22706,7 +21884,7 @@
     "id": "staplemd-9e9d1203",
     "name": "热干面",
     "summary": "热干面是武汉最具代表性的小吃之一，属于鄂菜系。碱水面条筋道爽滑，裹满浓稠的芝麻酱，搭配酸豆角、萝卜干和肉末，咸香微辣，滋味醇厚。主要提供碳水化合物和蛋白质，芝麻酱也富含钙质。制作简单快捷，新手也能轻松上手，从煮面到拌好大",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 25,
@@ -22846,12 +22024,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "葱 1~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -22933,12 +22105,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥚"
-      },
-      {
-        "name": "蒜头 2~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -22961,7 +22127,7 @@
     "id": "staplemd-d4a598bb",
     "name": "肉蛋盖饭",
     "summary": "这道菜酱香浓郁、咸甜适口，肉馅焦香、鸡蛋嫩滑，盖在热米饭上十分满足，属于家常快手料理。富含优质蛋白质和必需氨基酸，能快速补充能量。做法简单直观，新手也能轻松上手，从备料到出锅大约只需十五分钟。 预估烹饪难度：★★★ 预估",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 25,
@@ -23191,7 +22357,7 @@
     "id": "staplemd-4570202c",
     "name": "手工水饺",
     "summary": "手工水饺是一道中式经典主食，皮薄馅大、鲜美多汁，饱腹又可以根据个人口味随意调味。猪肉馅提供优质蛋白质和脂肪，搭配韭菜还能补充维生素与膳食纤维。这道菜品对新手来说难度较高，需要掌握和面、擀皮、调馅和煮饺的火候，预计制作时间",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 45,
@@ -23217,12 +22383,6 @@
       },
       {
         "name": "芝麻香油",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "芝麻香油 2-",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
@@ -23302,7 +22462,7 @@
     "id": "staplemd-8af12b07",
     "name": "酸辣蕨根粉",
     "summary": "酸辣蕨根粉口感爽滑筋道，酸辣开胃，是一道家常凉菜，也可当作主食享用。蕨根粉富含淀粉和膳食纤维，能为身体提供能量。这道菜做法格外简单，对新手非常友好，从准备到完成只需 10 分钟。 预估烹饪难度：★★ 预估卡路里：318 ",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 10,
@@ -23395,7 +22555,7 @@
     "id": "staplemd-c0d0b9a3",
     "name": "汤面",
     "summary": "汤面是一道自由搭配的家常主食，汤汁清爽，面条软滑，兼容各种荤素食材，味道可鲜可淡。它富含碳水化合物和优质蛋白质，搭配蔬菜还能补充维生素与膳食纤维，营养均衡又饱腹。做法非常简单，无需厨艺基础，新手也能轻松驾驭。从准备食材到",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 30,
@@ -23635,19 +22795,7 @@
         "emoji": "🍚"
       },
       {
-        "name": "鸡蛋 1~",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
         "name": "蚝油",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "酱油 5-",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
@@ -23679,7 +22827,7 @@
     "id": "staplemd-2479707c",
     "name": "鲜肉烧卖",
     "summary": "这是一道江南风味的精致点心，皮薄如纸，馅料饱满多汁，咬开时肉香、笋鲜与皮冻融化后的汤汁交融，咸中带甜，口感软嫩弹牙。猪肉和虾仁提供优质蛋白质，冬笋与香菇增添膳食纤维和微量元素，低脂版本进一步减少了饱和脂肪。虽然包制手法需",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 30,
@@ -23790,7 +22938,7 @@
     "id": "staplemd-05bdd763",
     "name": "咸肉菜饭",
     "summary": "这是一道充满上海弄堂风情的家常主食，咸肉的醇香与青菜的清甜在猪油的点化下融进每一粒米饭，既有锅巴焦脆，又保留菜梗爽嫩，层次分明。青菜富含维生素和膳食纤维，咸肉提供蛋白质与能量，荤素搭配均衡。做法并不复杂，但需要掌握分次下",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 10,
@@ -23849,12 +22997,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "白糖 0-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -23939,30 +23081,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "鸡蛋 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥚"
-      },
-      {
-        "name": "冷冻去头去皮基围虾 10-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🐟"
-      },
-      {
-        "name": "油 30-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "盐 12-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -24020,12 +23138,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🌿"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -24044,7 +23156,7 @@
     "id": "staplemd-351ae0d3",
     "name": "印度烤饼",
     "summary": "这是一道印度风味的发酵烤饼，外表微焦酥脆，内部松软有嚼劲，是咖喱的绝佳搭档。富含碳水化合物和蛋白质，酸奶的加入也让面饼更易消化。制作稍有难度，需注意面团软硬和火候，但平底锅即可操作，提前 1 小时发酵，总耗时约 1.5 ",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 5,
@@ -24155,7 +23267,7 @@
     "id": "staplemd-16197f29",
     "name": "印度焖饭",
     "summary": "印度焖饭是源自莫卧儿帝国时期的皇家料理，米粒细长、香料气息浓郁，鸡肉嫩滑、米饭粒粒分明，层次丰富。富含蛋白质和多种香料精华，能提振食欲。制作步骤较繁琐，对新手不太友好，全程约需 90 分钟（鸡肉需提前腌制 1 小时）。 ",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 90,
@@ -24266,7 +23378,7 @@
     "id": "staplemd-f7d9dc5a",
     "name": "鹰嘴豆炸饼",
     "summary": "鹰嘴豆咖喱配油炸面饼是北印度经典街头小吃，松软的炸饼搭配香料浓郁的鹰嘴豆，口感层次丰富，酸辣咸香。鹰嘴豆富含植物蛋白和膳食纤维，饱腹又营养。制作步骤稍多，但跟着流程走并不难，适合有一定基础的家常烹饪。约 50 分钟即可完",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 50,
@@ -24377,7 +23489,7 @@
     "id": "staplemd-5d469d9b",
     "name": "炸酱面",
     "summary": "炸酱面是一道酱香浓郁、面条劲道的传统北京家常面食，搭配清爽菜码，咸甜适口。主要营养来自瘦肉蛋白质和蔬菜维生素，能为人体提供充足能量。做法对新手友好，预计制作时长约 30 分钟，熟练掌握后可通过备菜与炒酱并行进一步缩短时间",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "适中",
     "time": 30,
@@ -24447,7 +23559,7 @@
     "id": "staplemd-ed1925ff",
     "name": "照烧鸡腿饭",
     "summary": "照烧鸡腿饭是一道甜咸适口的下饭菜，鸡腿煎得焦香后融入浓郁酱汁，口感嫩滑入味。鸡腿肉富含优质蛋白，搭配西兰花和胡萝卜能补充膳食纤维与维生素。制作稍需一点去骨技巧，但整体不复杂，新手跟着步骤也能成功。从备料到出锅，大约 30",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 30,
@@ -24558,7 +23670,7 @@
     "id": "staplemd-bf854779",
     "name": "蒸卤面",
     "summary": "这是一道豫南地区经典的家常面食，荤素搭配，面条吸足汤汁，口感软韧，咸香入味。五花肉提供优质蛋白质和脂肪，芹菜富含膳食纤维。做法简单易学，新手也能从容上手，整体制作约需一小时。 预估烹饪难度：★★★★ 预估卡路里：1563",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "进阶",
     "time": 1,
@@ -24637,16 +23749,16 @@
         "emoji": "🍚"
       },
       {
-        "name": "大葱 10cm",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
         "name": "大蒜",
         "amount": "适量",
         "type": "main",
         "emoji": "🧄"
+      },
+      {
+        "name": "姜片",
+        "amount": "适量",
+        "type": "main",
+        "emoji": "🫚"
       }
     ],
     "steps": [
@@ -24669,7 +23781,7 @@
     "id": "staplemd-a7df7a2b",
     "name": "中式馅饼",
     "summary": "这道饼外皮微脆内里松软，馅料咸香，属于家常面食。富含碳水化合物和蛋白质，搭配胡萝卜和鸡蛋更添营养。制作难度中等，新手需掌握火候，但步骤明确易上手。从备料到完成大约需要 1 小时。 预估烹饪难度：★★★★ 预估卡路里：12",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 30,
@@ -24746,12 +23858,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "大葱 1/",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -24774,7 +23880,7 @@
     "id": "staplemd-5dd9b9cf",
     "name": "猪油拌饭",
     "summary": "这是一道充满南方家常气息的简单拌饭，米粒被融化的猪油包裹，透着酱油的咸鲜和葱花的清香，是许多孩子食欲不振时的安心之选。主要提供快速碳水与脂肪能量，但胆固醇较高，不宜常吃。制作毫无门槛，哪怕完全不会做饭也能轻松完成，煮好的",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 25,
@@ -24821,12 +23927,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🥩"
-      },
-      {
-        "name": "葱花 0-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -24842,7 +23942,7 @@
     "id": "staplemd-50290b69",
     "name": "煮泡面加蛋",
     "summary": "煮泡面加蛋是一道便捷的快手主食，口感顺滑，汤味浓郁，适合随时填饱肚子。主要提供碳水化合物和蛋白质，能快速补充能量。做法极其简单，只需烧水、煮面、打入鸡蛋煮熟，新手也能轻松掌握，全程大约 10 分钟即可完成。 预估烹饪难度",
-    "image": "recipes/tomato-noodle.jpg",
+    "image": "",
     "category": "主食",
     "difficulty": "简单",
     "time": 10,
@@ -24992,12 +24092,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "大蒜四五瓣",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -25186,7 +24280,7 @@
     "id": "vegetable_dishmd-c5a35f0b",
     "name": "炒茄子",
     "summary": "这道家常炒茄子软嫩入味，酱香浓郁，加八角后风味更足。茄子富含膳食纤维、维生素 P 和钾元素，有助于保护心血管。做法简单，对新手友好，全程大火快炒，从备料到出锅大约二十分钟即可完成。 预估烹饪难度：★★★ 预估卡路里：61",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "适中",
     "time": 1,
@@ -25267,7 +24361,7 @@
     "id": "vegetable_dishmd-1954016a",
     "name": "炒青菜",
     "summary": "这是一道清爽可口的家常素菜，口感脆嫩、咸鲜回甘。青菜富含维生素与膳食纤维，有助于促进消化。做法非常简单，零基础也能轻松驾驭，从备菜到出锅大约只需 10 分钟。 预估烹饪难度：★★ 预估卡路里：152 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 10,
@@ -25278,12 +24372,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥬"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -25302,7 +24390,7 @@
     "id": "vegetable_dishmd-66fb349b",
     "name": "葱煎豆腐",
     "summary": "外焦里嫩，葱香浓郁，咸鲜微辣，是一道家常风味。豆腐富含植物蛋白和钙质，搭配青椒和葱段，营养均衡。制作难度适中，煎豆腐时需掌握小火慢煎，新手按步骤耐心操作也能做好，全程约 30 分钟。 预估烹饪难度：★★★ 预估卡路里：3",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 30,
@@ -25368,7 +24456,7 @@
     "id": "vegetable_dishmd-5957fd38",
     "name": "脆皮豆腐",
     "summary": "脆皮豆腐外酥里嫩，酱汁咸甜适口，是一道快手下饭菜。豆腐富含植物蛋白和钙质，鸡蛋提供优质蛋白，营养搭配均衡。制作需要耐心煎出金黄脆皮，但步骤清晰，初学者也能掌握，全程大约需要 30 分钟。 预估烹饪难度：★★★ 预估卡路里",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "适中",
     "time": 30,
@@ -25498,12 +24586,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🍚"
-      },
-      {
-        "name": "尖椒 3 -",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫑"
       }
     ],
     "steps": [
@@ -25579,18 +24661,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "辣椒 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫑"
-      },
-      {
-        "name": "蒜瓣 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -25719,7 +24789,7 @@
     "id": "vegetable_dishmd-ca8f6e29",
     "name": "蚝油生菜",
     "summary": "蚝油生菜是一道爽口鲜香的家常菜，脆嫩的生菜淋上蒜香蚝油汁，咸中带甜，属于粤菜和川菜馆都很常见的快手素菜。富含维生素和膳食纤维，有助于促进消化。做法对新手非常友好，从洗菜到出锅大约只需 15 分钟即可完成。 预估烹饪难度：",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 15,
@@ -25763,30 +24833,6 @@
       },
       {
         "name": "食用油",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "生菜 1 棵",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥬"
-      },
-      {
-        "name": "蚝油 6-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "大蒜 4-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "食用油 5-",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
@@ -25873,12 +24919,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "姜末 1 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫚"
       }
     ],
     "steps": [
@@ -25897,7 +24937,7 @@
     "id": "vegetable_dishmd-76a411fe",
     "name": "红烧茄子",
     "summary": "红烧茄子是一道咸香浓郁的家常下饭菜，软糯的茄块吸饱汤汁，搭配柿子椒和番茄，酸辣适口。茄子富含膳食纤维和维生素 P，炸过的茄块香而不腻。制作需要挂糊油炸并慢烧入味，步骤略多但对新手仍可尝试，专注细节就能成功。从备料到出锅大",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "进阶",
     "time": 45,
@@ -26033,12 +25073,6 @@
         "emoji": "🧂"
       },
       {
-        "name": "大蒜 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
         "name": "油",
         "amount": "适量",
         "type": "seasoning",
@@ -26145,12 +25179,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫑"
-      },
-      {
-        "name": "香油 2-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -26285,7 +25313,7 @@
     "id": "vegetable_dishmd-6bc332ed",
     "name": "鸡蛋花",
     "summary": "一道简单易做的家常食疗汤饮，有甜咸两种风味，口感柔滑嫩爽，属于民间润喉小方。富含优质蛋白质和卵磷脂，易于消化吸收，可缓解喉咙干痒不适。制作极简单，初学者看一遍就能上手，从烧水到完成大约只需 5 分钟。 预估烹饪难度：★ ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 5,
@@ -26314,24 +25342,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
-      },
-      {
-        "name": "沸水 100 -",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "白糖 5 -",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "食盐 1 -",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -26348,7 +25358,7 @@
     "id": "vegetable_dishmd-69b4efc9",
     "name": "鸡蛋火腿炒黄瓜",
     "summary": "这是一道清爽快手的家常小炒，咸鲜适口，黄瓜脆嫩、鸡蛋软滑、火腿增香，属于大众化的中式家常菜。鸡蛋提供优质蛋白，黄瓜富含维生素和水分，火腿补充风味，整体营养均衡。烹饪步骤简单明了，难度很低，对厨房新手非常友好。从备菜到出锅",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 10,
@@ -26414,7 +25424,7 @@
     "id": "vegetable_dishmd-05d89111",
     "name": "茄子炖土豆",
     "summary": "茄子炖土豆是一道东北家常炖菜，口感绵软咸香，带着辣椒的微辣和蒜香，十分下饭。茄子富含花青素和膳食纤维，土豆提供碳水化合物和维生素 C，加上猪肉的蛋白质，营养均衡又饱腹。这道菜操作流程简单，但需要掌握翻炒和收汁的火候，对新",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "适中",
     "time": 45,
@@ -26493,7 +25503,7 @@
     "id": "vegetable_dishmd-976e2272",
     "name": "家常日本豆腐",
     "summary": "家常日本豆腐是一道外酥里嫩的家常快手菜，金黄脆壳包裹着柔滑的玉子豆腐，搭配青椒、胡萝卜等时蔬，可调成咸鲜或酸甜风味，脆嫩咸香。日本豆腐以鸡蛋为主要原料，富含优质蛋白，加上木耳和蔬菜，营养均衡。需要一点煎豆腐的技巧，难度适",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 30,
@@ -26676,7 +25686,7 @@
     "id": "vegetable_dishmd-b3b9d448",
     "name": "金钱蛋",
     "summary": "金钱蛋是一道外焦里嫩、咸香微辣的湘味家常菜，煎至金黄的蛋片形似铜钱，寓意吉祥。鸡蛋与青红椒搭配，富含优质蛋白质和多种维生素，营养均衡。制作难度中等，新手稍加练习也能掌握，全程约需 30 分钟即可完成下饭菜。 预估烹饪难度",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 30,
@@ -26747,18 +25757,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "食用油 20-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "小米辣 6-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
       }
     ],
     "steps": [
@@ -26779,7 +25777,7 @@
     "id": "vegetable_dishmd-43560897",
     "name": "金针菇日本豆腐煲",
     "summary": "金针菇日本豆腐煲是一道酱香浓郁的家常下饭菜，豆腐外焦里嫩，金针菇爽滑入味。金针菇富含氨基酸和膳食纤维，日本豆腐提供优质蛋白，营养开胃。这道菜步骤简单，新手也能轻松掌握，从备菜到出锅大约需要 30 分钟。 预估烹饪难度：★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 30,
@@ -26834,40 +25832,16 @@
         "emoji": "🫗"
       },
       {
-        "name": "金针菇 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "豆腐 2 袋",
+        "name": "豆腐",
         "amount": "适量",
         "type": "main",
         "emoji": "◻️"
-      },
-      {
-        "name": "小米椒 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🫑"
-      },
-      {
-        "name": "蒜 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       },
       {
         "name": "老抽",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🍶"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -26881,7 +25855,7 @@
     "id": "vegetable_dishmd-a90aef7a",
     "name": "韭菜炒蛋",
     "summary": "韭菜炒蛋是一道经典的家常菜，韭菜香气浓郁，鸡蛋嫩滑鲜美，简单易做，营养丰富。韭菜含有丰富的维生素和纤维素，鸡蛋提供优质蛋白质。这道菜制作简单，原材料易得，特别适合厨房新手入门，从头备菜到盛盘出锅大约只需 10 分钟。 预",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 10,
@@ -26978,40 +25952,10 @@
         "emoji": "🧂"
       },
       {
-        "name": "食用油 20-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "酱油 4-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
         "name": "小米椒",
         "amount": "适量",
         "type": "main",
         "emoji": "🫑"
-      },
-      {
-        "name": "蒜蓉 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "孜然 1-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🥣"
-      },
-      {
-        "name": "食用盐 0.5-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
       }
     ],
     "steps": [
@@ -27089,7 +26033,7 @@
     "id": "vegetable_dishmd-8aac24c1",
     "name": "雷椒皮蛋",
     "summary": "雷椒皮蛋是一道卖相朴实但风味十足的家常凉菜，青椒的焦香与皮蛋的醇滑交融，酸辣开胃，尤其适合夏日佐餐。皮蛋富含蛋白质和矿物质，青椒提供丰富的维生素 C，大蒜则有助增进食欲。整道菜操作简单，新手也能轻松驾驭，从备料到完成大约",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 15,
@@ -27154,30 +26098,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🫑"
-      },
-      {
-        "name": "蒜 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "生抽 15-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
-      },
-      {
-        "name": "陈醋 15-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
       }
     ],
     "steps": [
@@ -27200,7 +26120,7 @@
     "id": "vegetable_dishmd-a7bd9d8e",
     "name": "凉拌豆腐",
     "summary": "这道凉菜清爽可口，富含植物蛋白和钙质，低脂健康，制作简单快捷，一般初学者只需要 10 分钟即可完成。 预估烹饪难度：★★ 预估卡路里：343 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 10,
@@ -27253,12 +26173,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫑"
-      },
-      {
-        "name": "大蒜 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -27281,7 +26195,7 @@
     "id": "vegetable_dishmd-46acb281",
     "name": "凉拌黄瓜",
     "summary": "这是一道清爽开胃的家常凉菜，口感脆嫩，酸香适口。黄瓜富含水分和维生素，有助于清热解暑、美容养颜。做法非常简单，对新手友好，只需拍碎、调味、腌制 15 分钟，全程约 20 分钟即可完成。 预估烹饪难度：★ 预估卡路里：10",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 15,
@@ -27332,7 +26246,7 @@
     "id": "vegetable_dishmd-0fc8849d",
     "name": "凉拌金针菇",
     "summary": "凉拌金针菇是一道简单快捷的家常开胃凉菜，口感脆嫩爽滑，咸鲜微酸。金针菇富含膳食纤维和多种维生素，热量较低。制作全程只需焯烫和调味，对新手非常友好，忙碌时也能快速准备。从备菜到完成大约只需 10 分钟。 预估烹饪难度：★★",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 10,
@@ -27535,12 +26449,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "蒜头 2 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -27556,7 +26464,7 @@
     "id": "vegetable_dishmd-3aadcade",
     "name": "凉拌油麦菜",
     "summary": "一道清爽解腻的家常凉菜，芝麻酱的醇厚包裹着油麦菜的脆嫩，酸甜咸香交织，非常开胃。油麦菜富含维生素和膳食纤维，芝麻酱则补充钙与健康脂肪，营养均衡。做法毫无难度，切一切、拌一拌就行，从准备到上桌只需十几分钟，特别适合新手和忙",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 20,
@@ -27629,7 +26537,7 @@
     "id": "vegetable_dishmd-0163cdc7",
     "name": "皮蛋豆腐",
     "summary": "皮蛋豆腐是一道清爽开胃的凉拌家常菜，松花蛋 Q 弹滑嫩，嫩豆腐入口即化，咸香微酸的口味特别下饭。豆腐富含优质植物蛋白和钙，皮蛋则提供铁、维生素 A 等营养素，搭配食用易于消化吸收。制作过程几乎零门槛，新手也能轻松完成，从",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 5,
@@ -27694,12 +26602,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥬"
-      },
-      {
-        "name": "香菜 1 株",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥬"
       }
     ],
     "steps": [
@@ -27714,7 +26616,7 @@
     "id": "vegetable_dishmd-dfb09bd6",
     "name": "蒲烧茄子",
     "summary": "蒲烧茄子是一道咸甜交织、口感软糯的家常菜，借鉴日式蒲烧风味却用中式煎烧手法烹制。茄子富含膳食纤维和多种维生素，有助于清热活血。难度适中，对新手稍需耐心，预计制作时长约 30 分钟。 预估烹饪难度：★★★ 预估卡路里：32",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 30,
@@ -27769,7 +26671,7 @@
         "emoji": "🥣"
       },
       {
-        "name": "1 份蒲烧汁",
+        "name": "长的上小下大的茄子",
         "amount": "适量",
         "type": "main",
         "emoji": "🥣"
@@ -27903,18 +26805,6 @@
         "emoji": "🧂"
       },
       {
-        "name": "闽星茶树菇 1 瓶",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "芹菜 250-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥬"
-      },
-      {
         "name": "蚝油 大约",
         "amount": "适量",
         "type": "seasoning",
@@ -27945,7 +26835,7 @@
     "id": "vegetable_dishmd-c8eb819f",
     "name": "清炒花菜",
     "summary": "一道常见的家常素菜，口感脆嫩爽口。富含维生素 C 和膳食纤维。做法简单快捷，一般初学者仅需 15 分钟即可完成。 预估烹饪难度：★★ 预估卡路里：211 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 15,
@@ -27974,12 +26864,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥬"
-      },
-      {
-        "name": "大蒜 2-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       },
       {
         "name": "食用油",
@@ -28013,7 +26897,7 @@
     "id": "vegetable_dishmd-6aa72343",
     "name": "清蒸南瓜",
     "summary": "一道原汁原味的家常蒸菜，最大程度保留南瓜的天然甜味与营养，口感软糯香甜，既可当甜点也可作主食。南瓜富含β-胡萝卜素和膳食纤维，有益视力与肠胃健康。制作极其简单，新手也能轻松搞定，从切配到出锅仅需 15-20 分钟。 预估",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 20,
@@ -28047,7 +26931,7 @@
     "id": "vegetable_dishmd-d62fbb76",
     "name": "陕北熬豆角",
     "summary": "这是一道西北农家风味的炖菜，豆角绵软、土豆沙糯、番茄汤汁浓郁，酸香开胃。富含膳食纤维、维生素和碳水化合物，营养均衡。做法极其简单，食材用量可随喜好调整，几乎没有失败的可能，对新手特别友好。从备料到出锅，大约只需 30 分",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 30,
@@ -28118,12 +27002,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🧄"
-      },
-      {
-        "name": "葱 3 圈",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       },
       {
         "name": "香菜碎根据口味加",
@@ -28313,12 +27191,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "蒜头 2 粒",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       }
     ],
     "steps": [
@@ -28337,7 +27209,7 @@
     "id": "vegetable_dishmd-33f8b620",
     "name": "水油焖蔬菜",
     "summary": "水油焖蔬菜是一道简单快手的家常佐餐，通过沸水加几滴油和调料，让叶菜口感软嫩、色泽油亮，既清爽又带有淡淡油香。这种做法有助于提高脂溶性维生素的吸收率，比生吃蔬菜更有营养价值。烹饪难度低，对新手非常友好，从洗菜到出锅一般只需",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 10,
@@ -28383,7 +27255,7 @@
     "id": "vegetable_dishmd-28a84cf7",
     "name": "松仁玉米",
     "summary": "松仁玉米是一道口感清甜脆嫩的家常快手菜，松仁香酥、玉米甜润，属于广受欢迎的北方家常风味。玉米和松仁搭配，能提供丰富的膳食纤维、不饱和脂肪酸和多种维生素，营养均衡。做法简单，新手也能轻松驾驭，从备料到出锅一般只需大约十五 ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 1,
@@ -28452,7 +27324,7 @@
     "id": "vegetable_dishmd-1bfcd484",
     "name": "素炒豆角",
     "summary": "这是一道酱香浓郁的家常小炒，豆角软嫩入味，鲜辣下饭。富含膳食纤维和多种维生素，有助于促进消化。做法简单，新手也能轻松上手，从备菜到出锅大约 20 分钟。 预估烹饪难度：★★ 预估卡路里：107 大卡",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 20,
@@ -28505,12 +27377,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "葱 3 圈",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
       }
     ],
     "steps": [
@@ -28531,7 +27397,7 @@
     "id": "vegetable_dishmd-ef00341c",
     "name": "酸辣土豆丝",
     "summary": "酸辣开胃的经典家常菜，口感脆爽，色泽鲜亮，属于大众喜爱的快手小炒。土豆提供碳水化合物和钾元素，辣椒富含维生素 C，有助于增进食欲。操作步骤简单明了，对新手十分友好，从备料到出锅大约只需 20 分钟。 预估烹饪难度：★★ ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 20,
@@ -28590,12 +27456,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -28734,7 +27594,7 @@
     "id": "vegetable_dishmd-e1405cad",
     "name": "蒜蓉西兰花",
     "summary": "这道家常蔬菜以蒜香浓郁、调味简单见长，西兰花焯水后软嫩或微脆，清淡鲜美。富含维生素 C、膳食纤维和多种抗氧化物质，是营养均衡的快手素菜。制作过程不难，新手也能轻松掌握，从备料到出锅一般约 15 分钟即可完成。 预估烹饪难",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 15,
@@ -28745,12 +27605,6 @@
         "amount": "适量",
         "type": "main",
         "emoji": "🥬"
-      },
-      {
-        "name": "大蒜 3-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🧄"
       },
       {
         "name": "生抽",
@@ -28889,7 +27743,7 @@
     "id": "vegetable_dishmd-82633c50",
     "name": "西红柿炒鸡蛋",
     "summary": "一道酸甜开胃的家常菜肴，嫩滑的鸡蛋裹着软烂多汁的西红柿，是中国家庭餐桌上的经典味道。鸡蛋提供优质蛋白质，西红柿富含维生素 C 和番茄红素，营养均衡好吸收。步骤简单，原材料易得，特别适合厨房新手入门，从头备菜到盛盘出锅大约",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 15,
@@ -29066,12 +27920,6 @@
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
-      },
-      {
-        "name": "食用油 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
       }
     ],
     "steps": [
@@ -29135,30 +27983,6 @@
       },
       {
         "name": "油",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "大葱 1 段",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🌿"
-      },
-      {
-        "name": "小米辣 1-",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🍚"
-      },
-      {
-        "name": "莲藕 1 段",
-        "amount": "适量",
-        "type": "main",
-        "emoji": "🥣"
-      },
-      {
-        "name": "食用油 10-",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🫗"
@@ -29241,7 +28065,7 @@
     "id": "vegetable_dishmd-b083ab02",
     "name": "印度葫芦丸子",
     "summary": "这道北印度素菜将葫芦擦丝与鹰嘴豆粉团成丸子，油炸后浸入番茄洋葱咖喱，外酥内软、酱汁浓郁香辛。瓠瓜清润、鹰嘴豆粉提供植物蛋白与膳食纤维，是一道饱腹又均衡的素食。制作涉及油炸和熬酱，步骤稍多但按序操作不难掌握，全程大约需要 ",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "进阶",
     "time": 40,
@@ -29352,7 +28176,7 @@
     "id": "vegetable_dishmd-b7eea716",
     "name": "印度土豆花菜",
     "summary": "这道印度家常素菜以干香金黄、香料浓郁为特点，土豆绵软、花菜略带焦边，属于北印度风味。土豆和花菜富含膳食纤维与维生素 C，营养均衡。做法简单，对新手友好，从准备到出锅约需 25 分钟。 预估烹饪难度：★★★ 预估卡路里：6",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "适中",
     "time": 25,
@@ -29463,7 +28287,7 @@
     "id": "vegetable_dishmd-30b171e7",
     "name": "油醋爆蛋",
     "summary": "这是一道湘味十足的家常快手下饭菜，酸辣鲜香，鸡蛋焦香蓬松裹满浓郁汤汁，十分开胃。鸡蛋提供优质蛋白质和卵磷脂，搭配香醋更有助于促进食欲。做法极其简单，新手友好，从准备到出锅仅需大约十分钟。 预估烹饪难度：★★ 预估卡路里：",
-    "image": "recipes/pepper-potato.jpg",
+    "image": "",
     "category": "家常菜",
     "difficulty": "简单",
     "time": 20,
@@ -29519,24 +28343,6 @@
       },
       {
         "name": "白糖",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🧂"
-      },
-      {
-        "name": "食用油 35-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🫗"
-      },
-      {
-        "name": "生抽 10-",
-        "amount": "适量",
-        "type": "seasoning",
-        "emoji": "🍶"
-      },
-      {
-        "name": "白糖 0-",
         "amount": "适量",
         "type": "seasoning",
         "emoji": "🧂"
