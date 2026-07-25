@@ -19,6 +19,9 @@ export type Recipe = {
   tip: string;
 };
 
+const recipeAsset = (fileName: string) =>
+  `${import.meta.env.BASE_URL}recipes/${fileName}`;
+
 export const INGREDIENT_EMOJI: Record<string, string> = {
   鸡蛋: "🥚",
   番茄: "🍅",
@@ -71,7 +74,7 @@ export const RECIPES: Recipe[] = [
     id: "tomato-egg-noodle",
     name: "西红柿鸡蛋挂面",
     summary: "酸甜汤底包裹筋道面条，十几分钟就能完成的一人食。",
-    image: "/recipes/tomato-noodle.jpg",
+    image: recipeAsset("tomato-noodle.jpg"),
     category: "主食",
     difficulty: "简单",
     time: 15,
@@ -98,7 +101,7 @@ export const RECIPES: Recipe[] = [
     id: "pepper-potato",
     name: "青椒土豆丝",
     summary: "脆爽清香的家常快手菜，搭配米饭尤其合适。",
-    image: "/recipes/pepper-potato.jpg",
+    image: recipeAsset("pepper-potato.jpg"),
     category: "家常菜",
     difficulty: "简单",
     time: 15,
@@ -125,7 +128,7 @@ export const RECIPES: Recipe[] = [
     id: "zucchini-egg",
     name: "西葫芦炒鸡蛋",
     summary: "鲜嫩清甜，食材简单，适合工作日快速完成。",
-    image: "/recipes/zucchini-egg.jpeg",
+    image: recipeAsset("zucchini-egg.jpeg"),
     category: "家常菜",
     difficulty: "简单",
     time: 12,
@@ -150,7 +153,7 @@ export const RECIPES: Recipe[] = [
     id: "caramel-potato",
     name: "拔丝土豆",
     summary: "外脆内软、糖丝晶亮，在家也能做的经典甜菜。",
-    image: "/recipes/caramel-potato.jpeg",
+    image: recipeAsset("caramel-potato.jpeg"),
     category: "特色菜",
     difficulty: "适中",
     time: 30,
@@ -173,7 +176,7 @@ export const RECIPES: Recipe[] = [
     id: "spinach-egg",
     name: "菠菜炒鸡蛋",
     summary: "颜色清新、口感柔嫩，一盘补充两种日常食材。",
-    image: "/recipes/spinach-egg.jpg",
+    image: recipeAsset("spinach-egg.jpg"),
     category: "家常菜",
     difficulty: "简单",
     time: 10,
@@ -197,7 +200,7 @@ export const RECIPES: Recipe[] = [
     id: "tomato-tofu",
     name: "西红柿豆腐汤羹",
     summary: "清爽微酸的暖胃汤羹，豆腐柔嫩、汤汁鲜美。",
-    image: "/recipes/tomato-tofu.jpeg",
+    image: recipeAsset("tomato-tofu.jpeg"),
     category: "汤羹",
     difficulty: "简单",
     time: 20,
