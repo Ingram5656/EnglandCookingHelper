@@ -12,7 +12,7 @@ export type StoredRecipe = Recipe & {
 };
 
 const DB_NAME = "smartrecipe-local-db";
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 function requestToPromise<T>(request: IDBRequest<T>) {
   return new Promise<T>((resolve, reject) => {
@@ -43,6 +43,13 @@ export function openRecipeDatabase() {
       if (!db.objectStoreNames.contains("ingredients")) {
         const store = db.createObjectStore("ingredients", { keyPath: "name" });
         store.createIndex("source", "source", { unique: false });
+        store.createIndex("category", "category", { unique: false });
+      } else {
+        const transaction = request.transaction;
+        const store = transaction?.objectStore("ingredients");
+        if (store && !store.indexNames.contains("category")) {
+          store.createIndex("category", "category", { unique: false });
+        }
       }
       if (!db.objectStoreNames.contains("meta")) {
         db.createObjectStore("meta", { keyPath: "key" });
@@ -69,6 +76,13 @@ async function seedDatabase(db: IDBDatabase) {
   if (currentMeta?.value === SEED_VERSION) return;
 
   const now = Date.now();
+  const existingIngredients = await requestToPromise<StoredIngredient[]>(
+    db.transaction("ingredients", "readonly").objectStore("ingredients").getAll(),
+  ).catch(() => []);
+  const userIngredients = existingIngredients.filter(
+    (ingredient) => ingredient.source === "user",
+  );
+
   const transaction = db.transaction(["recipes", "ingredients", "meta"], "readwrite");
   const recipesStore = transaction.objectStore("recipes");
   const ingredientsStore = transaction.objectStore("ingredients");
@@ -103,11 +117,12 @@ async function seedDatabase(db: IDBDatabase) {
       }
     }
   }
+  ingredientsStore.clear();
   for (const ingredient of ingredientMap.values()) {
-    const existing = await requestToPromise<StoredIngredient | undefined>(
-      ingredientsStore.get(ingredient.name),
-    );
-    if (!existing) ingredientsStore.put(ingredient);
+    ingredientsStore.put(ingredient);
+  }
+  for (const ingredient of userIngredients) {
+    ingredientsStore.put(ingredient);
   }
 
   metaStore.put({ key: "seedVersion", value: SEED_VERSION });

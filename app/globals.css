@@ -1083,6 +1083,41 @@ select:focus-visible {
   width: 100%;
 }
 
+.ingredient-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+
+.ingredient-category-tabs button {
+  align-items: center;
+  background: #f7faf8;
+  border: 1px solid #e0e8e3;
+  border-radius: 999px;
+  color: #536058;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 12px;
+}
+
+.ingredient-category-tabs button.active {
+  background: #eef9f2;
+  border-color: #54ba7d;
+  color: var(--green-dark);
+}
+
+.ingredient-category-tabs span {
+  background: white;
+  border-radius: 999px;
+  color: #7a867f;
+  font-size: 10px;
+  padding: 2px 7px;
+}
+
 .ingredient-grid {
   display: grid;
   gap: 10px;

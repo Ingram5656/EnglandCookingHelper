@@ -11,7 +11,13 @@ import {
   StoredIngredient,
   StoredRecipe,
 } from "./database";
-import { Ingredient, Recipe, SYNONYMS } from "./recipes";
+import {
+  categoryForIngredient,
+  INGREDIENT_CATEGORIES,
+  Ingredient,
+  Recipe,
+  SYNONYMS,
+} from "./recipes";
 
 type View =
   | "recommend"
@@ -127,6 +133,10 @@ function parseRecipeTemplate(text: string, imageDataUrl: string): StoredRecipe {
       amount: rawAmount || "适量",
       type: rawType === "seasoning" ? "seasoning" : "main",
       emoji: rawEmoji || "🥣",
+      category: categoryForIngredient(
+        normalizeIngredient(rawName),
+        rawType === "seasoning" ? "seasoning" : "main",
+      ),
     };
   });
   if (!ingredients.length) throw new Error("模板缺少“食材”列表。");
@@ -172,6 +182,8 @@ export default function Home() {
   const [showIngredientPicker, setShowIngredientPicker] = useState(false);
   const [query, setQuery] = useState("");
   const [ingredientQuery, setIngredientQuery] = useState("");
+  const [ingredientCategoryFilter, setIngredientCategoryFilter] =
+    useState<"全部" | (typeof INGREDIENT_CATEGORIES)[number]>("全部");
   const [timeFilter, setTimeFilter] = useState("all");
   const [difficultyFilter, setDifficultyFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
@@ -330,11 +342,13 @@ export default function Home() {
     const normalizedQuery = ingredientQuery.trim().toLowerCase();
     return ingredients.filter(
       (item) =>
-        !normalizedQuery ||
-        item.name.toLowerCase().includes(normalizedQuery) ||
-        item.emoji.includes(normalizedQuery),
+        (ingredientCategoryFilter === "全部" ||
+          item.category === ingredientCategoryFilter) &&
+        (!normalizedQuery ||
+          item.name.toLowerCase().includes(normalizedQuery) ||
+          item.emoji.includes(normalizedQuery)),
     );
-  }, [ingredientQuery, ingredients]);
+  }, [ingredientCategoryFilter, ingredientQuery, ingredients]);
 
   const recipesWithoutImage = useMemo(
     () => recipes.filter((recipe) => !recipe.image).length,
@@ -432,6 +446,9 @@ export default function Home() {
         amount: "适量",
         type: ingredient.type,
         emoji: ingredient.emoji || "🥣",
+        category:
+          ingredient.category ||
+          categoryForIngredient(ingredient.name, ingredient.type),
         source: "user",
       });
     }
@@ -971,6 +988,25 @@ export default function Home() {
                 />
               </label>
             </div>
+            <div className="ingredient-category-tabs" aria-label="食材分类">
+              {(["全部", ...INGREDIENT_CATEGORIES] as const).map((category) => (
+                <button
+                  key={category}
+                  className={
+                    ingredientCategoryFilter === category ? "active" : ""
+                  }
+                  onClick={() => setIngredientCategoryFilter(category)}
+                >
+                  {category}
+                  <span>
+                    {category === "全部"
+                      ? ingredients.length
+                      : ingredients.filter((item) => item.category === category)
+                          .length}
+                  </span>
+                </button>
+              ))}
+            </div>
             <div className="ingredient-grid">
               {supportedIngredients.map((ingredient) => (
                 <button
@@ -980,7 +1016,10 @@ export default function Home() {
                 >
                   <span>{ingredient.emoji}</span>
                   <strong>{ingredient.name}</strong>
-                  <small>{ingredient.type === "main" ? "主料" : "调料"}</small>
+                  <small>
+                    {ingredient.category} ·{" "}
+                    {ingredient.type === "main" ? "主料" : "调料"}
+                  </small>
                 </button>
               ))}
             </div>
