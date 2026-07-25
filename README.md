@@ -32,3 +32,16 @@ pnpm build
 ## 数据与素材
 
 菜谱结构和本地图片整理自 [HowToCook](https://github.com/Anduin2017/HowToCook)，并为当前离线推荐演示做了精简和结构化处理。原项目采用 Unlicense。
+
+## 导入 HowToCook 菜谱
+
+当前版本已从 `D:\Cookingmaster\HowToCook-master\dishes` 导入 368 道本地菜谱，跳过 `template/示例菜`。导入结果保存在 `app/generated-recipes.json`，可在离线前端中直接搜索、筛选和匹配。
+
+如需重新导入本地 HowToCook 菜谱：
+
+```bash
+pnpm import:howtocook
+pnpm build
+```
+
+导入脚本会复制可识别的菜谱图片到 `public/howtocook`，没有图片的菜谱会使用本地兜底图。

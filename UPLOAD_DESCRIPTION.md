@@ -27,3 +27,11 @@
 - 将本地菜谱图片路径改为跟随应用基准路径，兼容开发模式和构建后离线打开。
 - 新增构建后内联步骤，将生产版 JS/CSS 写入 `dist/index.html`，避免 `file://` 下浏览器拦截外部模块资源。
 - 修复后重新执行生产构建验证。
+
+## 2026-07-25 · HowToCook 全量菜谱导入
+
+- 从 `D:\Cookingmaster\HowToCook-master\dishes` 导入 368 道真实菜谱，跳过模板目录 `template/示例菜`。
+- 新增 `scripts/import-howtocook.mjs`，可重复生成 `app/generated-recipes.json`。
+- 将可识别的菜谱图片复制到 `public/howtocook`；无图菜谱使用本地兜底图，仍可离线运行。
+- 前端改为读取生成菜谱数据，并自动生成食材 emoji 表与食材建议列表。
+- 重新执行生产构建，并用 Chrome 直接打开 `dist/index.html` 验证页面、图片和控制台状态。

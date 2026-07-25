@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build && node scripts/inline-build.mjs",
+    "import:howtocook": "node scripts/import-howtocook.mjs",
     "preview": "vite preview",
     "lint": "tsc --noEmit"
   },
