@@ -87,3 +87,13 @@
 - 修正明显带说明文字的食材名称，例如 `蛋挞皮品牌不限整包蛋挞皮约为` 归并为 `蛋挞皮`，`未过期的一袋速冻水饺` 归并为 `速冻水饺`
 - `清洗记录` 工作表改为完整人工决策表，记录全部删除和合并/改名决策
 - 当前 Excel 复核结果：704 个唯一食材；主食 89、蔬菜 142、肉类 110、海鲜 43、调料 320；重复名称 0；工具/说明/组合类残留扫描 0
+
+## 2026-07-26 · Excel 食材库同步到前端数据库和菜谱
+
+- 新增 `app/ingredient-database.json`，作为由 Excel 同步得到的前端种子食材库
+- IndexedDB `ingredients` 初始化改为直接写入该食材库，共 704 个食材
+- 同步清洗 `app/generated-recipes.json`；所有菜谱食材均归一到 Excel 食材名，移除工具、说明语句和组合项
+- 新增 `scripts/sync-recipes-from-ingredient-database.mjs`，用于在食材库变更后重新清洗菜谱
+- `pnpm import:howtocook` 现在会导入 HowToCook 后自动执行食材库同步
+- 验证结果：368 道菜谱、704 个数据库食材、实际使用 697 个、暂未使用 7 个、缺失食材 0、空食材菜谱 0、重复菜谱食材 0、工具/说明/组合类残留 0
+- 重新执行 `pnpm import:howtocook`、`pnpm sync:ingredient-db` 和 `pnpm build`，验证通过

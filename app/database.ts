@@ -1,4 +1,10 @@
-import { Ingredient, Recipe, RECIPES, SEED_VERSION } from "./recipes";
+import {
+  INGREDIENT_DATABASE,
+  Ingredient,
+  Recipe,
+  RECIPES,
+  SEED_VERSION,
+} from "./recipes";
 
 export type StoredIngredient = Ingredient & {
   source: "seed" | "user";
@@ -109,17 +115,9 @@ async function seedDatabase(db: IDBDatabase) {
     recipesStore.put(seeded);
   }
 
-  const ingredientMap = new Map<string, StoredIngredient>();
-  for (const recipe of RECIPES) {
-    for (const ingredient of recipe.ingredients) {
-      if (!ingredientMap.has(ingredient.name)) {
-        ingredientMap.set(ingredient.name, { ...ingredient, source: "seed" });
-      }
-    }
-  }
   ingredientsStore.clear();
-  for (const ingredient of ingredientMap.values()) {
-    ingredientsStore.put(ingredient);
+  for (const ingredient of INGREDIENT_DATABASE) {
+    ingredientsStore.put({ ...ingredient, source: "seed" });
   }
   for (const ingredient of userIngredients) {
     ingredientsStore.put(ingredient);
