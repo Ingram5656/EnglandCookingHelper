@@ -303,6 +303,7 @@ export default function Home() {
       .filter((recipe) => {
         if (activeView === "favorites" && !favorites.includes(recipe.id)) return false;
         if (activeView === "recent" && !recent.includes(recipe.id)) return false;
+        if (activeView === "recommend" && recipe.score < 60) return false;
         if (
           normalizedQuery &&
           !recipe.name.toLowerCase().includes(normalizedQuery) &&
@@ -351,8 +352,8 @@ export default function Home() {
   }, [visibleRecipes, selectedRecipeId]);
 
   const selectedRecipe =
-    scoredRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
-    scoredRecipes[0];
+    visibleRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
+    visibleRecipes[0];
   const matchedIngredients =
     selectedRecipe?.ingredients.filter((item) =>
       normalizedPantry.includes(normalizeIngredient(item.name)),
@@ -624,7 +625,13 @@ export default function Home() {
         </div>
       </aside>
 
-      <main className="main-content">
+      <main
+        className={`main-content ${
+          activeView !== "ingredients" && activeView !== "upload"
+            ? "recipe-mode"
+            : "database-mode"
+        }`}
+      >
         <header className="topbar">
           <div>
             <p className="eyebrow">SMARTRECIPE · INDEXEDDB</p>
@@ -839,7 +846,9 @@ export default function Home() {
                 </select>
               </label>
               <span className="result-count">
-                {visibleRecipes.length} 个结果 · {recipesWithoutImage} 道待上传图片
+                {visibleRecipes.length} 个结果
+                {activeView === "recommend" ? " · 仅显示匹配度 60%+" : ""} ·{" "}
+                {recipesWithoutImage} 道待上传图片
               </span>
             </div>
 

@@ -241,6 +241,13 @@ select:focus-visible {
   padding: 28px 34px 42px;
 }
 
+.main-content.recipe-mode {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .topbar {
   align-items: center;
   display: grid;
@@ -633,6 +640,20 @@ select:focus-visible {
   grid-template-columns: minmax(500px, 1.15fr) minmax(390px, 0.85fr);
   margin: 0 auto;
   max-width: 1400px;
+  min-height: 0;
+  width: 100%;
+}
+
+.main-content.recipe-mode .topbar,
+.main-content.recipe-mode .pantry-panel,
+.main-content.recipe-mode .toolbar {
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+.main-content.recipe-mode .workspace {
+  flex: 1 1 auto;
+  height: auto;
 }
 
 .recipe-list,
@@ -642,6 +663,36 @@ select:focus-visible {
   border-radius: 16px;
   box-shadow: var(--shadow);
   overflow: hidden;
+}
+
+.main-content.recipe-mode .recipe-list,
+.main-content.recipe-mode .recipe-detail {
+  height: 100%;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.main-content.recipe-mode .recipe-detail {
+  position: static;
+}
+
+.main-content.recipe-mode .recipe-list::-webkit-scrollbar,
+.main-content.recipe-mode .recipe-detail::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main-content.recipe-mode .recipe-list::-webkit-scrollbar-thumb,
+.main-content.recipe-mode .recipe-detail::-webkit-scrollbar-thumb {
+  background: #d7e4dc;
+  border: 3px solid white;
+  border-radius: 999px;
+}
+
+.main-content.recipe-mode .recipe-list::-webkit-scrollbar-track,
+.main-content.recipe-mode .recipe-detail::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .recipe-card {
@@ -1659,8 +1710,20 @@ select:focus-visible {
     padding: 118px 18px 35px;
   }
 
+  .main-content.recipe-mode {
+    display: block;
+    height: auto;
+    overflow: visible;
+  }
+
   .workspace {
     grid-template-columns: 1fr;
+  }
+
+  .main-content.recipe-mode .recipe-list,
+  .main-content.recipe-mode .recipe-detail {
+    height: auto;
+    overflow: visible;
   }
 
   .recipe-detail {
