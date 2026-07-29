@@ -47,6 +47,7 @@ dist/index.html
 - 检查或创建 `backend\.venv`
 - 检查并安装后端依赖
 - 检查并安装前端依赖
+- 优先使用系统 `pnpm`，找不到时自动尝试 Codex 内置 Node/pnpm 运行时
 - 启动 RecipeNLG FastAPI 后端：`http://127.0.0.1:8000`
 - 启动 Vite 前端：`http://127.0.0.1:5173`
 - 自动打开浏览器

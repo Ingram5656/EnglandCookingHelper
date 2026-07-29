@@ -31,6 +31,57 @@ function Get-RequiredCommand([string[]]$Names, [string]$InstallHint) {
   throw $InstallHint
 }
 
+function Get-FrontendRunner() {
+  $systemPnpm = Get-Command "pnpm.cmd" -ErrorAction SilentlyContinue | Select-Object -First 1
+  if (-not $systemPnpm) {
+    $systemPnpm = Get-Command "pnpm" -ErrorAction SilentlyContinue | Select-Object -First 1
+  }
+  if ($systemPnpm) {
+    return @{
+      Command = $systemPnpm.Source
+      PathPrefix = ""
+      InstallArgs = @("install")
+      DevArgs = @("run", "dev", "--", "--host", "127.0.0.1", "--port", "5173", "--strictPort")
+      Label = "pnpm"
+    }
+  }
+
+  $candidateRuntimeRoots = @(
+    (Join-Path $env:USERPROFILE ".cache\codex-runtimes\codex-primary-runtime\dependencies"),
+    (Join-Path $env:LOCALAPPDATA "codex-runtimes\codex-primary-runtime\dependencies")
+  )
+  foreach ($codexRuntimeRoot in $candidateRuntimeRoots) {
+    $codexPnpm = Join-Path $codexRuntimeRoot "bin\fallback\pnpm.cmd"
+    $codexNodeBin = Join-Path $codexRuntimeRoot "node\bin"
+    $codexFallbackBin = Join-Path $codexRuntimeRoot "bin\fallback"
+    if ((Test-Path $codexPnpm) -and (Test-Path $codexNodeBin)) {
+      return @{
+        Command = $codexPnpm
+        PathPrefix = "$codexNodeBin;$codexFallbackBin;"
+        InstallArgs = @("install")
+        DevArgs = @("run", "dev", "--", "--host", "127.0.0.1", "--port", "5173", "--strictPort")
+        Label = "bundled pnpm"
+      }
+    }
+  }
+
+  $npm = Get-Command "npm.cmd" -ErrorAction SilentlyContinue | Select-Object -First 1
+  if (-not $npm) {
+    $npm = Get-Command "npm" -ErrorAction SilentlyContinue | Select-Object -First 1
+  }
+  if ($npm) {
+    return @{
+      Command = $npm.Source
+      PathPrefix = ""
+      InstallArgs = @("install")
+      DevArgs = @("run", "dev", "--", "--host", "127.0.0.1", "--port", "5173", "--strictPort")
+      Label = "npm"
+    }
+  }
+
+  throw "No frontend runner was found. Install Node.js 22.13+ with pnpm, or run this launcher from Codex once so the bundled Node runtime is available."
+}
+
 function Test-Url([string]$Url) {
   try {
     Invoke-WebRequest -Uri $Url -UseBasicParsing -TimeoutSec 2 | Out-Null
@@ -59,10 +110,10 @@ $pythonCommand = $null
 if (-not (Test-Path $VenvPython)) {
   $pythonCommand = Get-RequiredCommand @("python", "py") "Python was not found. Install Python 3.10+ and run this launcher again."
 }
-$pnpmCommand = Get-RequiredCommand @("pnpm.cmd", "pnpm") "pnpm was not found. Install Node.js 22.13+ and enable pnpm, then run this launcher again."
+$frontendRunner = Get-FrontendRunner
 Write-Host "Project root: $ProjectRoot"
 Write-Host "Backend root: $BackendRoot"
-Write-Host "pnpm: $pnpmCommand"
+Write-Host "Frontend runner: $($frontendRunner.Label) at $($frontendRunner.Command)"
 
 if ($DryRun) {
   Write-Host "Dry run passed. No environment was created and no services were started." -ForegroundColor Cyan
@@ -88,7 +139,10 @@ if ($LASTEXITCODE -ne 0) {
 Write-Step "Checking frontend dependencies"
 if (-not (Test-Path (Join-Path $ProjectRoot "node_modules"))) {
   Write-Host "Installing frontend dependencies..."
-  & $pnpmCommand install
+  if ($frontendRunner.PathPrefix) {
+    $env:Path = $frontendRunner.PathPrefix + $env:Path
+  }
+  & $frontendRunner.Command @($frontendRunner.InstallArgs)
 }
 
 if (Test-Url "$BackendUrl/health") {
@@ -117,8 +171,9 @@ if (Test-Url $FrontendUrl) {
   Write-Step "Starting frontend and opening browser"
   $frontendCommand = @"
 Set-Location $(Quote-ForPowerShell $ProjectRoot)
+`$env:Path = "$( $frontendRunner.PathPrefix )" + `$env:Path
 `$env:VITE_RECIPE_API_URL = "$BackendUrl"
-& $(Quote-ForPowerShell $pnpmCommand) run dev -- --host 127.0.0.1 --port 5173 --strictPort
+& $(Quote-ForPowerShell $frontendRunner.Command) $($frontendRunner.DevArgs -join " ")
 "@
   Start-Process powershell.exe -ArgumentList @(
     "-NoExit",

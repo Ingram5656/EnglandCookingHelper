@@ -131,3 +131,10 @@
 - 启动脚本会设置 `VITE_RECIPE_API_URL=http://127.0.0.1:8000`，确保前端 AI 生成功能连接本机后端
 - 如果 8000 或 5173 端口服务已经运行，脚本会复用现有服务并打开前端页面
 - 文档新增“一键启动”说明
+
+## 2026-07-29 · 一键启动脚本 pnpm 兜底修复
+
+- 修复普通双击 PowerShell 环境找不到 `pnpm` 时直接退出的问题
+- 启动脚本现在会按顺序查找系统 `pnpm`、Codex 内置 Node/pnpm 运行时、系统 `npm`
+- 使用 Codex 内置 pnpm 时会自动把内置 Node 目录写入前端服务窗口的 `PATH`
+- 验证：`scripts/start-smartrecipe.ps1 -DryRun` 通过
