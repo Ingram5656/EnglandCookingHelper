@@ -32,6 +32,9 @@ def _fallback_recipe(ingredients: list[str], reason: str | None = None) -> dict[
     title_core = ", ".join(item.title() for item in ingredients[:3])
     title = f"{title_core} Skillet" if title_core else "AI Generated Skillet"
     main = ingredients or ["seasonal vegetables"]
+    first = main[0]
+    rest = main[1:]
+    supporting = ", ".join(rest) if rest else "the remaining ingredients"
     return {
         "title": title,
         "ingredients": [
@@ -44,11 +47,11 @@ def _fallback_recipe(ingredients: list[str], reason: str | None = None) -> dict[
             {"name": "olive oil", "amount": "1 tablespoon", "type": "seasoning"},
         ],
         "steps": [
-            "Prepare and cut all ingredients into even pieces.",
-            "Heat olive oil in a pan over medium heat.",
-            "Add the main ingredients and cook until lightly browned.",
-            "Season with salt and black pepper, then stir until evenly coated.",
-            "Cook until the ingredients are tender and serve warm.",
+            f"Prepare {', '.join(main)} and cut everything into even pieces.",
+            f"Heat olive oil in a pan over medium heat, then add {first}.",
+            f"Cook {first} until it begins to brown, then add {supporting}.",
+            "Season with salt and black pepper, stirring until evenly coated.",
+            f"Cook until {', '.join(main)} are tender and serve warm.",
         ],
         "time": "30 minutes",
         "difficulty": "easy",
@@ -60,10 +63,9 @@ def _fallback_recipe(ingredients: list[str], reason: str | None = None) -> dict[
 
 def _prompt_from_ingredients(ingredients: list[str]) -> str:
     return (
-        "Generate a complete cooking recipe.\n"
-        f"Ingredients: {', '.join(ingredients)}\n"
-        "Return title, ingredients, and numbered instructions.\n"
-        "Recipe:"
+        "<RECIPE_START><INPUT_START>"
+        + "<NEXT_INPUT>".join(ingredients)
+        + "<INPUT_END><INGR_START>"
     )
 
 
@@ -98,7 +100,99 @@ def _generate_text(ingredients: list[str], max_new_tokens: int) -> str:
     return tokenizer.decode(output_ids[0], skip_special_tokens=True).strip()
 
 
-def _split_generated_text(text: str) -> dict[str, Any]:
+def _first_between(text: str, start: str, end: str) -> str:
+    pattern = re.escape(start) + r"(.*?)" + re.escape(end)
+    match = re.search(pattern, text, flags=re.S)
+    return match.group(1).strip() if match else ""
+
+
+def _strip_step_prefix(value: str) -> str:
+    return re.sub(r"^\d+[\).、]\s*", "", value).strip()
+
+
+def _ingredient_from_text(value: str) -> dict[str, str]:
+    clean = re.sub(r"\s+", " ", value).strip(" ,.;")
+    amount_pattern = (
+        r"^((?:\d+[\d/\s.-]*|[¼½¾⅓⅔⅛⅜⅝⅞]+|one|two|three|four|five|six|"
+        r"seven|eight|nine|ten|a|an)\s*(?:c\.?|cup|cups|tbsp\.?|tablespoons?|"
+        r"tsp\.?|teaspoons?|lb\.?|lbs\.?|pounds?|oz\.?|ounces?|g|gram|grams|"
+        r"kg|ml|l|pinch|dash|whole|small|medium|large|clove|cloves|slice|"
+        r"slices|can|cans|package|packages|bunch|stick|sticks)?\.?)\s+(.+)$"
+    )
+    match = re.match(amount_pattern, clean, flags=re.I)
+    if match:
+        amount, name = match.groups()
+        return {"name": name.strip(" ,.;"), "amount": amount.strip(), "type": "main"}
+    return {"name": clean, "amount": "to taste", "type": "main"}
+
+
+def _split_recipenlg_tags(text: str, fallback_ingredients: list[str]) -> dict[str, Any]:
+    first_recipe = text.split("<RECIPE_END>", 1)[0]
+    title = _first_between(first_recipe, "<TITLE_START>", "<TITLE_END>")
+    ingredient_block = first_recipe
+    if "<INGR_END>" in ingredient_block:
+        ingredient_block = ingredient_block.split("<INGR_END>", 1)[0]
+    ingredient_items = [
+        item.strip()
+        for item in ingredient_block.replace("<INGR_START>", "")
+        .split("<NEXT_INGR>")
+        if item.strip() and "<INSTR_START>" not in item
+    ]
+
+    instruction_block = _first_between(
+        first_recipe,
+        "<INSTR_START>",
+        "<INSTR_END>",
+    )
+    if not instruction_block and "<NEXT_INSTR>" in first_recipe:
+        before_title = first_recipe.split("<TITLE_START>", 1)[0]
+        instruction_block = before_title.replace("<INSTR_START>", "")
+    steps = [
+        _strip_step_prefix(step)
+        for step in instruction_block.split("<NEXT_INSTR>")
+        if _strip_step_prefix(step)
+    ]
+
+    if not title:
+        title_match = re.search(r"<TITLE_START>\s*([^<]+)", text)
+        if title_match:
+            title = title_match.group(1).strip()
+    if not title and fallback_ingredients:
+        title = f"{' '.join(item.title() for item in fallback_ingredients[:3])} Recipe"
+
+    if not steps:
+        raise RecipeGenerationError("RecipeNLG tagged output had no steps.")
+
+    ingredients = [
+        _ingredient_from_text(item)
+        for item in ingredient_items
+        if item and not item.startswith("<")
+    ]
+    if not ingredients:
+        ingredients = [
+            {"name": item, "amount": "to taste", "type": "main"}
+            for item in fallback_ingredients
+        ]
+
+    return {
+        "title": title,
+        "ingredients": ingredients,
+        "steps": steps[:10],
+        "time": "30 minutes",
+        "difficulty": "medium",
+        "source": "AI Generated",
+        "model": MODEL_NAME,
+    }
+
+
+def _split_generated_text(
+    text: str,
+    fallback_ingredients: list[str] | None = None,
+) -> dict[str, Any]:
+    fallback_ingredients = fallback_ingredients or []
+    if any(tag in text for tag in ("<NEXT_INSTR>", "<INSTR_START>", "<TITLE_START>")):
+        return _split_recipenlg_tags(text, fallback_ingredients)
+
     lines = [line.strip(" \t-") for line in text.splitlines() if line.strip()]
     if not lines:
         raise RecipeGenerationError("RecipeNLG returned empty text.")
@@ -130,7 +224,7 @@ def _split_generated_text(text: str) -> dict[str, Any]:
                 item.strip(" ,.;") for item in re.split(r";|,(?=\s*[A-Za-z])", line)
             )
         else:
-            step = re.sub(r"^\d+[\).、]\s*", "", line).strip()
+            step = _strip_step_prefix(line)
             if step:
                 steps.append(step)
 
@@ -139,7 +233,7 @@ def _split_generated_text(text: str) -> dict[str, Any]:
         ingredient_lines = []
     if not steps:
         steps = [
-            re.sub(r"^\d+[\).、]\s*", "", line).strip()
+            _strip_step_prefix(line)
             for line in lines[1:]
             if len(line) > 12
         ]
@@ -173,7 +267,7 @@ def generate_recipe(
 
     try:
         text = _generate_text(cleaned, max_new_tokens=max_new_tokens)
-        recipe = _split_generated_text(text)
+        recipe = _split_generated_text(text, cleaned)
         if not recipe["ingredients"]:
             recipe["ingredients"] = [
                 {"name": item, "amount": "to taste", "type": "main"}

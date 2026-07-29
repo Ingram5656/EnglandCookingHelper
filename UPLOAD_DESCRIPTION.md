@@ -108,3 +108,11 @@
 - 菜谱列表和详情新增模式展示：`Existing Recipe`、`User Recipe`、`AI Creation`
 - AI 生成菜谱复用现有 Recipe Viewer、食材清单、步骤和缺少食材展示逻辑，不破坏 IndexedDB 和 HowToCook 导入流程
 - 验证：`pnpm build` 通过，`python -m py_compile backend\app.py backend\recipe_generator.py` 通过，`chicken/potato/onion` 生成格式化轻量测试通过
+
+## 2026-07-29 · RecipeNLG 固定 fallback 步骤修复
+
+- 修复 RecipeNLG 原始输出解析逻辑：模型返回的是 `<NEXT_INSTR>`、`<INGR_END>`、`<TITLE_START>` 等标记格式，旧解析器只识别普通文本，导致一直进入 fallback
+- 后端 prompt 改为 RecipeNLG 原生格式：`<RECIPE_START><INPUT_START>...<INPUT_END><INGR_START>`
+- 新增 RecipeNLG 标记解析，提取真实标题、食材、步骤，只截取第一道生成菜谱，避免串入后续训练样本
+- fallback 步骤也改为按输入食材动态生成，不再所有输入都显示同一组步骤
+- 验证：真实模型下 `chicken/potato/onion` 返回 `Chicken And Potatoes`，`egg/tomato/rice` 返回 `Tomato Rice Pancakes`，两者步骤不同且没有 `fallback_reason`
