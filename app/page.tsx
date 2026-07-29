@@ -123,6 +123,14 @@ function sourceModeLabel(recipe: Recipe) {
   return "Existing Recipe";
 }
 
+function ratingForRecipe(recipe: Recipe, index: number) {
+  const seed = Array.from(recipe.id || recipe.name).reduce(
+    (sum, char) => sum + char.charCodeAt(0),
+    index,
+  );
+  return (4.4 + (seed % 5) / 10).toFixed(1);
+}
+
 function parseRecipeTemplate(text: string, imageDataUrl: string): StoredRecipe {
   const name = valueAfter("菜名", text);
   if (!name) throw new Error("模板缺少“菜名”。");
@@ -197,6 +205,7 @@ export default function Home() {
   const [categoryFilter, setCategoryFilter] = useState("all");
   const [sortMode, setSortMode] = useState("match");
   const [activeView, setActiveView] = useState<View>("recommend");
+  const [matchOnly, setMatchOnly] = useState(false);
   const [selectedRecipeId, setSelectedRecipeId] = useState("");
   const [favorites, setFavorites] = useState<string[]>([]);
   const [recent, setRecent] = useState<string[]>([]);
@@ -303,7 +312,7 @@ export default function Home() {
       .filter((recipe) => {
         if (activeView === "favorites" && !favorites.includes(recipe.id)) return false;
         if (activeView === "recent" && !recent.includes(recipe.id)) return false;
-        if (activeView === "recommend" && recipe.score < 60) return false;
+        if (matchOnly && recipe.score < 60) return false;
         if (
           normalizedQuery &&
           !recipe.name.toLowerCase().includes(normalizedQuery) &&
@@ -335,6 +344,7 @@ export default function Home() {
     categoryFilter,
     difficultyFilter,
     favorites,
+    matchOnly,
     query,
     recent,
     scoredRecipes,
@@ -379,6 +389,16 @@ export default function Home() {
     () => recipes.filter((recipe) => !recipe.image).length,
     [recipes],
   );
+  const todayRecommendations = useMemo(() => {
+    const withImage = recipes.filter((recipe) => Boolean(recipe.image));
+    const xiachufangRecipes = withImage.filter((recipe) =>
+      recipe.id.startsWith("xiachufang-"),
+    );
+    const otherImageRecipes = withImage.filter(
+      (recipe) => !recipe.id.startsWith("xiachufang-"),
+    );
+    return [...xiachufangRecipes, ...otherImageRecipes].slice(0, 5);
+  }, [recipes]);
 
   function announce(message: string) {
     setToast(message);
@@ -450,7 +470,7 @@ export default function Home() {
         updatedAt: now,
       };
       setAiRecipe(storedRecipe);
-      setActiveView("recommend");
+      setActiveView("categories");
       setSortMode("match");
       setSelectedRecipeId(storedRecipe.id);
       setRecent((current) =>
@@ -473,13 +493,35 @@ export default function Home() {
   }
 
   function handleRecommendRecipes() {
-    setActiveView("recommend");
+    setActiveView("categories");
     setSortMode("match");
+    setMatchOnly(true);
     if (bestLocalScore === 0 && selectedIngredients.length) {
       void handleGenerateAiRecipe();
       return;
     }
     announce("已按当前食材重新匹配");
+  }
+
+  function openHomeRecipe(id: string) {
+    setActiveView("categories");
+    setCategoryFilter("all");
+    setSortMode("match");
+    setMatchOnly(false);
+    openRecipe(id);
+  }
+
+  function startQuickPick() {
+    setActiveView("categories");
+    setSortMode("match");
+    setMatchOnly(false);
+    setShowIngredientPicker(true);
+    window.setTimeout(() => {
+      document.getElementById("pantry-panel")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
   }
 
   function handleNav(id: (typeof NAV_ITEMS)[number]["id"]) {
@@ -489,6 +531,7 @@ export default function Home() {
     }
     setSidePanel(null);
     setActiveView(id);
+    setMatchOnly(false);
     if (id === "categories") setCategoryFilter("all");
   }
 
@@ -569,6 +612,9 @@ export default function Home() {
             : activeView === "upload"
               ? "上传菜谱"
               : "推荐菜谱";
+  const isHomeView = activeView === "recommend";
+  const isRecipeBrowserView =
+    activeView !== "ingredients" && activeView !== "upload" && !isHomeView;
 
   if (!dbReady) {
     return (
@@ -627,7 +673,9 @@ export default function Home() {
 
       <main
         className={`main-content ${
-          activeView !== "ingredients" && activeView !== "upload"
+          isHomeView
+            ? "home-mode"
+            : activeView !== "ingredients" && activeView !== "upload"
             ? "recipe-mode"
             : "database-mode"
         }`}
@@ -663,9 +711,72 @@ export default function Home() {
           </div>
         </header>
 
-        {activeView !== "ingredients" && activeView !== "upload" && (
+        {isHomeView && (
+          <section className="home-dashboard" aria-label="首页推荐">
+            <section className="today-panel">
+              <div className="today-panel-heading">
+                <h2>
+                  今日推荐 <span aria-hidden="true">🌿</span>
+                </h2>
+                <p>优先展示下厨房导入的本地图文菜谱</p>
+              </div>
+              <div className="today-card-row">
+                {todayRecommendations.map((recipe, index) => (
+                  <button
+                    className="today-recipe-card"
+                    key={recipe.id}
+                    onClick={() => openHomeRecipe(recipe.id)}
+                    aria-label={`查看${recipe.name}`}
+                  >
+                    <img src={recipe.image} alt={recipe.name} />
+                    <div className="today-recipe-copy">
+                      <h3>{recipe.name}</h3>
+                      <div className="today-recipe-meta">
+                        <span>
+                          {recipe.difficulty} · {recipe.time}分钟
+                        </span>
+                        <strong>★ {ratingForRecipe(recipe, index)}</strong>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+                <button
+                  className="today-next-button"
+                  onClick={() => {
+                    setActiveView("categories");
+                    setCategoryFilter("all");
+                  }}
+                  aria-label="查看更多菜谱"
+                >
+                  ›
+                </button>
+              </div>
+            </section>
+
+            <section className="quick-start-panel">
+              <div>
+                <h2>
+                  快速开始 <span aria-hidden="true">🌿</span>
+                </h2>
+                <p>选择冰箱里的食材，智能推荐美味菜谱</p>
+                <button className="quick-start-button" onClick={startQuickPick}>
+                  <span aria-hidden="true">＋</span>
+                  选择食材
+                </button>
+              </div>
+              <div className="quick-start-art" aria-hidden="true">
+                <span className="art-bubble one" />
+                <span className="art-bubble two" />
+                <span className="art-bubble three" />
+                <div className="art-plate">🥗</div>
+              </div>
+            </section>
+          </section>
+        )}
+
+        {isRecipeBrowserView && (
           <>
-            <section className="pantry-panel">
+            <section className="pantry-panel" id="pantry-panel">
               <div className="panel-heading">
                 <div>
                   <h2>
@@ -847,7 +958,7 @@ export default function Home() {
               </label>
               <span className="result-count">
                 {visibleRecipes.length} 个结果
-                {activeView === "recommend" ? " · 仅显示匹配度 60%+" : ""} ·{" "}
+                {matchOnly ? " · 仅显示匹配度 60%+" : ""} ·{" "}
                 {recipesWithoutImage} 道待上传图片
               </span>
             </div>
@@ -968,7 +1079,8 @@ export default function Home() {
                         setTimeFilter("all");
                         setDifficultyFilter("all");
                         setCategoryFilter("all");
-                        setActiveView("recommend");
+                        setMatchOnly(false);
+                        setActiveView("categories");
                       }}
                     >
                       清除筛选
