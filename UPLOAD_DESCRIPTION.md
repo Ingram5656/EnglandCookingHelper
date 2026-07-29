@@ -97,3 +97,14 @@
 - `pnpm import:howtocook` 现在会导入 HowToCook 后自动执行食材库同步
 - 验证结果：368 道菜谱、704 个数据库食材、实际使用 697 个、暂未使用 7 个、缺失食材 0、空食材菜谱 0、重复菜谱食材 0、工具/说明/组合类残留 0
 - 重新执行 `pnpm import:howtocook`、`pnpm sync:ingredient-db` 和 `pnpm build`，验证通过
+
+## 2026-07-29 · RecipeNLG AI 菜谱生成集成
+
+- 新增 `backend/` FastAPI 后端，包含 `app.py`、`recipe_generator.py`、`requirements.txt` 和运行说明
+- 后端新增 `POST /generate-recipe`，请求 `{ "ingredients": [...] }`，返回 `{ "recipe": ... }`
+- `recipe_generator.py` 封装 HuggingFace `mbien/recipenlg`，支持多食材输入、生成长度控制和非空 fallback 菜谱
+- 前端新增 `app/aiRecipe.ts`，通过 `VITE_RECIPE_API_URL` 或默认 `http://127.0.0.1:8000` 调用本机 RecipeNLG API
+- 推荐页新增 `AI Generate Recipe` 按钮；当前食材本地匹配度为 0 时，点击推荐会自动尝试调用 RecipeNLG
+- 菜谱列表和详情新增模式展示：`Existing Recipe`、`User Recipe`、`AI Creation`
+- AI 生成菜谱复用现有 Recipe Viewer、食材清单、步骤和缺少食材展示逻辑，不破坏 IndexedDB 和 HowToCook 导入流程
+- 验证：`pnpm build` 通过，`python -m py_compile backend\app.py backend\recipe_generator.py` 通过，`chicken/potato/onion` 生成格式化轻量测试通过

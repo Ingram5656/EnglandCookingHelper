@@ -11,7 +11,7 @@ export type StoredIngredient = Ingredient & {
 };
 
 export type StoredRecipe = Recipe & {
-  source: "seed" | "user";
+  source: "seed" | "user" | "ai";
   imageSource: "seed" | "upload" | "none";
   createdAt: number;
   updatedAt: number;

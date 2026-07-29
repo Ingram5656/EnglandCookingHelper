@@ -389,6 +389,7 @@ select:focus-visible {
 
 .ghost-button,
 .primary-button,
+.ai-button,
 .danger-button {
   border-radius: 10px;
   font-size: 13px;
@@ -420,6 +421,22 @@ select:focus-visible {
 
 .primary-button:hover {
   background: linear-gradient(135deg, #2aad68, #158e4c);
+}
+
+.ai-button {
+  background: linear-gradient(135deg, #1f2937, #39625a);
+  border: 0;
+  box-shadow: 0 7px 16px rgba(31, 41, 55, 0.16);
+  color: white;
+}
+
+.ai-button:hover {
+  background: linear-gradient(135deg, #111827, #2f554e);
+}
+
+.ai-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 .ingredient-chips {
@@ -518,6 +535,45 @@ select:focus-visible {
 .suggestion-row button:hover {
   border-color: #8ac7a1;
   color: var(--green-dark);
+}
+
+.ai-callout {
+  align-items: center;
+  background:
+    radial-gradient(circle at 100% 0, rgba(44, 175, 103, 0.13), transparent 9rem),
+    #f8fbf9;
+  border: 1px solid #dbe9df;
+  border-radius: 13px;
+  display: flex;
+  gap: 14px;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 13px 14px;
+}
+
+.ai-callout strong {
+  display: block;
+  font-size: 13px;
+}
+
+.ai-callout p {
+  color: #66736b;
+  font-size: 12px;
+  margin: 4px 0 0;
+}
+
+.ai-callout.loading {
+  border-color: #b5dec5;
+}
+
+.ai-callout.error {
+  background: #fff8f7;
+  border-color: #f3c7c2;
+}
+
+.ai-callout.success {
+  background: #f3fbf6;
+  border-color: #b8e2c8;
 }
 
 .toolbar {
@@ -693,6 +749,22 @@ select:focus-visible {
 
 .card-meta span:first-child {
   color: #5aa678;
+}
+
+.source-badge {
+  border-radius: 999px;
+  font-weight: 800;
+  padding: 2px 8px;
+}
+
+.source-badge.existing {
+  background: #edf7f1;
+  color: #23804b;
+}
+
+.source-badge.ai {
+  background: #eef2ff;
+  color: #3445a1;
 }
 
 .ingredient-line {
@@ -1020,6 +1092,7 @@ select:focus-visible {
   align-items: center;
   display: flex;
   flex-direction: column;
+  gap: 8px;
   justify-content: center;
   min-height: 390px;
   padding: 35px;

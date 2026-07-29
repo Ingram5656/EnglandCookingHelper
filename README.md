@@ -13,6 +13,8 @@
 - “食材清单”页面展示网站支持的食材、emoji、类型和分类
 - 食材清单支持分类筛选：主食、蔬菜、肉类、海鲜、调料
 - “上传菜谱”页面支持菜谱图片上传和公式化模板导入
+- 可选 FastAPI + RecipeNLG 后端，支持无本地匹配时生成 AI 菜谱
+- 菜谱模式区分 `Existing Recipe`、`User Recipe` 和 `AI Creation`
 - 桌面与移动端响应式界面
 
 ## 本地运行
@@ -36,6 +38,29 @@ pnpm build
 
 ```text
 dist/index.html
+```
+
+## RecipeNLG AI 生成后端
+
+前端默认仍然可以完全离线使用本地 HowToCook 菜谱和 IndexedDB。RecipeNLG 是可选本机后端：只有点击 `AI Generate Recipe`，或当前食材没有本地匹配时，前端才会尝试调用 `http://127.0.0.1:8000/generate-recipe`。
+
+启动后端：
+
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app:app --host 127.0.0.1 --port 8000
+```
+
+首次运行会从 HuggingFace 下载 `mbien/recipenlg` 模型，需要网络和本地缓存空间。后端如果无法加载模型，会返回结构化 fallback 菜谱，避免前端收到空结果。
+
+如需修改前端调用地址：
+
+```powershell
+$env:VITE_RECIPE_API_URL="http://127.0.0.1:8000"
+pnpm dev
 ```
 
 ## 数据与素材
