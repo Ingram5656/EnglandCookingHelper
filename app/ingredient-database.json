@@ -1,0 +1,4930 @@
+[
+  {
+    "name": "巴斯马蒂香米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "半成品薯条",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍟",
+    "category": "主食"
+  },
+  {
+    "name": "半成品意大利面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "半干荞麦面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "北方大米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "北京麻辣方便面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "主食"
+  },
+  {
+    "name": "冰粉籽",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "饼干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍪",
+    "category": "主食"
+  },
+  {
+    "name": "饼干屑",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍪",
+    "category": "主食"
+  },
+  {
+    "name": "炒河粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "纯干燕麦片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "大米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "带皮玉米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌽",
+    "category": "主食"
+  },
+  {
+    "name": "蛋挞皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥧",
+    "category": "主食"
+  },
+  {
+    "name": "地瓜粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "低筋面粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "方便面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "方形吐司片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "粉丝",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "风干快熟面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "干面条",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "高筋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "高筋面粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "谷朊粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "挂面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "龟苓膏粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "河粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "黑米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "红薯粉丝",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "吉士粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "江南米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "饺子",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "蕨根粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "快熟面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "冷冻玉米粒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌽",
+    "category": "主食"
+  },
+  {
+    "name": "冷饭",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "丽滋饼干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍪",
+    "category": "主食"
+  },
+  {
+    "name": "凉粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "凉皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "螺蛳粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "麦芽粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "馒头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "米饭",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "米粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "面包",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "面包糠",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "面包片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "面粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "面条",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "魔芋粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "年糕",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "糯米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "糯米粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "泡面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "普通面粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "荞麦面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "全麦面粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "全脂奶粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "热干面特有的碱水面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "烧卖皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧂",
+    "category": "主食"
+  },
+  {
+    "name": "手指饼干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍪",
+    "category": "主食"
+  },
+  {
+    "name": "手抓饼皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "速冻馄饨",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥟",
+    "category": "主食"
+  },
+  {
+    "name": "速冻水饺",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥟",
+    "category": "主食"
+  },
+  {
+    "name": "粟米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "塔塔粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "通心粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "土豆干粉条",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "吐司",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "鲜面条",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "小薄饼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "小麦粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "小米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "新鲜吐司",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "新鲜玉米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌽",
+    "category": "主食"
+  },
+  {
+    "name": "燕麦",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "洋葱粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "意大利面",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍜",
+    "category": "主食"
+  },
+  {
+    "name": "薏米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍚",
+    "category": "主食"
+  },
+  {
+    "name": "鹰嘴豆粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "玉米",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌽",
+    "category": "主食"
+  },
+  {
+    "name": "玉米粒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌽",
+    "category": "主食"
+  },
+  {
+    "name": "粘米粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "蒸肉粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "蒸肉米粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "中筋面粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "紫薯粉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "主食"
+  },
+  {
+    "name": "白菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "白菜心",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "白豆腐",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "白萝卜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥕",
+    "category": "蔬菜"
+  },
+  {
+    "name": "白蘑菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "白洋葱",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "白玉菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "百香果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "包菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "薄荷叶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌿",
+    "category": "蔬菜"
+  },
+  {
+    "name": "薄荷汁",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌿",
+    "category": "蔬菜"
+  },
+  {
+    "name": "菠菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "菜椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "菜椒甜椒各",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "菜心",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "草果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "草莓",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍓",
+    "category": "蔬菜"
+  },
+  {
+    "name": "橙子",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍊",
+    "category": "蔬菜"
+  },
+  {
+    "name": "糍粑辣椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "葱",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "葱结",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "葱头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "大白菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "大白菜嫩叶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "大葱",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "大蒜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "灯笼椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "调理机",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "东北酸菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "冬菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "冬瓜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥒",
+    "category": "蔬菜"
+  },
+  {
+    "name": "冬笋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豆腐",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豆干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豆角",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豆皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豆芽",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豆制品",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "俄式酸黄瓜汁",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥒",
+    "category": "蔬菜"
+  },
+  {
+    "name": "番茄",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍅",
+    "category": "蔬菜"
+  },
+  {
+    "name": "番茄膏",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍅",
+    "category": "蔬菜"
+  },
+  {
+    "name": "番茄罐头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍅",
+    "category": "蔬菜"
+  },
+  {
+    "name": "凤梨",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍐",
+    "category": "蔬菜"
+  },
+  {
+    "name": "腐乳",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥫",
+    "category": "蔬菜"
+  },
+  {
+    "name": "橄榄菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "干豆腐",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "干红椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "干辣椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "干木耳",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "干香菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "果蜜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "荷兰豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "黑木耳",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "红葱头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "红豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "红椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "红腰豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "红芸豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "胡萝卜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥕",
+    "category": "蔬菜"
+  },
+  {
+    "name": "瓠瓜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧂",
+    "category": "蔬菜"
+  },
+  {
+    "name": "花菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥦",
+    "category": "蔬菜"
+  },
+  {
+    "name": "花椰菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥥",
+    "category": "蔬菜"
+  },
+  {
+    "name": "黄豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "黄瓜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥒",
+    "category": "蔬菜"
+  },
+  {
+    "name": "混合坚果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥜",
+    "category": "蔬菜"
+  },
+  {
+    "name": "茄子",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍆",
+    "category": "蔬菜"
+  },
+  {
+    "name": "尖椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "坚果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥜",
+    "category": "蔬菜"
+  },
+  {
+    "name": "坚果碎",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥜",
+    "category": "蔬菜"
+  },
+  {
+    "name": "姜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫚",
+    "category": "蔬菜"
+  },
+  {
+    "name": "茭白",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧂",
+    "category": "蔬菜"
+  },
+  {
+    "name": "金菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "金针菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "韭菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "菌菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "空心菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "苦瓜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥒",
+    "category": "蔬菜"
+  },
+  {
+    "name": "辣椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "老豆腐",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "荔浦芋头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "莲藕",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🪷",
+    "category": "蔬菜"
+  },
+  {
+    "name": "绿豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "绿豆芽",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "萝卜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥕",
+    "category": "蔬菜"
+  },
+  {
+    "name": "萝卜干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥕",
+    "category": "蔬菜"
+  },
+  {
+    "name": "螺丝椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "毛豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "梅菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "蘑菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "木耳",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "南瓜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🎃",
+    "category": "蔬菜"
+  },
+  {
+    "name": "内酯豆腐",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "柠檬",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍋",
+    "category": "蔬菜"
+  },
+  {
+    "name": "柠檬汁",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍋",
+    "category": "蔬菜"
+  },
+  {
+    "name": "泡姜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫚",
+    "category": "蔬菜"
+  },
+  {
+    "name": "苹果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍎",
+    "category": "蔬菜"
+  },
+  {
+    "name": "奇异果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "切丝柳橙干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍊",
+    "category": "蔬菜"
+  },
+  {
+    "name": "切丝芒果干",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥭",
+    "category": "蔬菜"
+  },
+  {
+    "name": "芹菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青葱",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青红椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青红辣椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青茄子",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍆",
+    "category": "蔬菜"
+  },
+  {
+    "name": "青椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "日本豆腐",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "山药",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🤍",
+    "category": "蔬菜"
+  },
+  {
+    "name": "生菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "蔬菜高汤",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "四季豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "酸菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "酸豆角",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "酸笋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "酸笋包",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "蒜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "蒜苗",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "蒜苔",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "蒜薹",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🧄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "甜椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "土豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "娃娃菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "豌豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "莴笋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "莴笋叶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "西葫芦",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥒",
+    "category": "蔬菜"
+  },
+  {
+    "name": "西兰花",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥦",
+    "category": "蔬菜"
+  },
+  {
+    "name": "鲜香菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "线椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "香菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "香菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "香蕉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍌",
+    "category": "蔬菜"
+  },
+  {
+    "name": "香芹",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "小米椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "腌制百香果部分",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥬",
+    "category": "蔬菜"
+  },
+  {
+    "name": "洋葱",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🟢",
+    "category": "蔬菜"
+  },
+  {
+    "name": "腰果",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥜",
+    "category": "蔬菜"
+  },
+  {
+    "name": "银耳",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🍄",
+    "category": "蔬菜"
+  },
+  {
+    "name": "鹰嘴豆",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🫘",
+    "category": "蔬菜"
+  },
+  {
+    "name": "油麦菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🛢️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "子弹头辣椒",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌶️",
+    "category": "蔬菜"
+  },
+  {
+    "name": "鹌鹑蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "半只鸡",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "纯牛奶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "纯瘦肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "打蛋器",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "大鸡腿",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "蛋类",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "蛋挞液",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "电动打蛋器",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "肥牛",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "肥牛卷",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "肥牛片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "肥肉末",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "桂皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "红柚果肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "火腿",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "火腿肠",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "火腿片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡半只",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡翅中",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡蛋的鸡蛋清",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡蛋黄",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡精",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡全翅",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡汤",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡腿",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡腿肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡胸肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸡爪",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "煎蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "腊肠",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "腊肠约",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "肋排",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "冷牛奶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "里脊肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "两个鸡蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "螺蛳肉包",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "梅头猪肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "牛腱子肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛里脊",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "牛柳",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛奶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛奶约",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛腩",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛排",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛肉高汤",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "牛肉末",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "牛蛙肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "排骨",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "培根",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "皮蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "前腿肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "黔式腊肠",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "全脂牛奶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "肉丁",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "肉类",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "肉末",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "肉沫",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "肉汤汁",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥣",
+    "category": "肉类"
+  },
+  {
+    "name": "肉馅",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "生鸡肝",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "手枪腿鸡腿",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "瘦肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "瘦肉末",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "熟蛋黄",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "酸奶",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥛",
+    "category": "肉类"
+  },
+  {
+    "name": "碎牛肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "肉类"
+  },
+  {
+    "name": "摊鸡蛋皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "兔肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "网购蛋挞液",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "无骨肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "无骨肉共需",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "无菌鸡蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "五花肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "五花肉薄片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "五花肉条",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "午餐肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "午餐肉罐头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥓",
+    "category": "肉类"
+  },
+  {
+    "name": "鲜鸭血",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦆",
+    "category": "肉类"
+  },
+  {
+    "name": "鲜仔鸭肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦆",
+    "category": "肉类"
+  },
+  {
+    "name": "咸肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "咸鸭蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "新鲜鸡翅",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "新鲜鸡翅中",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "新鲜鸡蛋",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥚",
+    "category": "肉类"
+  },
+  {
+    "name": "鸭肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦆",
+    "category": "肉类"
+  },
+  {
+    "name": "鸭子",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦆",
+    "category": "肉类"
+  },
+  {
+    "name": "羊腩",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐑",
+    "category": "肉类"
+  },
+  {
+    "name": "羊排",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐑",
+    "category": "肉类"
+  },
+  {
+    "name": "羊肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐑",
+    "category": "肉类"
+  },
+  {
+    "name": "意式猪肉香肠",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪里脊",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪里脊肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪排骨",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪前肘",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪肉末",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪肉片",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪肉馅",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪瘦肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪蹄",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪通脊肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "猪五花肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "肉类"
+  },
+  {
+    "name": "煮熟的腊肉",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🥩",
+    "category": "肉类"
+  },
+  {
+    "name": "阿根廷红虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "昂刺鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "巴沙鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "鳊鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "草鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "蛏子",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦪",
+    "category": "海鲜"
+  },
+  {
+    "name": "大虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "甘竹牌鲮鱼罐头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "桂鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "鳜鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "海虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "黑虎虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "黑鳕鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "活虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "鲣鱼海苔碎",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "剑骨鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "冷冻去皮基围虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "鲤鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "鲮鱼罐头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "鲈鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "罗氏虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "牛羊鱼虾等肉类",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐮",
+    "category": "海鲜"
+  },
+  {
+    "name": "螃蟹",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦀",
+    "category": "海鲜"
+  },
+  {
+    "name": "泡发好的海参",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "翘嘴鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "青蟹",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦀",
+    "category": "海鲜"
+  },
+  {
+    "name": "肉蟹",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦀",
+    "category": "海鲜"
+  },
+  {
+    "name": "三文鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "生蚝",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦪",
+    "category": "海鲜"
+  },
+  {
+    "name": "水浸金枪鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "水浸金枪鱼罐头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "虾滑馅",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "虾皮",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "虾仁",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "鲜虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "小龙虾",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦐",
+    "category": "海鲜"
+  },
+  {
+    "name": "蟹味菇",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🦀",
+    "category": "海鲜"
+  },
+  {
+    "name": "鱼",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "鱼露",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "鱼肉馅",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐷",
+    "category": "海鲜"
+  },
+  {
+    "name": "鱼头",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🐟",
+    "category": "海鲜"
+  },
+  {
+    "name": "紫菜",
+    "amount": "适量",
+    "type": "main",
+    "emoji": "🌊",
+    "category": "海鲜"
+  },
+  {
+    "name": "爱尔兰百利甜酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "安琪甜酒曲",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "奥利奥",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍪",
+    "category": "调料"
+  },
+  {
+    "name": "八角",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌿",
+    "category": "调料"
+  },
+  {
+    "name": "耙耙柑",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "白醋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "白胡椒粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "白酱油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "白酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "白朗姆酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "白葡萄酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍇",
+    "category": "调料"
+  },
+  {
+    "name": "白鱔",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "白芝麻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "白芷",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "百里香",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "冰淇淋底料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍨",
+    "category": "调料"
+  },
+  {
+    "name": "冰糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "冰镇苏打水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥤",
+    "category": "调料"
+  },
+  {
+    "name": "波旁威士忌",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "菠萝汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍍",
+    "category": "调料"
+  },
+  {
+    "name": "菜籽油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "藏红花",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "草寇",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "草莓糖浆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "茶粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "茶树菇",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍄",
+    "category": "调料"
+  },
+  {
+    "name": "朝天椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "陈醋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "陈皮",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "橙味甜酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍊",
+    "category": "调料"
+  },
+  {
+    "name": "橙汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍊",
+    "category": "调料"
+  },
+  {
+    "name": "豉油调味汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "赤藓糖醇",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "出汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "糍粑",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍡",
+    "category": "调料"
+  },
+  {
+    "name": "葱油酱汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "醋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "醋包",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "大排",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "大田螺",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "带脚",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "淡奶油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "蛋黄酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "当归",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "淀粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "丁香",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "豆瓣酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "豆豉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "豆蔻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🫘",
+    "category": "调料"
+  },
+  {
+    "name": "豆母子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🫘",
+    "category": "调料"
+  },
+  {
+    "name": "豆油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "剁椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "番茄酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "方糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "放凉浓缩咖啡",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "枫糖浆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "蜂蜜",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍯",
+    "category": "调料"
+  },
+  {
+    "name": "凤尾",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "伏特加",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "腐乳汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "腐竹",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🫘",
+    "category": "调料"
+  },
+  {
+    "name": "甘草",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "甘露咖啡酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "橄榄油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "干桂花",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "干酵母",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "干罗勒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "干线椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "高度白酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "高汤",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "枸杞",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🔴",
+    "category": "调料"
+  },
+  {
+    "name": "罐头菠萝片",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍍",
+    "category": "调料"
+  },
+  {
+    "name": "桂林辣椒酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "桂林三花酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "桂圆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🟤",
+    "category": "调料"
+  },
+  {
+    "name": "果酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "海苔碎",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍙",
+    "category": "调料"
+  },
+  {
+    "name": "海鲜酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "海盐",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "韩式酱油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "韩式辣酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "蚝油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "黑醋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "黑胡椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "黑胡椒粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "黑胡椒粒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "黑胡椒碎",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "黑椒牛排调味料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "黑椒腌料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "黑芝麻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "红茶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "红茶包",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "红茶茶包",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "红葱油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "红豆蔻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🫘",
+    "category": "调料"
+  },
+  {
+    "name": "红腐乳",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "红花椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "红尖椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "红酱油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "红石榴糖浆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "红糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "红枣",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌰",
+    "category": "调料"
+  },
+  {
+    "name": "胡椒粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "花雕酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "花椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "花椒粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "花椒粒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "花椒碎",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "花椒油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "花生",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "花生酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "花生碎",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "花生油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "话梅",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "黄冰糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "黄豆酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "黄花",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "黄酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "黄油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "茴香",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "吉利丁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧊",
+    "category": "调料"
+  },
+  {
+    "name": "吉利丁片",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧊",
+    "category": "调料"
+  },
+  {
+    "name": "加糖炼乳",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "茄汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "姜粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "姜黄粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "酱油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "椒盐",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "酵母",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "酵母粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "酵头",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "芥末",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🟡",
+    "category": "调料"
+  },
+  {
+    "name": "芥末油—可用其他食用油替代",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "金酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "酒糟",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "咖啡粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "咖啡液",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "咖喱块",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍛",
+    "category": "调料"
+  },
+  {
+    "name": "开洋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "可可粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "可乐",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥤",
+    "category": "调料"
+  },
+  {
+    "name": "辣椒粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "辣椒面",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "辣椒油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "蓝橙力娇酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍊",
+    "category": "调料"
+  },
+  {
+    "name": "朗姆酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "醪糟",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "老抽",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "老干妈",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "冷冻花卷",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "莲子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🪷",
+    "category": "调料"
+  },
+  {
+    "name": "炼乳",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥛",
+    "category": "调料"
+  },
+  {
+    "name": "料酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "龙舌兰酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "卤料包",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "绿色小豆蔻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🫘",
+    "category": "调料"
+  },
+  {
+    "name": "麻辣鲜",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "马斯卡彭芝士",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥛",
+    "category": "调料"
+  },
+  {
+    "name": "麦冬",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "麦片",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "美人辣",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "米醋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍚",
+    "category": "调料"
+  },
+  {
+    "name": "米酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍚",
+    "category": "调料"
+  },
+  {
+    "name": "绵白糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "棉花糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "秒表",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "茉莉绿茶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍵",
+    "category": "调料"
+  },
+  {
+    "name": "奶酪",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥛",
+    "category": "调料"
+  },
+  {
+    "name": "奶油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "奶油奶酪",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "南腐乳",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "南乳",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "牛排酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "牛油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "牛油果",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "浓缩咖啡",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "☕",
+    "category": "调料"
+  },
+  {
+    "name": "欧芹",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "帕马森干酪",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "刨丝器",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "泡打粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "泡椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "披萨石",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "皮冻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "啤酒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍺",
+    "category": "调料"
+  },
+  {
+    "name": "葡萄干",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍇",
+    "category": "调料"
+  },
+  {
+    "name": "蒲烧汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "其他调味料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "奇亚籽",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "千张",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "巧克力",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "青花椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "青芥末",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🟡",
+    "category": "调料"
+  },
+  {
+    "name": "青柠",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "轻食机",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "清水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "去心莲子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🪷",
+    "category": "调料"
+  },
+  {
+    "name": "燃气灶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "日式味淋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "容量是",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "容量在",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "乳鸽",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "沙拉酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "筛网",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "山奈",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "山楂片",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "鳝丝",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "商芝",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "烧烤料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "烧烤撒料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "生抽",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "生粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "十三香",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌿",
+    "category": "调料"
+  },
+  {
+    "name": "石斛",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "食用油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "手枪腿",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "熟白芝麻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "熟花生",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "熟松子仁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "刷子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "水≥",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "水淀粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "苏打气泡水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "苏打水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥤",
+    "category": "调料"
+  },
+  {
+    "name": "酥油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "速冻汤圆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "酸梅晶固体饮料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蒜粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "蒜蓉酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "蒜蓉辣酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "炭火",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "汤力水气泡水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "汤料包",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "糖",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "糖浆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍬",
+    "category": "调料"
+  },
+  {
+    "name": "藤椒油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "甜椒粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "甜面酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "土豆淀粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "豌豆淀粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "威士忌",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍸",
+    "category": "调料"
+  },
+  {
+    "name": "味极鲜",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "味精",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "✨",
+    "category": "调料"
+  },
+  {
+    "name": "味淋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "味素",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "温水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "乌梅",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "乌枣",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌰",
+    "category": "调料"
+  },
+  {
+    "name": "无盐黄油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "五香粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "吸管",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "西洋参",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "香菜粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "香草精",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "香醋",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍶",
+    "category": "调料"
+  },
+  {
+    "name": "香干",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "香辣酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "香叶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌿",
+    "category": "调料"
+  },
+  {
+    "name": "小豆蔻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🫘",
+    "category": "调料"
+  },
+  {
+    "name": "小豆蔻粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "小斧头",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "小料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "小苏打",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "小汤圆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "新奥尔良烤翅调料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "新鲜绿叶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "新鲜欧芹",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "杏仁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "雪碧",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "雪克瓶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "血肠",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "研杵",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "盐",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "盐焗鸡粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "椰浆",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥥",
+    "category": "调料"
+  },
+  {
+    "name": "椰奶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥥",
+    "category": "调料"
+  },
+  {
+    "name": "椰汁",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥥",
+    "category": "调料"
+  },
+  {
+    "name": "椰子水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥥",
+    "category": "调料"
+  },
+  {
+    "name": "野山椒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌶️",
+    "category": "调料"
+  },
+  {
+    "name": "一般人可以食用",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "意大利面酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "饮用水",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "印度黑盐—可用普通盐替代",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "印度综合香料粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "油泼辣子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "柚子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "玉米淀粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "玉米油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "玉竹",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "遇水发光冰块",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "原料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "原味奥利奥",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🍪",
+    "category": "调料"
+  },
+  {
+    "name": "原味酸奶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥛",
+    "category": "调料"
+  },
+  {
+    "name": "原则",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "圆碟子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蘸料碟",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "笊篱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蒸篦子",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蒸架",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蒸笼",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蒸箱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "蒸鱼豉油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "芝麻",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "芝麻酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "芝麻粒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥜",
+    "category": "调料"
+  },
+  {
+    "name": "芝麻盐",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "芝麻油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "芝士",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥛",
+    "category": "调料"
+  },
+  {
+    "name": "芝士片",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥛",
+    "category": "调料"
+  },
+  {
+    "name": "重奶油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "猪油",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "猪油渣",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🛢️",
+    "category": "调料"
+  },
+  {
+    "name": "主料",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "柱候酱",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥫",
+    "category": "调料"
+  },
+  {
+    "name": "孜然",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌿",
+    "category": "调料"
+  },
+  {
+    "name": "孜然粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "孜然粒",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🌿",
+    "category": "调料"
+  },
+  {
+    "name": "紫苏叶",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  },
+  {
+    "name": "Masala粉",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🥣",
+    "category": "调料"
+  },
+  {
+    "name": "paprika",
+    "amount": "适量",
+    "type": "seasoning",
+    "emoji": "🧂",
+    "category": "调料"
+  }
+]

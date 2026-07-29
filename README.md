@@ -13,6 +13,8 @@
 - “食材清单”页面展示网站支持的食材、emoji、类型和分类
 - 食材清单支持分类筛选：主食、蔬菜、肉类、海鲜、调料
 - “上传菜谱”页面支持菜谱图片上传和公式化模板导入
+- 可选 FastAPI + RecipeNLG 后端，支持无本地匹配时生成 AI 菜谱
+- 菜谱模式区分 `Existing Recipe`、`User Recipe` 和 `AI Creation`
 - 桌面与移动端响应式界面
 
 ## 本地运行
@@ -38,9 +40,34 @@ pnpm build
 dist/index.html
 ```
 
+## RecipeNLG AI 生成后端
+
+前端默认仍然可以完全离线使用本地 HowToCook 菜谱和 IndexedDB。RecipeNLG 是可选本机后端：只有点击 `AI Generate Recipe`，或当前食材没有本地匹配时，前端才会尝试调用 `http://127.0.0.1:8000/generate-recipe`。
+
+启动后端：
+
+```bash
+cd backend
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app:app --host 127.0.0.1 --port 8000
+```
+
+首次运行会从 HuggingFace 下载 `mbien/recipenlg` 模型，需要网络和本地缓存空间。后端如果无法加载模型，会返回结构化 fallback 菜谱，避免前端收到空结果。
+
+如需修改前端调用地址：
+
+```powershell
+$env:VITE_RECIPE_API_URL="http://127.0.0.1:8000"
+pnpm dev
+```
+
 ## 数据与素材
 
 菜谱结构和本地图片整理自 [HowToCook](https://github.com/Anduin2017/HowToCook)，并为当前离线推荐演示做了结构化处理。原项目采用 Unlicense。
+
+食材数据库来源于 `docs/SmartRecipe_Ingredient_Database.xlsx` 的人工核查结果，并同步生成到 `app/ingredient-database.json`。前端首次打开时会把这份 JSON 作为 `ingredients` 表的种子数据写入浏览器 IndexedDB。
 
 ## 导入 HowToCook 菜谱
 
@@ -57,14 +84,20 @@ pnpm build
 
 - 复制可识别的菜谱图片到 `public/howtocook`
 - 为无图菜谱显示“待上传图片”
-- 从菜谱食材中生成食材清单
-- 归一化常见重复名称，例如“西红柿/番茄”“小葱/香葱/葱”“白糖/白砂糖/糖”
+- 生成 `app/generated-recipes.json`
+- 自动执行 `scripts/sync-recipes-from-ingredient-database.mjs`，把菜谱食材同步清洗为 Excel 食材库中的规范名称
 - 过滤锅、碗、刀、搅拌机、烤箱等工具或容器类非食材项
-- 为每个食材补充 emoji 和分类
+
+如果只修改了 `app/ingredient-database.json`，可单独同步清洗菜谱：
+
+```bash
+pnpm sync:ingredient-db
+pnpm build
+```
 
 ## 本地数据库功能
 
-应用首次打开时会把内置菜谱和食材写入浏览器 IndexedDB。运行后新增或修改的数据也会写入本地数据库：
+应用首次打开时会把内置菜谱和 Excel 同步后的食材库写入浏览器 IndexedDB。运行后新增或修改的数据也会写入本地数据库：
 
 - `recipes`：菜谱、步骤、分类、食材、图片引用或上传图片数据
 - `ingredients`：网站支持的食材名称、类型、emoji 和分类
@@ -73,9 +106,17 @@ pnpm build
 当前种子数据包含：
 
 - 368 道菜谱
-- 991 个去重后的食材
-- 主食 132 个、蔬菜 177 个、肉类 135 个、海鲜 44 个、调料 503 个
+- 704 个 Excel 人工核查后的唯一食材
+- 主食 89 个、蔬菜 142 个、肉类 110 个、海鲜 43 个、调料 320 个
+- 菜谱中实际使用 697 个食材，暂未使用 7 个食材
 
-数据库升级时会清理旧版种子食材中的重复项和工具项，并保留用户自己新增的食材。
+当前同步校验结果：
+
+- 菜谱食材全部存在于 `app/ingredient-database.json`
+- 空食材菜谱：0
+- 菜谱内重复食材：0
+- 工具、说明语句、组合项残留扫描：0
+
+数据库升级或种子版本变化时，会重建内置食材清单，同时保留用户自行新增的食材。
 
 无原始图片的菜谱会显示“待上传图片”，不会使用其他菜谱图片冒充。可以在菜谱详情中上传或替换图片，也可以在“上传菜谱”页面按模板导入新菜谱。如果模板里包含食材库不存在的食材，应用会先弹窗确认是否添加该食材。

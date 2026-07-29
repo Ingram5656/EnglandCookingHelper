@@ -1,6 +1,7 @@
 "use client";
 
 import { ChangeEvent, FormEvent, useEffect, useMemo, useState } from "react";
+import { generateAiRecipe } from "./aiRecipe";
 import {
   getAllIngredients,
   getAllRecipes,
@@ -27,6 +28,7 @@ type View =
   | "ingredients"
   | "upload";
 type SidePanel = "shopping" | "settings" | null;
+type AiStatus = "idle" | "loading" | "success" | "error";
 
 const DEFAULT_INGREDIENTS = ["鸡蛋", "番茄", "青椒", "土豆", "葱", "大蒜"];
 const TEMPLATE = `菜名：红烧鱼
@@ -115,6 +117,12 @@ function blockAfter(label: string, text: string) {
   return lines.slice(start + 1, end < 0 ? lines.length : end).join("\n");
 }
 
+function sourceModeLabel(recipe: Recipe) {
+  if (recipe.source === "ai") return "AI Creation";
+  if (recipe.source === "user") return "User Recipe";
+  return "Existing Recipe";
+}
+
 function parseRecipeTemplate(text: string, imageDataUrl: string): StoredRecipe {
   const name = valueAfter("菜名", text);
   if (!name) throw new Error("模板缺少“菜名”。");
@@ -201,6 +209,9 @@ export default function Home() {
   const [pendingMissingIngredients, setPendingMissingIngredients] = useState<
     Ingredient[]
   >([]);
+  const [aiRecipe, setAiRecipe] = useState<StoredRecipe | null>(null);
+  const [aiStatus, setAiStatus] = useState<AiStatus>("idle");
+  const [aiError, setAiError] = useState("");
   const [toast, setToast] = useState("");
   const [dbReady, setDbReady] = useState(false);
 
@@ -262,13 +273,26 @@ export default function Home() {
     () => selectedIngredients.map(normalizeIngredient),
     [selectedIngredients],
   );
+  const allRecipes = useMemo(
+    () => (aiRecipe ? [aiRecipe, ...recipes] : recipes),
+    [aiRecipe, recipes],
+  );
 
   const scoredRecipes = useMemo(
     () =>
-      recipes.map((recipe) => ({
+      allRecipes.map((recipe) => ({
         ...recipe,
-        score: scoreRecipe(recipe, selectedIngredients),
+        score:
+          recipe.source === "ai" ? 100 : scoreRecipe(recipe, selectedIngredients),
       })),
+    [allRecipes, selectedIngredients],
+  );
+  const bestLocalScore = useMemo(
+    () =>
+      recipes.reduce(
+        (best, recipe) => Math.max(best, scoreRecipe(recipe, selectedIngredients)),
+        0,
+      ),
     [recipes, selectedIngredients],
   );
 
@@ -279,6 +303,7 @@ export default function Home() {
       .filter((recipe) => {
         if (activeView === "favorites" && !favorites.includes(recipe.id)) return false;
         if (activeView === "recent" && !recent.includes(recipe.id)) return false;
+        if (activeView === "recommend" && recipe.score < 60) return false;
         if (
           normalizedQuery &&
           !recipe.name.toLowerCase().includes(normalizedQuery) &&
@@ -327,8 +352,8 @@ export default function Home() {
   }, [visibleRecipes, selectedRecipeId]);
 
   const selectedRecipe =
-    scoredRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
-    scoredRecipes[0];
+    visibleRecipes.find((recipe) => recipe.id === selectedRecipeId) ??
+    visibleRecipes[0];
   const matchedIngredients =
     selectedRecipe?.ingredients.filter((item) =>
       normalizedPantry.includes(normalizeIngredient(item.name)),
@@ -404,6 +429,57 @@ export default function Home() {
       willAdd ? [...current, name] : current.filter((item) => item !== name),
     );
     announce(willAdd ? `已把 ${name} 加入购物清单` : `已从清单移除 ${name}`);
+  }
+
+  async function handleGenerateAiRecipe() {
+    const requestIngredients = selectedIngredients.map(normalizeIngredient);
+    if (!requestIngredients.length) {
+      announce("请先添加至少一个食材");
+      return;
+    }
+    setAiStatus("loading");
+    setAiError("");
+    try {
+      const generatedRecipe = await generateAiRecipe(requestIngredients);
+      const now = Date.now();
+      const storedRecipe: StoredRecipe = {
+        ...generatedRecipe,
+        source: "ai",
+        imageSource: "none",
+        createdAt: now,
+        updatedAt: now,
+      };
+      setAiRecipe(storedRecipe);
+      setActiveView("recommend");
+      setSortMode("match");
+      setSelectedRecipeId(storedRecipe.id);
+      setRecent((current) =>
+        [storedRecipe.id, ...current.filter((item) => item !== storedRecipe.id)].slice(
+          0,
+          8,
+        ),
+      );
+      setAiStatus("success");
+      announce("已生成 AI 菜谱");
+    } catch (error) {
+      const message =
+        error instanceof Error
+          ? error.message
+          : "RecipeNLG API 暂时不可用";
+      setAiError(message);
+      setAiStatus("error");
+      announce("AI 生成失败，请检查本机后端服务");
+    }
+  }
+
+  function handleRecommendRecipes() {
+    setActiveView("recommend");
+    setSortMode("match");
+    if (bestLocalScore === 0 && selectedIngredients.length) {
+      void handleGenerateAiRecipe();
+      return;
+    }
+    announce("已按当前食材重新匹配");
   }
 
   function handleNav(id: (typeof NAV_ITEMS)[number]["id"]) {
@@ -549,7 +625,13 @@ export default function Home() {
         </div>
       </aside>
 
-      <main className="main-content">
+      <main
+        className={`main-content ${
+          activeView !== "ingredients" && activeView !== "upload"
+            ? "recipe-mode"
+            : "database-mode"
+        }`}
+      >
         <header className="topbar">
           <div>
             <p className="eyebrow">SMARTRECIPE · INDEXEDDB</p>
@@ -601,13 +683,16 @@ export default function Home() {
                   </button>
                   <button
                     className="primary-button"
-                    onClick={() => {
-                      setActiveView("recommend");
-                      setSortMode("match");
-                      announce("已按当前食材重新匹配");
-                    }}
+                    onClick={handleRecommendRecipes}
                   >
                     ✣ 推荐菜谱
+                  </button>
+                  <button
+                    className="ai-button"
+                    onClick={() => void handleGenerateAiRecipe()}
+                    disabled={aiStatus === "loading" || !selectedIngredients.length}
+                  >
+                    {aiStatus === "loading" ? "生成中..." : "AI Generate Recipe"}
                   </button>
                 </div>
               </div>
@@ -671,6 +756,33 @@ export default function Home() {
                   </div>
                 </div>
               )}
+              {(bestLocalScore === 0 || aiStatus !== "idle") && (
+                <div className={`ai-callout ${aiStatus}`}>
+                  <div>
+                    <strong>
+                      {bestLocalScore === 0
+                        ? "本地菜谱没有直接匹配"
+                        : "RecipeNLG 生成模式"}
+                    </strong>
+                    <p>
+                      {aiStatus === "loading"
+                        ? "正在调用本机 FastAPI + RecipeNLG 生成新菜谱。"
+                        : aiStatus === "error"
+                          ? `生成失败：${aiError}`
+                          : aiRecipe
+                            ? "已生成 AI Creation 菜谱，可在右侧详情中查看。"
+                            : "可以点击 AI Generate Recipe，用当前食材生成新组合。"}
+                    </p>
+                  </div>
+                  <button
+                    className="ghost-button"
+                    onClick={() => void handleGenerateAiRecipe()}
+                    disabled={aiStatus === "loading" || !selectedIngredients.length}
+                  >
+                    {aiStatus === "loading" ? "生成中..." : "调用 RecipeNLG"}
+                  </button>
+                </div>
+              )}
             </section>
 
             <div className="toolbar">
@@ -726,7 +838,7 @@ export default function Home() {
                   onChange={(event) => setCategoryFilter(event.target.value)}
                 >
                   <option value="all">全部分类</option>
-                  {[...new Set(recipes.map((recipe) => recipe.category))].map(
+                  {[...new Set(allRecipes.map((recipe) => recipe.category))].map(
                     (category) => (
                       <option key={category}>{category}</option>
                     ),
@@ -734,7 +846,9 @@ export default function Home() {
                 </select>
               </label>
               <span className="result-count">
-                {visibleRecipes.length} 个结果 · {recipesWithoutImage} 道待上传图片
+                {visibleRecipes.length} 个结果
+                {activeView === "recommend" ? " · 仅显示匹配度 60%+" : ""} ·{" "}
+                {recipesWithoutImage} 道待上传图片
               </span>
             </div>
 
@@ -789,6 +903,13 @@ export default function Home() {
                             <span>♧ {recipe.difficulty}</span>
                             <span>◷ {recipe.time} 分钟</span>
                             <span>▤ {recipe.category}</span>
+                            <span
+                              className={`source-badge ${
+                                recipe.source === "ai" ? "ai" : "existing"
+                              }`}
+                            >
+                              {sourceModeLabel(recipe)}
+                            </span>
                             <span>{recipe.imageSource === "upload" ? "用户图片" : recipe.image ? "原图" : "无图"}</span>
                           </p>
                           <p className="ingredient-line">
@@ -852,6 +973,13 @@ export default function Home() {
                     >
                       清除筛选
                     </button>
+                    <button
+                      className="ai-button"
+                      onClick={() => void handleGenerateAiRecipe()}
+                      disabled={aiStatus === "loading" || !selectedIngredients.length}
+                    >
+                      {aiStatus === "loading" ? "生成中..." : "AI Generate Recipe"}
+                    </button>
                   </div>
                 )}
               </section>
@@ -872,7 +1000,7 @@ export default function Home() {
                       <h2>{selectedRecipe.name}</h2>
                       <p>
                         ♧ {selectedRecipe.difficulty} · ◷ {selectedRecipe.time} 分钟 ·{" "}
-                        {selectedRecipe.servings} 人份
+                        {selectedRecipe.servings} 人份 · {sourceModeLabel(selectedRecipe)}
                       </p>
                     </div>
                     <div className="detail-score">

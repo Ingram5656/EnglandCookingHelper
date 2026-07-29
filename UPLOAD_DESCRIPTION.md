@@ -87,3 +87,39 @@
 - 修正明显带说明文字的食材名称，例如 `蛋挞皮品牌不限整包蛋挞皮约为` 归并为 `蛋挞皮`，`未过期的一袋速冻水饺` 归并为 `速冻水饺`
 - `清洗记录` 工作表改为完整人工决策表，记录全部删除和合并/改名决策
 - 当前 Excel 复核结果：704 个唯一食材；主食 89、蔬菜 142、肉类 110、海鲜 43、调料 320；重复名称 0；工具/说明/组合类残留扫描 0
+
+## 2026-07-26 · Excel 食材库同步到前端数据库和菜谱
+
+- 新增 `app/ingredient-database.json`，作为由 Excel 同步得到的前端种子食材库
+- IndexedDB `ingredients` 初始化改为直接写入该食材库，共 704 个食材
+- 同步清洗 `app/generated-recipes.json`；所有菜谱食材均归一到 Excel 食材名，移除工具、说明语句和组合项
+- 新增 `scripts/sync-recipes-from-ingredient-database.mjs`，用于在食材库变更后重新清洗菜谱
+- `pnpm import:howtocook` 现在会导入 HowToCook 后自动执行食材库同步
+- 验证结果：368 道菜谱、704 个数据库食材、实际使用 697 个、暂未使用 7 个、缺失食材 0、空食材菜谱 0、重复菜谱食材 0、工具/说明/组合类残留 0
+- 重新执行 `pnpm import:howtocook`、`pnpm sync:ingredient-db` 和 `pnpm build`，验证通过
+
+## 2026-07-29 · RecipeNLG AI 菜谱生成集成
+
+- 新增 `backend/` FastAPI 后端，包含 `app.py`、`recipe_generator.py`、`requirements.txt` 和运行说明
+- 后端新增 `POST /generate-recipe`，请求 `{ "ingredients": [...] }`，返回 `{ "recipe": ... }`
+- `recipe_generator.py` 封装 HuggingFace `mbien/recipenlg`，支持多食材输入、生成长度控制和非空 fallback 菜谱
+- 前端新增 `app/aiRecipe.ts`，通过 `VITE_RECIPE_API_URL` 或默认 `http://127.0.0.1:8000` 调用本机 RecipeNLG API
+- 推荐页新增 `AI Generate Recipe` 按钮；当前食材本地匹配度为 0 时，点击推荐会自动尝试调用 RecipeNLG
+- 菜谱列表和详情新增模式展示：`Existing Recipe`、`User Recipe`、`AI Creation`
+- AI 生成菜谱复用现有 Recipe Viewer、食材清单、步骤和缺少食材展示逻辑，不破坏 IndexedDB 和 HowToCook 导入流程
+- 验证：`pnpm build` 通过，`python -m py_compile backend\app.py backend\recipe_generator.py` 通过，`chicken/potato/onion` 生成格式化轻量测试通过
+
+## 2026-07-29 · RecipeNLG 固定 fallback 步骤修复
+
+- 修复 RecipeNLG 原始输出解析逻辑：模型返回的是 `<NEXT_INSTR>`、`<INGR_END>`、`<TITLE_START>` 等标记格式，旧解析器只识别普通文本，导致一直进入 fallback
+- 后端 prompt 改为 RecipeNLG 原生格式：`<RECIPE_START><INPUT_START>...<INPUT_END><INGR_START>`
+- 新增 RecipeNLG 标记解析，提取真实标题、食材、步骤，只截取第一道生成菜谱，避免串入后续训练样本
+- fallback 步骤也改为按输入食材动态生成，不再所有输入都显示同一组步骤
+- 验证：真实模型下 `chicken/potato/onion` 返回 `Chicken And Potatoes`，`egg/tomato/rice` 返回 `Tomato Rice Pancakes`，两者步骤不同且没有 `fallback_reason`
+
+## 2026-07-29 · 推荐页滚动和匹配度过滤修复
+
+- 菜谱选择列表和右侧详细菜谱在桌面布局下改为独立滚动，避免浏览长列表时详情区域跟着页面一起移动
+- 移动端仍保留单列自然滚动，避免小屏出现过小的嵌套滚动区域
+- 推荐菜谱页只显示匹配度 60% 以上的菜谱，低匹配结果不再出现在推荐列表和右侧详情中
+- 推荐结果数量文案增加“仅显示匹配度 60%+”提示
