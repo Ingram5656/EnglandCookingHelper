@@ -145,6 +145,7 @@
 - 当前下厨房爬虫结果累计 131 个唯一有效菜谱，全部带有本地封面图片
 - 原始爬虫输出归档到 `docs/xiachufang_home_recipes.json`
 - 新增 `scripts/import-xiachufang-recipes.mjs`，把 `home_recipes.json` 合并到 `app/generated-recipes.json`
+- 同步归档当前可运行的爬虫脚本副本到 `scripts/xiachufang_top_recipes.py`
 - 新增 `pnpm import:xiachufang`，可重复同步下厨房爬虫结果
 - 下厨房图片复制到 `public/xiachufang`，前端可离线展示
 - 导入时按现有 Excel 食材库尽量归一化食材名、emoji 和分类，并把移动端单行步骤拆成步骤数组
