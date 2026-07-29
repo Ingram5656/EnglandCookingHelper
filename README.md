@@ -40,6 +40,19 @@ pnpm build
 dist/index.html
 ```
 
+## Windows 一键启动
+
+双击项目根目录的 `StartSmartRecipe.bat` 可以自动启动完整开发环境：
+
+- 检查或创建 `backend\.venv`
+- 检查并安装后端依赖
+- 检查并安装前端依赖
+- 启动 RecipeNLG FastAPI 后端：`http://127.0.0.1:8000`
+- 启动 Vite 前端：`http://127.0.0.1:5173`
+- 自动打开浏览器
+
+启动后会出现两个服务窗口：一个后端窗口、一个前端窗口。窗口需要保持打开；关闭窗口即停止对应服务。
+
 ## RecipeNLG AI 生成后端
 
 前端默认仍然可以完全离线使用本地 HowToCook 菜谱和 IndexedDB。RecipeNLG 是可选本机后端：只有点击 `AI Generate Recipe`，或当前食材没有本地匹配时，前端才会尝试调用 `http://127.0.0.1:8000/generate-recipe`。
