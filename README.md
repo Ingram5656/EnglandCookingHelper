@@ -109,6 +109,25 @@ pnpm sync:ingredient-db
 pnpm build
 ```
 
+## 导入下厨房菜谱
+
+当前版本已从 `D:\xiachufang_top_recipes_crawler_v4\home_recipes.json` 合并 131 道下厨房家常菜榜单菜谱，并把对应图片复制到 `public/xiachufang`。原始爬虫 JSON 同步归档到 `docs/xiachufang_home_recipes.json`。
+
+如需重新同步下厨房爬虫结果：
+
+```bash
+pnpm import:xiachufang
+pnpm build
+```
+
+导入脚本会：
+
+- 读取下厨房爬虫 JSON
+- 把图片复制到 `public/xiachufang`
+- 合并到 `app/generated-recipes.json`
+- 按现有 Excel 食材库尽量归一化食材名称、emoji 和分类
+- 把下厨房移动端合并在单行里的步骤拆成项目可展示的步骤数组
+
 ## 本地数据库功能
 
 应用首次打开时会把内置菜谱和 Excel 同步后的食材库写入浏览器 IndexedDB。运行后新增或修改的数据也会写入本地数据库：
@@ -119,7 +138,7 @@ pnpm build
 
 当前种子数据包含：
 
-- 368 道菜谱
+- 499 道菜谱，其中 368 道来自 HowToCook，131 道来自下厨房榜单
 - 704 个 Excel 人工核查后的唯一食材
 - 主食 89 个、蔬菜 142 个、肉类 110 个、海鲜 43 个、调料 320 个
 - 菜谱中实际使用 697 个食材，暂未使用 7 个食材

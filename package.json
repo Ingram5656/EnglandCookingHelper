@@ -9,6 +9,7 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build && node scripts/inline-build.mjs",
     "import:howtocook": "node scripts/import-howtocook.mjs && node scripts/sync-recipes-from-ingredient-database.mjs",
+    "import:xiachufang": "node scripts/import-xiachufang-recipes.mjs",
     "sync:ingredient-db": "node scripts/sync-recipes-from-ingredient-database.mjs",
     "preview": "vite preview",
     "lint": "tsc --noEmit"

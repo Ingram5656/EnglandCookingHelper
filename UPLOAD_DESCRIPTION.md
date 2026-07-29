@@ -138,3 +138,15 @@
 - 启动脚本现在会按顺序查找系统 `pnpm`、Codex 内置 Node/pnpm 运行时、系统 `npm`
 - 使用 Codex 内置 pnpm 时会自动把内置 Node 目录写入前端服务窗口的 `PATH`
 - 验证：`scripts/start-smartrecipe.ps1 -DryRun` 通过
+
+## 2026-07-29 · 下厨房榜单菜谱同步
+
+- 使用 `D:\xiachufang_top_recipes_crawler_v4\xiachufang_top_recipes.py` 在 `recipe-crawler` 环境中爬取下厨房家常菜分类最受欢迎榜单
+- 当前下厨房爬虫结果累计 131 个唯一有效菜谱，全部带有本地封面图片
+- 原始爬虫输出归档到 `docs/xiachufang_home_recipes.json`
+- 新增 `scripts/import-xiachufang-recipes.mjs`，把 `home_recipes.json` 合并到 `app/generated-recipes.json`
+- 新增 `pnpm import:xiachufang`，可重复同步下厨房爬虫结果
+- 下厨房图片复制到 `public/xiachufang`，前端可离线展示
+- 导入时按现有 Excel 食材库尽量归一化食材名、emoji 和分类，并把移动端单行步骤拆成步骤数组
+- 当前前端菜谱库共 499 道：HowToCook 368 道，下厨房 131 道
+- 验证：131 道下厨房菜谱均有图片、食材和步骤；`pnpm build` 通过
