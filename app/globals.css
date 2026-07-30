@@ -253,6 +253,11 @@ select:focus-visible {
   overflow-y: auto;
 }
 
+.main-content.all-recipes-mode {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
 .topbar {
   align-items: center;
   display: grid;
@@ -573,6 +578,158 @@ select:focus-visible {
   right: 55px;
   top: 38px;
   width: 10px;
+}
+
+.all-recipes-panel {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #edf1ee;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(31, 54, 42, 0.07);
+  margin: 38px auto 0;
+  max-width: 1400px;
+  padding: 20px 24px 30px;
+}
+
+.all-recipe-tabs {
+  border-bottom: 1px solid #eef1ef;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+}
+
+.all-recipe-tabs button {
+  align-items: center;
+  background: white;
+  border: 1px solid #e7ece9;
+  color: #75827a;
+  display: inline-flex;
+  font-size: 15px;
+  font-weight: 800;
+  gap: 7px;
+  min-height: 44px;
+  min-width: 100px;
+  padding: 0 20px;
+}
+
+.all-recipe-tabs button:first-child {
+  border-radius: 13px 0 0 13px;
+}
+
+.all-recipe-tabs button:last-child {
+  border-radius: 0 13px 13px 0;
+}
+
+.all-recipe-tabs button + button {
+  margin-left: -1px;
+}
+
+.all-recipe-tabs button.active {
+  background: #eef9f2;
+  border-color: #cfeada;
+  color: var(--green-dark);
+  position: relative;
+  z-index: 1;
+}
+
+.all-recipe-tabs button span {
+  color: #9aa49e;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.all-recipes-summary {
+  color: #77837c;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+.all-recipe-grid {
+  display: grid;
+  gap: 28px 30px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.all-recipe-card {
+  background: white;
+  border: 1px solid #edf0ee;
+  border-radius: 11px;
+  box-shadow: 0 11px 25px rgba(34, 54, 43, 0.07);
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  text-align: left;
+  transition:
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.all-recipe-card:hover {
+  box-shadow: 0 16px 30px rgba(34, 54, 43, 0.11);
+  transform: translateY(-2px);
+}
+
+.all-recipe-card img,
+.all-recipe-placeholder {
+  aspect-ratio: 2.1 / 1;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.all-recipe-placeholder {
+  align-items: center;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(44, 175, 103, 0.14), transparent 9rem),
+    linear-gradient(135deg, #f8fbf9, #eef5f1);
+  color: #7a8981;
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  justify-content: center;
+}
+
+.all-recipe-placeholder span {
+  font-size: 34px;
+}
+
+.all-recipe-placeholder small {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.all-recipe-copy {
+  padding: 17px 16px 15px;
+}
+
+.all-recipe-copy h3 {
+  color: #17251d;
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 17px;
+  min-height: 24px;
+}
+
+.all-recipe-meta {
+  align-items: center;
+  color: #7d8982;
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.all-recipe-meta strong {
+  color: var(--green);
+  font-size: 14px;
+}
+
+.all-recipes-empty {
+  border: 1px dashed #dce8e0;
+  border-radius: 14px;
+  box-shadow: none;
 }
 
 .pantry-panel {
@@ -1874,6 +2031,11 @@ select:focus-visible {
     grid-template-columns: 1fr 260px;
   }
 
+  .all-recipe-grid {
+    gap: 22px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .workspace {
     grid-template-columns: minmax(440px, 1fr) minmax(330px, 0.82fr);
   }
@@ -1960,6 +2122,10 @@ select:focus-visible {
     min-height: auto;
   }
 
+  .main-content.all-recipes-mode {
+    min-height: auto;
+  }
+
   .today-card-row {
     display: flex;
     overflow-x: auto;
@@ -1990,6 +2156,24 @@ select:focus-visible {
     font-size: 66px;
     height: 118px;
     width: 170px;
+  }
+
+  .all-recipes-panel {
+    margin-top: 22px;
+  }
+
+  .all-recipe-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .all-recipe-tabs button {
+    flex: 0 0 auto;
+  }
+
+  .all-recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .workspace {
@@ -2046,6 +2230,26 @@ select:focus-visible {
   .quick-start-button {
     justify-content: center;
     width: 100%;
+  }
+
+  .all-recipes-panel {
+    padding: 15px;
+  }
+
+  .all-recipe-tabs button {
+    font-size: 13px;
+    min-height: 40px;
+    min-width: 86px;
+    padding: 0 14px;
+  }
+
+  .all-recipe-grid {
+    gap: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .all-recipe-copy h3 {
+    min-height: 0;
   }
 
   .pantry-panel {

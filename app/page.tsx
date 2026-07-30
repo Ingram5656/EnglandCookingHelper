@@ -22,6 +22,7 @@ import {
 
 type View =
   | "recommend"
+  | "all"
   | "categories"
   | "favorites"
   | "recent"
@@ -29,8 +30,17 @@ type View =
   | "upload";
 type SidePanel = "shopping" | "settings" | null;
 type AiStatus = "idle" | "loading" | "success" | "error";
+type AllRecipeTab = "全部" | "家常菜" | "快手菜" | "汤羹" | "素食" | "主食";
 
 const DEFAULT_INGREDIENTS = ["鸡蛋", "番茄", "青椒", "土豆", "葱", "大蒜"];
+const ALL_RECIPE_TABS: AllRecipeTab[] = [
+  "全部",
+  "家常菜",
+  "快手菜",
+  "汤羹",
+  "素食",
+  "主食",
+];
 const TEMPLATE = `菜名：红烧鱼
 分类：水产
 难度：适中
@@ -60,6 +70,7 @@ const NAV_ITEMS: Array<{
   icon: string;
 }> = [
   { id: "recommend", label: "首页推荐", icon: "⌂" },
+  { id: "all", label: "全部菜谱", icon: "▦" },
   { id: "categories", label: "菜谱分类", icon: "▦" },
   { id: "favorites", label: "收藏菜谱", icon: "♡" },
   { id: "recent", label: "最近浏览", icon: "◷" },
@@ -129,6 +140,40 @@ function ratingForRecipe(recipe: Recipe, index: number) {
     index,
   );
   return (4.4 + (seed % 5) / 10).toFixed(1);
+}
+
+function isVegetarianRecipe(recipe: Recipe) {
+  if (recipe.category === "肉菜" || recipe.category === "水产") return false;
+  const nonVegetarianTerms = [
+    "肉",
+    "猪",
+    "牛",
+    "羊",
+    "鸡",
+    "鸭",
+    "鹅",
+    "鱼",
+    "虾",
+    "蟹",
+    "贝",
+    "蛤",
+    "蚬",
+    "排骨",
+    "火腿",
+    "培根",
+    "腊肠",
+    "香肠",
+  ];
+  return !recipe.ingredients.some((ingredient) =>
+    nonVegetarianTerms.some((term) => ingredient.name.includes(term)),
+  );
+}
+
+function matchesAllRecipeTab(recipe: Recipe, tab: AllRecipeTab) {
+  if (tab === "全部") return true;
+  if (tab === "快手菜") return recipe.time <= 20;
+  if (tab === "素食") return isVegetarianRecipe(recipe);
+  return recipe.category === tab;
 }
 
 function parseRecipeTemplate(text: string, imageDataUrl: string): StoredRecipe {
@@ -203,6 +248,7 @@ export default function Home() {
   const [timeFilter, setTimeFilter] = useState("all");
   const [difficultyFilter, setDifficultyFilter] = useState("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
+  const [allRecipeTab, setAllRecipeTab] = useState<AllRecipeTab>("全部");
   const [sortMode, setSortMode] = useState("match");
   const [activeView, setActiveView] = useState<View>("recommend");
   const [matchOnly, setMatchOnly] = useState(false);
@@ -399,6 +445,38 @@ export default function Home() {
     );
     return [...xiachufangRecipes, ...otherImageRecipes].slice(0, 5);
   }, [recipes]);
+  const allRecipeTabCounts = useMemo(() => {
+    return ALL_RECIPE_TABS.reduce(
+      (counts, tab) => ({
+        ...counts,
+        [tab]: recipes.filter((recipe) => matchesAllRecipeTab(recipe, tab)).length,
+      }),
+      {} as Record<AllRecipeTab, number>,
+    );
+  }, [recipes]);
+  const allRecipeCards = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    return recipes
+      .filter((recipe) => {
+        if (!matchesAllRecipeTab(recipe, allRecipeTab)) return false;
+        if (
+          normalizedQuery &&
+          !recipe.name.toLowerCase().includes(normalizedQuery) &&
+          !recipe.ingredients.some((item) =>
+            item.name.toLowerCase().includes(normalizedQuery),
+          )
+        )
+          return false;
+        return true;
+      })
+      .sort((a, b) => {
+        if (Boolean(a.image) !== Boolean(b.image)) return a.image ? -1 : 1;
+        const aXiachufang = a.id.startsWith("xiachufang-");
+        const bXiachufang = b.id.startsWith("xiachufang-");
+        if (aXiachufang !== bXiachufang) return aXiachufang ? -1 : 1;
+        return a.name.localeCompare(b.name, "zh-Hans-CN");
+      });
+  }, [allRecipeTab, query, recipes]);
 
   function announce(message: string) {
     setToast(message);
@@ -605,16 +683,26 @@ export default function Home() {
       ? "收藏菜谱"
       : activeView === "recent"
         ? "最近浏览"
-        : activeView === "categories"
-          ? "菜谱分类"
-          : activeView === "ingredients"
-            ? "食材清单"
-            : activeView === "upload"
-              ? "上传菜谱"
-              : "推荐菜谱";
+        : activeView === "all"
+          ? "全部菜谱"
+          : activeView === "categories"
+            ? "菜谱分类"
+            : activeView === "ingredients"
+              ? "食材清单"
+              : activeView === "upload"
+                ? "上传菜谱"
+                : "推荐菜谱";
+  const subheading =
+    activeView === "all"
+      ? "浏览本地数据库中的所有菜谱"
+      : "菜谱、食材清单和上传图片都保存在当前浏览器的本地数据库";
   const isHomeView = activeView === "recommend";
+  const isAllRecipesView = activeView === "all";
   const isRecipeBrowserView =
-    activeView !== "ingredients" && activeView !== "upload" && !isHomeView;
+    activeView !== "ingredients" &&
+    activeView !== "upload" &&
+    !isHomeView &&
+    !isAllRecipesView;
 
   if (!dbReady) {
     return (
@@ -675,6 +763,8 @@ export default function Home() {
         className={`main-content ${
           isHomeView
             ? "home-mode"
+            : isAllRecipesView
+              ? "all-recipes-mode"
             : activeView !== "ingredients" && activeView !== "upload"
             ? "recipe-mode"
             : "database-mode"
@@ -686,9 +776,7 @@ export default function Home() {
             <h1>
               {heading} <span aria-hidden="true">🌿</span>
             </h1>
-            <p>
-              菜谱、食材清单和上传图片都保存在当前浏览器的本地数据库
-            </p>
+            <p>{subheading}</p>
           </div>
           <label className="search-box">
             <span aria-hidden="true">⌕</span>
@@ -771,6 +859,75 @@ export default function Home() {
                 <div className="art-plate">🥗</div>
               </div>
             </section>
+          </section>
+        )}
+
+        {isAllRecipesView && (
+          <section className="all-recipes-panel" aria-label="全部菜谱">
+            <div className="all-recipe-tabs" aria-label="菜谱分类筛选">
+              {ALL_RECIPE_TABS.map((tab) => (
+                <button
+                  key={tab}
+                  className={allRecipeTab === tab ? "active" : ""}
+                  onClick={() => setAllRecipeTab(tab)}
+                >
+                  {tab}
+                  <span>{allRecipeTabCounts[tab] ?? 0}</span>
+                </button>
+              ))}
+            </div>
+
+            <div className="all-recipes-summary">
+              <span>共 {recipes.length} 道菜谱</span>
+              <span>当前显示 {allRecipeCards.length} 道</span>
+              <span>{recipesWithoutImage} 道待上传图片</span>
+            </div>
+
+            {allRecipeCards.length ? (
+              <div className="all-recipe-grid">
+                {allRecipeCards.map((recipe, index) => (
+                  <button
+                    key={recipe.id}
+                    className="all-recipe-card"
+                    onClick={() => openHomeRecipe(recipe.id)}
+                    aria-label={`查看${recipe.name}`}
+                  >
+                    {recipe.image ? (
+                      <img src={recipe.image} alt={recipe.name} />
+                    ) : (
+                      <div className="all-recipe-placeholder">
+                        <span>📷</span>
+                        <small>待上传图片</small>
+                      </div>
+                    )}
+                    <div className="all-recipe-copy">
+                      <h3>{recipe.name}</h3>
+                      <div className="all-recipe-meta">
+                        <span>
+                          {recipe.difficulty} · {recipe.time}分钟
+                        </span>
+                        <strong>★ {ratingForRecipe(recipe, index)}</strong>
+                      </div>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <div className="empty-state all-recipes-empty">
+                <span>🔎</span>
+                <h3>没有找到符合条件的菜谱</h3>
+                <p>请尝试切换分类，或清空顶部搜索关键词。</p>
+                <button
+                  className="primary-button"
+                  onClick={() => {
+                    setQuery("");
+                    setAllRecipeTab("全部");
+                  }}
+                >
+                  显示全部菜谱
+                </button>
+              </div>
+            )}
           </section>
         )}
 
